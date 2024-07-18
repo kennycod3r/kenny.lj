@@ -1,0 +1,116 @@
+.display-page {
+  border-radius: 12px 12px 0 0;
+  position: fixed;
+  color: white;
+  inset: 56px 0px 0px;
+  width: 100%;
+  min-height: calc(100% - 56px);
+  transform: translateY(0);
+  z-index: 998;
+  padding: 1em;
+  overflow: hidden;
+  background-color: var(--black);
+  transition: transform 1s cubic-bezier(0.4, 0.4, 0.1, 1) 0s;
+  will-change: transform;
+}
+.DisplayPageHide {
+  transform: translateY(100%);
+}
+
+.display-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.display-page-image {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 30%;
+  overscroll-behavior-inline: contain;
+  width: 100%;
+  min-height: 32vw;
+  border: 1px solid rgb(18, 18, 19);
+  gap: 0.4em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0;
+}
+/* .display-page-image::-webkit-scrollbar {
+} */
+
+.small-img img {
+  height: 40px;
+  width: 40px;
+}
+
+.flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100% !important;
+}
+.dp-btn button {
+  right: 10px;
+  bottom: 5px;
+}
+.display-page-btn {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.display-page-btn:hover {
+  background-color: rgba(240, 248, 255, 0.106);
+}
+
+.display-page-scroller {
+  width: 100%;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  margin: 0;
+  overflow: hidden !important;
+  align-items: center;
+  justify-content: center;
+}
+.snap-scroller {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 2em;
+}
+.snap-scroller > * {
+  scroll-snap-align: start;
+}
+.projectImgss{
+  inline-size: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 720px) {
+  .display-page-image {
+    grid-auto-flow: row;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-items: center;
+    justify-content: center;
+  }
+  .projectImgss {
+    inline-size: auto;
+    background-color: whitesmoke;
+    width: 300px;
+    min-height: 300px;
+    object-fit: cover;
+  }
+
+  .display-page-text {
+    width: 100%;
+    padding: 0 1em;
+  }
+}

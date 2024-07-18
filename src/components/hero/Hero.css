@@ -1,0 +1,155 @@
+.hero-container {
+  min-width: 100%;
+  min-height: 90vh;
+  justify-content: center;
+  position: relative;
+  background-position: center;
+  overflow: hidden !important;
+  background-size: cover;
+  background-image: url("../../../src/images/hello.webp");
+}
+
+.hero-caption {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-headtextt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-weight: bold;
+}
+
+.arrowdiv {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.hero-headtextt h1 {
+  font-size: 4em;
+  margin-top: 12px;
+  letter-spacing: -2px;
+}
+.linehero {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.span-container {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  overflow: hidden !important;
+}
+.oshin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 1.4;
+  font-weight: 400;
+  width: 400px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.oshin-container span {
+  font-size: 1.44em;
+  color: white !important;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.smallp {
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.smallestp {
+  font-size: 14px;
+}
+
+.view-hero-header {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  height: 60px;
+  justify-items: flex-start;
+}
+
+.explore-text {
+  color: white;
+  padding-left: 20px;
+  font-weight: 300;
+}
+
+.view-hero-header-details {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: left;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden !important;
+  align-items: center;
+  padding: 0 10px;
+  line-height: normal;
+  align-content: space-around;
+  justify-items: center;
+}
+
+.view-hero-header-details p {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.view-hero-header-details div {
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 780px) {
+  .hero-container {
+    min-height: 70vh;
+  }
+  .hero-overlay {
+    min-height: 100%;
+  }
+  .view-hero-header-details {
+    grid-template-columns: 1fr;
+  }
+  .hero-caption {
+    padding: 10px;
+  }
+  .hero-headtextt {
+    line-height: 1;
+  }
+  .hero-headtextt h1 {
+    font-size: 3.2em;
+    width: 50%;
+  }
+  .oshin-container {
+    width: 80% !important;
+  }
+  .oshin-container span {
+    font-size: 1em;
+    margin-left: 0;
+  }
+}

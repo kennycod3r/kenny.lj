@@ -1,0 +1,94 @@
+:root {
+  --orange: #f90;
+}
+
+.aboutme-pages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.about-me-section {
+  max-width: 1000px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-me-header {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.about-me-p {
+  text-align: left;
+  font-size: 1rem;
+  color: #bcbcbc;
+  padding: 2em 1em;
+  max-width: 300px;
+}
+
+.profile-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item-img {
+  background-image: url('../../images/profile.webp');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.orangedot, .orangeColor {
+  color: var(--orange);
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  background-color: black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 767px) {
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    object-fit: contain;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

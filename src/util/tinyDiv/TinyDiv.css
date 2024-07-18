@@ -1,0 +1,98 @@
+.author-box {
+  background-color: var(--black);
+  height: 70px;
+  max-height: 80px;
+  opacity: 0.95;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  width: 260px;
+  padding: 0 10px;
+  overflow: hidden;
+  display: flex;
+  z-index: 17;
+  line-height: 1em !important;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-box:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow);
+}
+
+.author-box:hover .author-image {
+  animation: logo-spin 0.3s ease;
+}
+
+.author-box-inner {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.author-image {
+  position: relative;
+  min-width: 3em;
+  height: 3em;
+  border: var(--border-line);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(253, 253, 253);
+  transition: all 0.3s ease;
+}
+
+.author-content {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  color: white;
+  width: 100%;
+}
+
+.tinytext, .bigtext{
+  font-size: 15px;
+  line-height: 20px;
+  font-style: normal;
+  text-transform: lowercase;
+}
+
+.tinytext{
+  font-size: 12px;
+  line-height: 15px;
+}
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.job-title {
+  font-size: 12px;
+}
+
+.tiniest {
+  font-size: 10px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
