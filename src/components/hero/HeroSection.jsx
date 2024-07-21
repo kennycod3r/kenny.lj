@@ -10,23 +10,35 @@ const HeroSection = () => {
       yPercent: -100,
       delay: 0.4,
       duration: 0.5,
-      ease: "power4.out",
+      ease: "cubic-bezier(0.16, 1, 0.3, 1)",
     })
-      .to("#line1", {
-        yPercent: -100,
-        duration: 0.6,
-        ease: "power4.out",
-      })
-      .to("#line2", {
-        yPercent: -100,
-        duration: 0.7,
-        ease: "power4.out",
-      })
-      .to("#line3", {
-        yPercent: -100,
-        duration: 0.8,
-        ease: "power4.out",
-      });
+      .to(
+        "#line1",
+        {
+          yPercent: -100,
+          duration: 0.6,
+          ease: "power4.out",
+        },
+        "-=0.4"
+      )
+      .to(
+        "#line2",
+        {
+          yPercent: -100,
+          duration: 0.7,
+          ease: "power4.out",
+        },
+        "-=0.4"
+      )
+      .to(
+        "#line3",
+        {
+          yPercent: -100,
+          duration: 0.8,
+          ease: "power4.out",
+        },
+        "-=0.4"
+      );
   }, []);
 
   useEffect(() => {
@@ -34,11 +46,11 @@ const HeroSection = () => {
   }, [runAnimation]);
 
   return (
-    <section className="hero-container fC" role="banner">
+    <section className="hero-container fJc" role="banner">
       <div className="overlay-base hero-overlay">
-        <div className="hero-caption">
+        <div className="hero-caption flexStartC">
           <header className="hero-headtext">
-            <p className="number">00</p>
+            <span className="number o2">00</span>
             <div className="containerAnimate">
               <div className="hero-containerAnimate-div">
                 <h1 className="Text_XL__ku5Fh" id="heroHeader">
@@ -76,15 +88,12 @@ const HeroSection = () => {
       <div className="slide-container" aria-hidden="true"></div>
       <div className="view-hero-header">
         <div className="explore-text">
-          <p className="headerp whiteColor">0 - 04</p>
+          <p className="headerp whiteColor">00 - 09</p>
         </div>
         <div className="view-hero-header-details">
-          <p className="hidemobile">MODERN WEBSITE</p>
-          <p className="hidemobile">
-           INTERACTIVE DEVELOPER
-          </p>
-          <p className="hidemobile">INTERACTIVE DESIGNER</p>
-          
+          <span className="hidemobile headerp">Web-Creator</span>
+          <span className="headerp">Front-End Developer</span>
+          <span className="hidemobile headerp">Interactive Designer</span>
         </div>
       </div>
     </section>

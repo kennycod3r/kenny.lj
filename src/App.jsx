@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import useLenis from "./components/hooks/UseLennis";
@@ -16,12 +16,9 @@ const App = () => {
 
   return (
     <div className="flexPage">
-      <Navbar
-        handleSidebar={handleSidebar}
-        openSidebar={openSidebar}
-      />
+      <Navbar handleSidebar={handleSidebar} openSidebar={openSidebar} />
       <Sidebar handleSidebar={handleSidebar} openSidebar={openSidebar} />
-      <Outlet/>
+      <Outlet />
       <Footer />
     </div>
   );

@@ -1,25 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import TextAbout from "../../util/TextAbout";
 
 const TechSection = ({ techCardData }) => {
   const navigate = useNavigate();
 
   return (
-    <section className="tech-section">
+    <section className="tech-section fJc flexDC">
       <div className="tech-section-wrapper">
         <div className="doublegrid">
-          <div className="containerAnimate">
-            <div className="containerAnimate-div">
-              <h1>Developer.</h1>
-            </div>
-            <div className="containerAnimate-div">
-              <h1>Designer.</h1>
-            </div>
-            <div className="containerAnimate-div">
-              <h1>Creator.</h1>
-            </div>
-          </div>
-          <div className="ts-div2">
+          <TextAbout />
+          <div className="ts-div2 fStart">
             <div className="ts-div2-lists-container">
               <ul className="tslists">
                 <li className="tinyp number">DEVELOPMENT</li>
@@ -49,9 +40,7 @@ const TechSection = ({ techCardData }) => {
                 <li className="tinyp">Wireframing</li>
               </ul>
               <ul className="tslists">
-                <li className="tinyp number">
-                  SEO & Performance Optimization
-                </li>
+                <li className="tinyp number">SEO & Performance Optimization</li>
                 <li className="tinyp">SEO Copy Optimization</li>
                 <li className="tinyp">Content Management</li>
                 <li className="tinyp">Quality Assurance</li>
@@ -82,12 +71,7 @@ const TechSection = ({ techCardData }) => {
                   <button
                     className="tech-btn"
                     onClick={() =>
-                      handleSendTech(
-                        techstackTitle,
-                        techText,
-                        displayPageImg,
-                        [] // You need to pass an array here if there are no project images
-                      )
+                      handleSendTech(techstackTitle, techText, displayPageImg)
                     }
                   >
                     <div>{techstackTitle}</div>

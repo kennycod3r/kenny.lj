@@ -1,88 +1,71 @@
-import React, { useState, memo } from "react";
+import React, { useState, useCallback } from "react";
 import AboutMe from "../About-me/AboutMe";
-import Services from "../MyService/Services";
-import projectImg1 from "../../images/shoefang1.webp";
-import Screenshot from "../../images/Screenshot.webp";
-import Screenshot2 from "../../images/projectss2.webp";
-import Screenshot3 from "../../images/projectss3.webp";
 import ProjectButton from "../../util/ProjectButton";
 import "./ProjectDisplay.css";
 
-const images = [
-  {
-    projectImages: [projectImg1, Screenshot2, Screenshot3],
-    image: projectImg1,
-    title: "SHOEFANG",
-  },
-  {
-    projectImages: [Screenshot],
-    image: Screenshot,
-    title: "MOTHER",
-  },
-  {
-    projectImages: [projectImg1],
-    image: projectImg1,
-    title: "SHOEfANG3",
-  },
-];
-
-const ProjectDisplay = memo(({ handleGetImage, handleOpenDisplay }) => {
+const ProjectDisplay = ({
+  handleGetImage,
+  handleOpenDisplay,
+  grid3,
+  hProjectImages,
+}) => {
   const [aboutSection, setAboutSection] = useState(false);
 
-  const btnText = aboutSection ? (
-    <p className="click-btn">
-      Click <br /> to Go back
-    </p>
-  ) : (
-    <p className="click-btn">click to load more</p>
+  const handleSendImg = useCallback(
+    (image, title, projectImages) => {
+      handleGetImage(image, title, projectImages);
+      handleOpenDisplay();
+    },
+    [handleGetImage, handleOpenDisplay]
   );
 
-  const handleSendImg = (image, title, projectImages) => {
-    handleGetImage(image, title, projectImages);
-    handleOpenDisplay();
-  };
-
   return (
-    <>
-      <div className="project-section">
-        <div className="project-wrapper">
-          {!aboutSection && (
-            <h1 className="header--two">
-              Selected Works. <span className="o2">03</span>
-            </h1>
+    <div className="project-section">
+      <div className="project-wrapper">
+        {!aboutSection && (
+          <h1 className="header--two">
+            Selected Works. <span className="o2">02</span>
+          </h1>
+        )}
+        <div>
+          {!aboutSection ? (
+            <div
+              className={
+                !grid3 ? "projectgrid " : " projectgrid Contactprojectgrid"
+              }
+            >
+              {hProjectImages.map((item, index) => (
+                <ProjectButton
+                  key={index}
+                  item={item}
+                  handleSendImg={handleSendImg}
+                  grid3={grid3}
+                />
+              ))}
+            </div>
+          ) : (
+            <AboutMe />
           )}
-          <div>
-            {!aboutSection ? (
-              <div className="projectgrid">
-                {images.map((item, index) => (
-                  <ProjectButton
-                    key={index}
-                    item={item}
-                    handleSendImg={handleSendImg}
-                  />
-                ))}
-              </div>
-            ) : (
-              <AboutMe />
-            )}
-          </div>
         </div>
-        <div className="phone-btn-div fC">
+      </div>
+      {!grid3 && (
+        <div className="phone-btn-div">
           <p>Keep Exploring Projects?</p>
           <button
-            className="phoneBtn fC"
+            className="phoneBtn fJc"
             onClick={() => setAboutSection(!aboutSection)}
           >
             <div className="circle fC">
               <div className="box"></div>
             </div>
           </button>
-          <span className="smallestp">{btnText}</span>
+          <span className="toggle-text">
+            {aboutSection ? "Click to Go back" : "Click to load more"}
+          </span>
         </div>
-      </div>
-      <Services />
-    </>
+      )}
+    </div>
   );
-});
+};
 
-export default ProjectDisplay;
+export default React.memo(ProjectDisplay);

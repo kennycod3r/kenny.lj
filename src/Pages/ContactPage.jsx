@@ -77,10 +77,10 @@ const ContactPage = () => {
   return (
     <div className="linkDisplaypage">
       <div className="contact-grid">
-        <div className="gridDiv">
+        <div className="gridDiv cgd">
           <div className="containerAnimate">
             <div className="containerAnimate-div">
-              <h1 id="contacth1">Contact Us <span className="o2">02</span></h1>
+              <h1 id="contacth1">Contact Me<span className="o2">07</span></h1>
             </div>
           </div>
         </div>

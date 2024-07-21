@@ -1,5 +1,4 @@
-import React, { useCallback, useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useCallback, useMemo } from "react";
 import Hero from "../components/hero/Hero.jsx";
 import Main from "../components/Main/Main.jsx";
 import ProjectDisplay from "../components/ProjectSection/ProjectDisplay.jsx";
@@ -8,7 +7,15 @@ import ReactImgSvg from "../assets/react.svg";
 import javascriptimgSvg from "../assets/javascriptImg.svg";
 import scssimgSvg from "../assets/scssImg.svg";
 import figmaSvg from "../assets/figma.svg";
+import Services from "../components/MyService/Services.jsx";
 import "./Pages.css";
+import projectImg1 from "../images/shoefang1.webp";
+import Screenshot from "../images/Screenshot.webp";
+import Screenshot2 from "../images/projectss2.webp";
+import Screenshot3 from "../images/projectss3.webp";
+import pshot0 from "../images/pshot0.webp";
+import pshot1 from "../images/pshot1.webp";
+import pshot2 from "../images/pshot2.webp";
 import TechSection from "../components/Techsec/TechSection.jsx";
 
 const HomePage = () => {
@@ -20,60 +27,60 @@ const HomePage = () => {
     displayPageDataImages: [],
   });
 
-  const navigate = useNavigate();
-
   const handleOpenDisplay = useCallback(() => {
     setOpenDisplay((prevState) => !prevState);
   }, []);
 
-  const handleSendTech = useCallback(
-    (title, techText, displayPageImg, projectImages) => {
-      setDisplayPageData({
-        displayPageDataImg: displayPageImg,
-        displayPageTitle: title,
-        displayPageText: techText,
-        displayPageDataImages: projectImages,
-      });
-      handleOpenDisplay();
+  const techCardData = useMemo(() => [
+    {
+      techstackTitle: "REACT",
+      techText:
+        "As a highly skilled React frontend developer, I excel in creating dynamic and responsive user interfaces with a strong focus on performance and user experience...",
+      displayPageImg: ReactImgSvg,
     },
-    [handleOpenDisplay]
-  );
-
-  const techCardData = useMemo(
-    () => [
-      {
-        techstackTitle: "REACT",
-        techText:
-          "As a highly skilled React frontend developer, I excel in creating dynamic and responsive user interfaces with a strong focus on performance and user experience. With a deep understanding of React's ecosystem, including hooks, state management, and component lifecycle, I efficiently translate complex designs into clean, maintainable code. My expertise in modern frontend technologies, combined with a keen eye for detail and a passion for innovation, enables me to deliver seamless and engaging web applications that consistently exceed client expectations.",
-        displayPageImg: ReactImgSvg,
-      },
-      {
-        techstackTitle: "JAVASCRIPT",
-        techText:
-          "As a proficient JavaScript developer, I bring extensive experience in building robust and scalable web applications. My deep understanding of JavaScript's core principles, coupled with expertise in modern frameworks and libraries, allows me to write clean, efficient, and maintainable code. I excel in problem-solving and debugging, ensuring optimal performance and seamless functionality. My passion for continuous learning and staying updated with the latest industry trends empowers me to deliver innovative solutions that drive business success and enhance user experience.",
-        displayPageImg: javascriptimgSvg,
-      },
-      {
-        techstackTitle: "SCSS/SC/GSAP",
-        techText:
-          "As an adept frontend developer, I specialize in crafting visually appealing and responsive designs using SCSS, CSS, Styled Components, and Bootstrap. My expertise in these styling technologies allows me to create clean, maintainable code and ensure a seamless user experience across devices. With a keen eye for design and a strong understanding of modern web standards, I deliver polished and professional interfaces that elevate any project.",
-        displayPageImg: scssimgSvg,
-      },
-      {
-        techstackTitle: "FIGMA",
-        techText:
-          "With my expertise in Figma, I excel in translating design concepts into functional, responsive interfaces with precision. My ability to quickly learn and adapt to emerging technologies ensures I stay ahead of industry trends, delivering innovative and up-to-date solutions. My commitment to continuous improvement and speed in mastering new tools and frameworks enables me to bring cutting-edge designs to life efficiently and effectively.",
-        displayPageImg: figmaSvg,
-      },
-    ],
-    []
-  );
+    {
+      techstackTitle: "JAVASCRIPT",
+      techText:
+        "As a proficient JavaScript developer, I bring extensive experience in building robust and scalable web applications...",
+      displayPageImg: javascriptimgSvg,
+    },
+    {
+      techstackTitle: "SCSS/SC/GSAP",
+      techText:
+        "As an adept frontend developer, I specialize in crafting visually appealing and responsive designs using SCSS, CSS, Styled Components, and Bootstrap...",
+      displayPageImg: scssimgSvg,
+    },
+    {
+      techstackTitle: "FIGMA",
+      techText:
+        "With my expertise in Figma, I excel in translating design concepts into functional, responsive interfaces with precision...",
+      displayPageImg: figmaSvg,
+    },
+  ], []);
+  const hProjectImages = [
+    {
+      projectImages: [pshot0, Screenshot2, Screenshot3],
+      image: pshot0,
+      title: "SHOEFANG",
+    },
+    {
+      projectImages: [Screenshot],
+      image: pshot2,
+      title: "MOTHER",
+    },
+    {
+      projectImages: [projectImg1],
+      image: pshot1,
+      title: "SHOEfANG3",
+    },
+  ];
 
   return (
     <div className="flexPage">
       <Hero />
       <Main />
       <ProjectDisplay
+        hProjectImages={hProjectImages}
         handleGetImage={(image, title, projectImages) =>
           setDisplayPageData({
             displayPageDataImg: image,
@@ -83,15 +90,15 @@ const HomePage = () => {
         }
         handleOpenDisplay={handleOpenDisplay}
       />
+      <Services />
+      <TechSection techCardData={techCardData} />
       <DisplayPage
         openDisplay={openDisplay}
         displayPageData={displayPageData}
         handleOpenDisplay={handleOpenDisplay}
       />
-      <TechSection techCardData={techCardData} />
     </div>
   );
 };
 
 export default HomePage;
-

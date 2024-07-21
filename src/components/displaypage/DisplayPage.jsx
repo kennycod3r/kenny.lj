@@ -1,55 +1,68 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import PropTypes from "prop-types";
 import "./DisplayPage.css";
 import CloseSvg from "../../util/CloseSvg";
+import ArrowLink from "../../util/ArrowLink";
 
-const DisplayPage = ({ handleOpenDisplay,displayPageData,openDisplay}) => {
-  const {
-    displayPageTitle,
-    displayPageText,
-    displayPageDataImg,
-    displayPageDataImages,
-  } = displayPageData;
+const DisplayPage = React.memo(
+  ({ handleOpenDisplay, displayPageData, openDisplay }) => {
+    const { displayPageTitle, displayPageDataImages } = displayPageData;
+    const displayPageRef = useRef(null);
 
-  return (
-    <div className={`display-page ${openDisplay ? "" : "DisplayPageHide"}`}>
-      <div className="display-page-content">
+    useEffect(() => {
+      const animation = gsap.to(displayPageRef.current, {
+        y: openDisplay ? 0 : "100%",
+        duration: 1,
+        ease: "power3.inOut",
+      });
+      return () => animation.kill();
+    }, [openDisplay]);
+
+    return (
+      <div ref={displayPageRef} data-lenis-prevent className="display-page">
         <div className="flex-header">
+          <span className="showmobile job-title underline whiteColor flexSB">
+            <ArrowLink /> VIEW LIVE PROJECT
+          </span>
           <div className="display-page-title">{displayPageTitle}</div>
-          <div className="fC">
+          <div className="close-header" onClick={handleOpenDisplay}>
             <span className="job-title whiteColor">close</span>
-            <button className="display-page-btn" onClick={handleOpenDisplay}>
+            <div className="display-page-btn dp-btn">
               <CloseSvg isOpen={openDisplay} />
-            </button>
+            </div>
           </div>
         </div>
-        <div className="display-page-scroller">
-          <div
-            className={
-              !displayPageText
-                ? "display-page-image snap-scroller"
-                : "small-img"
-            }
-          >
-            <div></div>
-            {displayPageDataImages.map((item, index) => (
-              <div className="projectImgss" key={index}>
-                <img src={item} alt={"flex-img"} />
+        <div className="display-page-content">
+          <div className="display-page-scroller">
+            <div className="display-page-image snap-scroller">
+              {displayPageDataImages.map((item, index) => (
+                <div className="project-imgs" key={index}>
+                  <img className="dp-inner-img" src={item} alt={`project-${index}`} />
+                </div>
+              ))}
+              <div className="project-imgs project-imgs-link">
+                <div className="pili fJc">
+                  <span className="job-title underline whiteColor fC">
+                    <ArrowLink /> VIEW LIVE PROJECT
+                  </span>
+                </div>
               </div>
-            ))}
-            <div>
-              <img src={displayPageDataImg} alt={displayPageTitle} />
             </div>
-            <div></div>
           </div>
-          {displayPageText && (
-            <div className="display-page-text">
-              <p className="headerp">{displayPageText}</p>
-            </div>
-          )}
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+);
+
+DisplayPage.propTypes = {
+  handleOpenDisplay: PropTypes.func.isRequired,
+  displayPageData: PropTypes.shape({
+    displayPageTitle: PropTypes.string.isRequired,
+    displayPageDataImages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  openDisplay: PropTypes.bool.isRequired,
 };
 
 export default DisplayPage;

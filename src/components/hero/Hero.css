@@ -1,20 +1,16 @@
 .hero-container {
   min-width: 100%;
   min-height: 90vh;
-  justify-content: center;
   position: relative;
   background-position: center;
-  overflow: hidden !important;
+  overflow: hidden;
   background-size: cover;
   background-image: url("../../../src/images/hello.webp");
 }
 
 .hero-caption {
-  display: flex;
   margin-top: 40px;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   padding: 20px;
 }
 
@@ -48,7 +44,7 @@
   min-height: 100%;
   min-width: 100%;
   position: relative;
-  overflow: hidden !important;
+  overflow: hidden;
 }
 .oshin-container {
   display: flex;
@@ -63,11 +59,12 @@
 
 .oshin-container span {
   font-size: 1.44em;
-  color: white !important;
   text-align: left;
   text-transform: capitalize;
 }
-
+.hero-headtext .o2 {
+  color: var(--orange);
+}
 .smallp {
   font-size: 15px;
   text-align: left;
@@ -90,24 +87,23 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   overflow: hidden;
-  height: 60px;
+  border-bottom: var(--border-line);
+  height: 50px;
   justify-items: flex-start;
 }
 
 .explore-text {
-  color: white;
-  padding-left: 20px;
-  font-weight: 300;
+  padding-left: 30px;
 }
 
 .view-hero-header-details {
-  background-color: #fff;
+  background-color: #fafafa;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: left;
   min-height: 100%;
   min-width: 100%;
-  overflow: hidden !important;
+  overflow: hidden;
   align-items: center;
   padding: 0 10px;
   line-height: normal;
@@ -115,15 +111,6 @@
   justify-items: center;
 }
 
-.view-hero-header-details p {
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.view-hero-header-details div {
-  align-items: center;
-  display: flex;
-}
 
 @media (max-width: 780px) {
   .hero-container {
@@ -146,7 +133,7 @@
     width: 50%;
   }
   .oshin-container {
-    width: 80% !important;
+    width: 80%;
   }
   .oshin-container span {
     font-size: 1em;

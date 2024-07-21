@@ -1,86 +1,135 @@
-:root {
-  --orange: #f90;
-}
 
 .aboutme-pages {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
+  padding: 1em;
 }
 
-.about-me-section {
-  max-width: 1000px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.about-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-nav {
+  background-color: black;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+
+.whitecontainer {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background: rgb(216, 162, 243);
+  background: linear-gradient(
+    184deg,
+    rgba(226, 170, 255, 1) 0%,
+    rgba(221, 160, 221, 1) 0%
+  );
+  box-shadow: 0 0 10px rgba(1, 1, 1, 0.38);
+  background-color: #181818;
+}
+
+.aboutpage {
+  padding: 4.2rem;
+}
+
+.aboutherocontainer {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 2fr 6fr;
+  background-color: black;
+}
+
+.aboutherocontainer div {
+  padding: 2em;
+}
+
+.aboutherocontainer .fadeIndiv {
   animation: fadeIn 1s ease-in-out;
 }
 
-.about-me-header {
-  max-width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 2em;
+.profilegrid {
+  display: flex;
+  gap: 0.1em;
 }
 
-.about-me-p {
-  text-align: left;
-  font-size: 1rem;
-  color: #bcbcbc;
-  padding: 2em 1em;
-  max-width: 300px;
+.profilediv {
+  height: 100px;
+  width: 100px;
+  transition: var(--animationSmooth);
+  border-radius: 50%;
+  cursor: pointer;
+  border: var(--border-line);
 }
 
-.profile-img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.profilediv:hover {
+  animation: logo-spin 0.3s ease;
 }
 
-.item-img {
-  background-image: url('../../images/profile.webp');
+.mediv,
+.syddiv {
+  position: relative;
+  background-image: url("../../images/profile.webp");
+  background-size: contain;
   background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  padding: 0 !important;
-  margin: 0;
 }
 
-.orangedot, .orangeColor {
+.proDiv {
+  display: flex;
+}
+
+.proDiv span {
+  background-color: var(--orange);
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 1em;
+}
+
+.syddiv {
+  background-image: url("../../images/syd.webp");
+}
+
+.orangedot,
+.orangeColor {
   color: var(--orange);
 }
 
-.grid3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 20px;
+.textexpandDiv {
+  min-height: 150px;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
 }
 
-.grid-item {
-  background-color: black;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+#animatetext1,
+#animatetext2,
+#animatetext3 {
+  transform: translateY(100%);
 }
 
 @media only screen and (max-width: 767px) {
-  .grid3 {
+  .aboutherocontainer div {
+    padding: 2em 10px;
+  }
+  .aboutpage {
+    padding: 0;
+  }
+
+  .aboutherocontainer {
     grid-template-columns: 1fr;
   }
 
-  .profile-img {
-    object-fit: contain;
+ 
+  .profilediv {
+    width: 80px;
+    height: 80px;
+  }
+
+  .textexpandDiv {
+    width: 100%;
   }
 }
 

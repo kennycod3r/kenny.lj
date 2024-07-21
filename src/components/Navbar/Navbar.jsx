@@ -4,40 +4,47 @@ import "./Navbar.css";
 import HamburgerMenu from "../Hamburger/HamburgerMenu";
 
 const Navbar = ({ handleSidebar, openSidebar }) => {
-  const navLinks = ["About", "Projects", "Contact"];
-
   return (
-    <nav className="static-nav">
-      <div className="static-nav-inner">
-        <div className="nav-links-container">
+    <nav className="static-nav fJc">
+      <div className="static-nav-inner flexSB">
+        <div className="nav-links-container fJc">
           <Link to="/">
             <div className="logo-text fcb">
-              <div className="spin-logodiv">
-                <span className="spinlogo">©</span>
+              <div className="spin-logodiv  fJc">
+                <span className="spinlogo fJc">©</span>
               </div>
               <div className="logo-main fcb">KNNY</div>
             </div>
           </Link>
         </div>
-        <div className="nav-links-container nlc-with-menu">
+        <div className="nav-links-container nlc-with-menu flexSB">
           <div className="nav-items-container showmobile">
             <ul className="showmobile">
-              {navLinks.map((link) => (
-                <li key={link}>
-                  <Link to={`/${link.toLowerCase()}`}>
-                    <div className="nav-link" data-text={link}>
-                      {link.replace(/([A-Z])/g, " $1").trim()}
-                    </div>
-                  </Link>
-                </li>
-              ))}
+              <li id="navabout">
+                <Link to="/AboutPage">
+                  <div className="nav-link fJc" data-text="About">
+                    About
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Projects">
+                  <div className="nav-link  fJc" data-text="Projects">
+                    Projects
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/ContactPage">
+                  <div className="nav-link  fJc" data-text="Contact">
+                    Contact
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="fixed-ham animated-btn">
-            <HamburgerMenu
-              handleSidebar={handleSidebar}
-              openSidebar={openSidebar}
-            />
+            <HamburgerMenu handleSidebar={handleSidebar} openSidebar={openSidebar} />
           </div>
         </div>
       </div>
@@ -46,4 +53,3 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
 };
 
 export default memo(Navbar);
-

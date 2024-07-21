@@ -10,10 +10,11 @@
   overflow: hidden;
   display: flex;
   z-index: 17;
+  cursor:crosshair;
   line-height: 1em !important;
   align-items: center;
   justify-content: flex-start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: var(--navanimationslow2), box-shadow 0.3s ease;
 }
 
 .author-box:hover {

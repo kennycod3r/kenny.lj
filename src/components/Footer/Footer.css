@@ -6,13 +6,15 @@
   z-index: 300;
   display: flex;
   align-items: center;
-  justify-content: baseline;
   min-height: fit-content;
 }
+
 .Homefooter-wrapper {
   min-width: 100%;
   min-height: 100%;
 }
+
+
 .Homefooter p {
   color: white;
 }
@@ -48,11 +50,6 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
-}
-
-.f-title {
-  padding-top: 1em;
-  text-align: left;
 }
 
 .aligned-paragraphs {
@@ -109,7 +106,7 @@
   right: 40px;
   z-index: 9;
   bottom: 70px;
-  transition: var(--animationSmooth);
+  transition: var(--navanimationslow);
 }
 .body-section {
   position: relative;
@@ -128,10 +125,9 @@
 
 .footer-btn {
   align-items: flex-start;
-  justify-content: flex-start !important;
-  min-height: 0 !important;
-  padding: 0 !important;
-  margin-top: 2em;
+  justify-content: flex-start ;
+  min-height: 0 ;
+  padding: 0;
 }
 .fc-recource{
   margin-top: 1em;

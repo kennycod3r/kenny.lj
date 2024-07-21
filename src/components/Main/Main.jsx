@@ -19,14 +19,12 @@ const Main = () => {
   }, []);
 
   return (
-    <main>
+    <main className="fJc">
       <div className="doublegrid">
         <div className="maingrid1">
-          <div className="containerAnimate">
-            <div className="containerAnimate-div">
-              <h1 id="header2">
-                What I Do?<span className="o2">03</span><div class="arrow-right"></div>
-              </h1>
+          <div className="containerAnimate main-animate-txt fJc">
+            <div className="containerAnimate-div fStart">
+              <h1 id="header2">What I Do?</h1>
             </div>
           </div>
 
@@ -41,7 +39,11 @@ const Main = () => {
         <div className="main-grid-2">
           <article className="smallp article">
             <div>
-              <h3 className="headerp name">Interactive Developer.</h3>
+              <div className="fStart">
+                {" "}
+                <h3 className="headerp name">Interactive Developer.</h3>
+                <span className="o2">01</span>
+              </div>
               <p className="smallestp headerp">
                 I create engaging and purposeful web experiences. As a frontend
                 developer versed in React, TypeScript, and all necessary skills,
@@ -54,7 +56,7 @@ const Main = () => {
                 with a competitive edge in the digital landscape.
               </p>
             </div>
-            <div>
+            <div className=" mobileBorder">
               <h3 className="headerp name">Interactive Designer.</h3>
               <p className="smallestp headerp">
                 I specialize in helping brands stand out in the digital world by
@@ -68,10 +70,15 @@ const Main = () => {
             </div>
           </article>
 
-          <div className="mfs">
-            <Link className="grey-text aboutme-link number fC" to="/AboutUs">
+          <div className="mfs main-f-btn footer-btn flexSB">
+            <Link className="grey-text underline aboutme-link number fC" to="/AboutPage">
               <ArrowLink black={true} />
               Explore More —ABOUT ME
+            </Link>
+            <Link to="/ContactPage">
+              <button className="more-button">
+                <p>Contact</p>
+              </button>
             </Link>
           </div>
         </div>

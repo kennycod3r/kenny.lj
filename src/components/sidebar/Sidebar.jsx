@@ -19,34 +19,21 @@ const Sidebar = ({ openSidebar, handleSidebar }) => {
           <CloseSvg isOpen={openSidebar} />
         </div>
         <ul>
-          <li className="navigation-sidelink">
+          <li className="navigation-sidelink flexSB">
             <Link
               to="/"
               className={`sidebar-link ${isActive("/") ? "active" : ""}`}
               data-text="Home"
               onClick={handleSidebar}
             >
-              <div>
+              <div className="fC">
                 <h3 className="headerh2">HOME</h3>
+                <div className={`dot ${isActive("/") ? "active" : ""}`}></div>
               </div>
-              <div className={`dot ${isActive("/") ? "active" : ""}`}></div>
             </Link>
+            <span className="o2">00-06</span>
           </li>
-          <li className="navigation-sidelink">
-            <Link
-              to="/AboutPage"
-              className={`sidebar-link ${isActive("/AboutPage") ? "active" : ""}`}
-              onClick={handleSidebar}
-            >
-              <div>
-                <h3 className="headerh2">ABOUT US</h3>
-              </div>
-              <div
-                className={`dot ${isActive("/AboutUs") ? "active" : ""}`}
-              ></div>
-            </Link>
-          </li>
-          <li className="navigation-sidelink">
+          <li className="navigation-sidelink flexSB">
             <Link
               to="/Projects"
               className={`sidebar-link ${
@@ -61,22 +48,42 @@ const Sidebar = ({ openSidebar, handleSidebar }) => {
                 className={`dot ${isActive("/Projects") ? "active" : ""}`}
               ></div>
             </Link>
+            <span className="o2">02-03</span>
           </li>
-          <li className="navigation-sidelink">
+          <li className="navigation-sidelink flexSB">
             <Link
-              to="/Press"
-              className={`sidebar-link ${isActive("/Press") ? "active" : ""}`}
+              to="/AboutPage"
+              className={`sidebar-link ${
+                isActive("/AboutPage") ? "active" : ""
+              }`}
               onClick={handleSidebar}
             >
               <div>
-                <h3 className="headerh2">PRESS</h3>
+                <h3 className="headerh2">ABOUT ME</h3>
+              </div>
+              <div
+                className={`dot ${isActive("/AboutUs") ? "active" : ""}`}
+              ></div>
+            </Link>
+            <span className="o2">03-04</span>
+          </li>
+          
+          <li className="navigation-sidelink flexSB">
+            <Link
+              to="/"
+              className={`sidebar-link`}
+              onClick={handleSidebar}
+            >
+              <div>
+                <h3 className="headerh2">SERVICES</h3>
               </div>
               <div
                 className={`dot ${isActive("/Press") ? "active" : ""}`}
               ></div>
             </Link>
+            <span className="o2">04-06</span>
           </li>
-          <li className="navigation-sidelink">
+          <li className="navigation-sidelink flexSB">
             <Link
               to="/ContactPage"
               className={`sidebar-link ${
@@ -91,6 +98,7 @@ const Sidebar = ({ openSidebar, handleSidebar }) => {
                 className={`dot ${isActive("/ContactPage") ? "active" : ""}`}
               ></div>
             </Link>
+            <span className="o2">06-09</span>
           </li>
         </ul>
         <div className="semi-circle">

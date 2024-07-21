@@ -14,7 +14,7 @@ const ServiceCard = ({
   imgtext2,
 }) => {
   return (
-    <div className="service-div">
+    <div className="service-div flexSB">
       <div className="service-card">
         <div className="service-card-btn pad-m">
           <h2 className="headerh2">{title}</h2>
@@ -23,7 +23,7 @@ const ServiceCard = ({
         <div className="service-card-wrapper">
           <div>
             <div
-              className="phonediv website-visual"
+              className="phonediv website-visual fJc"
               style={{ backgroundImage: `url(${servicesIcon})` }}
             >
               <div className="overlay-tinydiv">
@@ -34,7 +34,7 @@ const ServiceCard = ({
                 />
               </div>
             </div>
-            <ul className="serviceList">
+            <ul className="serviceList flexSB">
               {serviceLists.map((service, index) => (
                 <li key={index} className="smallestp headerp">
                   {service}

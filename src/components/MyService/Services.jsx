@@ -1,9 +1,9 @@
 import React from "react";
 import ServiceCard from "../../util/ServiceCard";
 import "./Services.css";
+import { Link } from "react-router-dom";
 import Ipad from "../../assets/ipad.svg";
 import ptinyicon from "../../images/profiletiny.png";
-import phoneImg from "../../images/phone.png";
 import googleIcon from "../../assets/google2.svg";
 import dropIcon from "../../assets/drop.svg";
 import spannerIcon from "../../assets/spanner.svg";
@@ -39,7 +39,7 @@ const Services = () => {
     {
       title: "Design/Branding",
       servicesIcon: websiteImg3,
-      tinyIcon1:boxIcon,
+      tinyIcon1: boxIcon,
       tinyIcon2: dCircle,
       tinyIcon3: dropIcon,
       serviceLists2: [
@@ -57,37 +57,39 @@ const Services = () => {
   ];
 
   return (
-    <div className="whitebtn-div">
+    <div className="whitebtn-div fJc">
       <h1 className="header--two fC">
         <div className="fC">
           <img src={Ipad} alt="service icon" className="svgipad showmobile" />
         </div>
-        Services I Provide. <span className="o2">03</span>
+        Services I Provide. <span className="o2">04</span>
       </h1>
       <div className="services-section">
         <div className="service-sec-grid">
-        {serviceDivData.map((service, index) => (
-          <ServiceCard
-            key={index}
-            Ipad={Ipad}
-            tinyIcon1={service.tinyIcon1}
-            tinyIcon2={service.tinyIcon2}
-            tinyIcon3={service.tinyIcon3}
-            title={service.title}
-            imgtext1={service.imgtext1}
-            imgtext2={service.imgtext2}
-            servicesText={service.servicesText}
-            serviceLists={service.serviceLists}
-            serviceLists2={service.serviceLists2}
-            servicesIcon={service.servicesIcon}
-          />
-        ))}
+          {serviceDivData.map((service, index) => (
+            <ServiceCard
+              key={index}
+              Ipad={Ipad}
+              tinyIcon1={service.tinyIcon1}
+              tinyIcon2={service.tinyIcon2}
+              tinyIcon3={service.tinyIcon3}
+              title={service.title}
+              imgtext1={service.imgtext1}
+              imgtext2={service.imgtext2}
+              servicesText={service.servicesText}
+              serviceLists={service.serviceLists}
+              serviceLists2={service.serviceLists2}
+              servicesIcon={service.servicesIcon}
+            />
+          ))}
         </div>
-        
-        <div className="more-btn-div">
-          <button className="more-button">
-            <p className="content-txt">Contact Me</p>
-          </button>
+
+        <div className="more-btn-div fJc">
+          <Link to="/ContactPage">
+            <button className="more-button">
+              <p className="content-txt">Contact Me</p>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

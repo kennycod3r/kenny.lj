@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
-const BackToTop = React.lazy(() => import("./BackToTop"));
+import BackToTop from './BackToTop';
 
 export default function Footer() {
   let currenttime = new Date().getFullYear();
@@ -8,14 +8,14 @@ export default function Footer() {
 
   return (
     <>
-      <React.Suspense fallback={<div>Loading...</div>}>
-        <BackToTop />
-      </React.Suspense>
+      <BackToTop />
 
       <footer className="Homefooter">
         <div className="Homefooter-wrapper">
-          <div className="f-title">
-            <h2>INFORMATION</h2>
+          <div className="containerAnimate-div fStart">
+            <h3>
+              INFORMATION. <span className="o2">06</span>
+            </h3>
           </div>
 
           <div className="footer-container">
