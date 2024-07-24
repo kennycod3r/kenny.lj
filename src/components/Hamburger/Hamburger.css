@@ -70,18 +70,18 @@
 }
 
 .hamburger--3dx.is-active .hamburger-inner {
-  background-color: transparent !important;
+  background-color: transparent;
   transform: rotateY(180deg);
 }
 
 .hamburger--3dx.is-active .hamburger-inner::before {
   transform: translate3d(0, 5px, 0) rotate(45deg);
-  background-color: var(--orange) !important;
-  color: var(--orange) !important;
+  background-color: var(--orange);
+  color: var(--orange);
 }
 
 .hamburger--3dx.is-active .hamburger-inner::after {
   transform: translate3d(0, -5px, 0) rotate(-45deg);
-  background-color: var(--orange) !important;
-  color: var(--orange) !important;
+  background-color: var(--orange);
+  color: var(--orange);
 }

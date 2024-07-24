@@ -44,7 +44,7 @@ export default function AboutMe() {
             </Link>
           </div>
         </div>
-        <div>
+        <div className="mobileBorder">
           <div>
             <h1 className="fStart fadeIndiv">
               Front-End Developer<span className="o2">04</span>
@@ -69,10 +69,7 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="about-me-section fadeIndiv">
-        <div className="about-text-area">
-          <div className="doublegrid"></div>
-          <p className="body-text">I can help with</p>
-        </div>
+        
       </div>
     </div>
   );

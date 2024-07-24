@@ -15,7 +15,7 @@
   padding: 0.5em 1em;
 }
 
-.whitecontainer {
+.whitecontainer, .whitecontainerorange {
   min-height: 100vh;
   width: 100%;
   margin: 0 auto;
@@ -29,6 +29,12 @@
   );
   box-shadow: 0 0 10px rgba(1, 1, 1, 0.38);
   background-color: #181818;
+}
+
+
+.whitecontainerorange {
+ background: black;
+ border: var(--border-line);
 }
 
 .aboutpage {
@@ -55,13 +61,19 @@
   gap: 0.1em;
 }
 
-.profilediv {
+.profilediv, .contactprofilediv{
   height: 100px;
   width: 100px;
   transition: var(--animationSmooth);
   border-radius: 50%;
   cursor: pointer;
   border: var(--border-line);
+}
+
+.contactprofilediv{
+  height: 35px;
+  width: 35px;
+  overflow: hidden;
 }
 
 .profilediv:hover {
@@ -110,7 +122,7 @@
   transform: translateY(100%);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 867px) {
   .aboutherocontainer div {
     padding: 2em 10px;
   }
@@ -130,6 +142,9 @@
 
   .textexpandDiv {
     width: 100%;
+  }
+  .aboutme-pages{
+    padding: 3px;
   }
 }
 

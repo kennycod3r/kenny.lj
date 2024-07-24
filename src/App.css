@@ -47,7 +47,10 @@ main {
   main {
     padding: 0;
   }
-
+  .main-f-btn {
+    flex-direction: column;
+    gap: 1em;
+  }
   main {
     padding: var(--padding-mobile);
   }

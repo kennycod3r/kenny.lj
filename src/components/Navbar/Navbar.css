@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 4.2rem;
-  line-height: normal !important;
+  line-height: normal;
   backdrop-filter: blur(0.1em);
   z-index: 95;
   color: white;
@@ -64,7 +64,7 @@
   content: attr(data-text);
   position: absolute;
   inset: 0;
-  color: whitesmoke;
+  color: white;
   transform: translateY(100%);
   transition: 0.4s var(--navCube);
   display: flex;

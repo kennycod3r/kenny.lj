@@ -1,6 +1,5 @@
 .aboutpage,
-.ProjectDisplaypage,
-.linkDisplaypage {
+.ProjectDisplaypage {
   background-color: var(--black);
   min-height: 100vh;
   height: 100%;
@@ -39,7 +38,7 @@
   min-width: 100%;
   position: relative;
   max-height: 45px;
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 #contacth1,
@@ -61,13 +60,15 @@
   transform: translateY(100%);
   color: white;
 }
+
 #header2 {
   font-size: 2.3em;
   align-items: center;
   justify-content: center;
-  color: var(--color1) !important;
+  color: var(--color1);
 }
 .linkDisplaypage {
+  background-color: black;
   display: flex;
   flex-direction: column;
   padding: var(--pagePadding);
@@ -77,7 +78,7 @@
 .service-btn {
   padding: 1em;
   cursor: pointer;
-  background-color: #ccc;
+  background-color: white;
   border: none;
   font-size: 10px;
   border-radius: 2em;
@@ -112,7 +113,32 @@
   padding: 2em;
   overflow: hidden;
 }
+
+.contact-wrapper-outer {
+  padding: 4em 6em;
+  background-color: var(--black);
+}
+
+.contact-profile {
+  height: 40px;
+  width: fit-content;
+  gap: 1em;
+  padding-left: 4px;
+  padding-right: 10px;
+  margin: 1em 0;
+  background-color: var(--orange);
+  border-radius: 2em;
+}
+
 /* Tech page */
+.mh40 {
+  min-height: 35vh;
+}
+.specialize {
+  display: grid;
+  gap: 0.5em;
+  margin-bottom: 4em;
+}
 .tech-card {
   min-height: 300px;
   min-width: 300px;
@@ -146,39 +172,18 @@
   gap: 2em;
 }
 
-.tech-cut {
-  background-color: var(--black);
-  width: 100%;
-  border-radius: 7px;
-  color: white;
-  overflow: hidden;
-  height: 60px;
-  font-size: 14px;
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--navanimationslow);
-}
-
-.tech-cut ul {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .ts-div2 {
-  justify-content: space-between;
+  display: grid;
   width: 100%;
-  gap: 0.7em;
+  gap: 2em;
 }
 
 .ts-div2-lists-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5em;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
   width: 100%;
 }
@@ -188,39 +193,12 @@
   line-height: 1.5em;
 }
 
-.tech-cut li {
-  display: flex;
-  padding: 0 2px;
-  min-height: 100%;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
-}
-
-.tech-btn {
-  min-width: 100%;
-  height: 40px;
-  border-radius: 9px;
-  display: flex;
-  background-color: inherit;
-  align-items: center;
-  justify-content: center;
-  border: 0.1px solid rgb(93, 93, 93);
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.linktech {
-  padding: 1em;
-}
-
-.tech-btn:hover {
-  background-color: var(--orange);
-}
 @media (max-width: 780px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+  .contact-wrapper-outer {
+    padding: 10px;
   }
   .gridDiv {
     padding: 0;

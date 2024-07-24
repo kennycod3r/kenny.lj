@@ -13,12 +13,12 @@ const DisplayPage = React.memo(
     useEffect(() => {
       const animation = gsap.to(displayPageRef.current, {
         y: openDisplay ? 0 : "100%",
-        duration: 1,
-        ease: "power3.inOut",
+        duration: 1.1,
+        stagger:0,
+        ease: "power4.out", // Use power4.out for a smoother deceleration effect
       });
       return () => animation.kill();
     }, [openDisplay]);
-
     return (
       <div ref={displayPageRef} data-lenis-prevent className="display-page">
         <div className="flex-header">
@@ -37,8 +37,8 @@ const DisplayPage = React.memo(
           <div className="display-page-scroller">
             <div className="display-page-image snap-scroller">
               {displayPageDataImages.map((item, index) => (
-                <div className="project-imgs" key={index}>
-                  <img className="dp-inner-img" src={item} alt={`project-${index}`} />
+                <div className="project-imgs-con fJc" key={index}>
+                  <img className="project-imgs" src={item} alt={`project-${index}`} />
                 </div>
               ))}
               <div className="project-imgs project-imgs-link">

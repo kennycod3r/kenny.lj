@@ -10,9 +10,9 @@ const TinyDiv = ({ imageUrl, imgtext, tinyText }) => {
         </div>
         <div className="author-content">
           {tinyText ? (
-            <span className="tinytext">{imgtext}</span>
+            <span className="tinyp">{imgtext}</span>
           ) : (
-            <span className="bigtext">{imgtext}</span>
+            <span className="headerp">{imgtext}</span>
           )}
         </div>
       </div>

@@ -1,10 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Vite + React</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="icon" type="image/svg+xml" href="/imgWindow.svg" />
+    <title>Oguntola Kenny • Freelance Designer & Developer</title>
+    <meta
+      name="description"
+      content="Oguntola Kenny is a Freelance Front-End Developer and Web Designer helping startups worldwide thrive in the digital world. Based in Nigeria, delivering tailor-made digital designs and building interactive websites from scratch."
+    />
+    <meta
+      property="og:title"
+      content="Oguntola Kenny • Freelance Designer & Developer"
+    />
+    <meta
+      property="og:description"
+      content="Oguntola Kenny is a Freelance Front-End Developer and Web Designer helping startups worldwide gain an unfair advantage."
+    />
+    <meta property="og:image" content="/src/images/hello.webp" />
+    <meta property="og:site_name" content="Oguntola Kenny" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="twitter:title"
+      content="Oguntola Kenny • Freelance Designer & Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Oguntola Kenny is a Freelance Front-End Developer and Web Designer helping startups worldwide gain an unfair advantage."
+    />
+    <meta property="twitter:image" content="/src/images/hello.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="google" content="notranslate" />
+    <link rel="canonical" href="https://oguntolakenny.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/src/App.css" rel="stylesheet" />
+    <style>
+      .hero-container {
+        width: 100%;
+        min-height: 90vh;
+        position: relative;
+        background: center / cover no-repeat
+          url("../../../src/images/hello.webp");
+        overflow: hidden;
+      }
+
+      .dd {
+        height: fit-content;
+        bottom: 0;
+        transform: translateY(0);
+        position: absolute;
+        overflow: hidden;
+        background-color: transparent;
+        right: 1em;
+        z-index: 2;
+        transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        will-change: transform;
+      }
+
+      .spinIcon {
+        transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        will-change: transform;
+        transform: rotate(180deg);
+      }
+
+      .spinIcon:hover {
+        animation: logo-spin 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .spinIcon-open {
+        transform: rotate(0deg);
+      }
+
+      .dd-open {
+        transform: translateY(-80px);
+      }
+
+      .nav-dd {
+        z-index: 2;
+        width: 570px;
+        color: white;
+        backdrop-filter: blur(6px);
+        background-color: rgba(118, 118, 118, 0.4);
+        border-radius: 0.75rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1em;
+        line-height: 1.4;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .expand-icon {
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        overflow: hidden;
+        right: 10px;
+        top: 10px;
+      }
+
+      @keyframes logo-spin-open {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(40deg);
+        }
+      }
+
+      @keyframes logo-spin-close {
+        from {
+          transform: rotate(40deg);
+        }
+        to {
+          transform: rotate(0);
+        }
+      }
+
+      .hero-headtextt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .arrowdiv {
+        width: 30px;
+        height: 30px;
+        margin-top: 20px;
+      }
+
+      .hero-headtextt h1 {
+        font-size: 4em;
+        margin-top: 12px;
+        letter-spacing: -2px;
+      }
+      .linehero,
+      .span-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        overflow: hidden;
+      }
+      .span-container {
+        position: relative;
+      }
+      .oshin-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        line-height: 1.4;
+        font-weight: 400;
+        width: 400px;
+        margin-top: 20px;
+        margin-left: 50px;
+      }
+
+      .oshin-container span {
+        font-size: 1.44em;
+        text-align: left;
+        text-transform: capitalize;
+      }
+      .hero-headtext .o2 {
+        color: var(--orange);
+      }
+      .smallp {
+        font-size: 15px;
+        text-align: left;
+        line-height: 1.4;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+
+      .smallestp {
+        font-size: 14px;
+      }
+
+      .view-hero-header {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 4;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        overflow: hidden;
+        border-bottom: var(--border-line);
+        height: 50px;
+        justify-items: flex-start;
+      }
+
+      .explore-text {
+        padding-left: 30px;
+      }
+
+      .view-hero-header-details {
+        background-color: #fafafa;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        min-height: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        align-items: center;
+        padding: 0 10px;
+        line-height: normal;
+        align-content: space-around;
+        justify-items: center;
+      }
+
+      @media (max-width: 780px) {
+        .dd {
+          right: auto;
+          bottom: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .dd-open {
+          transform: translateY(30px);
+        }
+        .expand-icon {
+          display: none;
+        }
+
+        .nav-dd {
+          width: 90%;
+        }
+        .hero-container {
+          min-height: 70vh;
+        }
+        .hero-overlay {
+          min-height: 100%;
+        }
+        .view-hero-header-details {
+          grid-template-columns: 1fr;
+        }
+        .hero-caption {
+          padding: 10px;
+        }
+        .hero-headtextt {
+          line-height: 1;
+        }
+        .hero-headtextt h1 {
+          font-size: 3.2em;
+          width: 50%;
+        }
+        .oshin-container {
+          width: 80%;
+        }
+        .oshin-container span {
+          font-size: 1em;
+          margin-left: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

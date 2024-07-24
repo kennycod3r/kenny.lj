@@ -1,26 +1,42 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import useLenis from "./components/hooks/UseLennis";
 import { Outlet } from "react-router-dom";
 import "./App.css";
+import Loading from "./util/Loader/Loading";
 import Sidebar from "./components/sidebar/Sidebar";
 
 const App = () => {
   useLenis();
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
 
   const handleSidebar = useCallback(() => {
     setOpenSidebar((prevState) => !prevState);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    const hideLoaderTimer = setTimeout(() => setShowLoader(false), 2500);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(hideLoaderTimer);
+    };
+  }, []);
+
   return (
-    <div className="flexPage">
-      <Navbar handleSidebar={handleSidebar} openSidebar={openSidebar} />
-      <Sidebar handleSidebar={handleSidebar} openSidebar={openSidebar} />
-      <Outlet />
-      <Footer />
-    </div>
+    <>
+      {showLoader && <Loading isLoading={isLoading} />}
+      <div className={`flexPage ${isLoading ? "hide-content" : ""}`}>
+        <Navbar handleSidebar={handleSidebar} openSidebar={openSidebar} />
+        <Sidebar handleSidebar={handleSidebar} openSidebar={openSidebar} />
+        <Outlet />
+        <Footer />
+      </div>
+    </>
   );
 };
 

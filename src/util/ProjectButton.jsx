@@ -11,7 +11,7 @@ const ProjectButton = ({
     <div>
       <button
         onClick={() =>
-          handleSendImg(item.image, item.title, item.projectImages)
+          handleSendImg(item.image, item.title, item.projectImages, item.projectTags)
         }
         className="project-button"
         style={{ position: "relative" }}
@@ -35,9 +35,11 @@ const ProjectButton = ({
         <div className="project-description">
           <h2 className="project-title">{item.title}</h2>
           <ul className="project-tags">
-            <li>design</li>
-            <li>development</li>
-            <li>strategy</li>
+            {item.projectTags.map((item, index) => {
+              return(
+                <li key={index}>{item}</li>
+              )
+            })}
           </ul>
         </div>
       </button>

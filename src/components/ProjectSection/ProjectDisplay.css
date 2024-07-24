@@ -3,7 +3,7 @@
   min-width: 100%;
   border-radius: 12px 12px 0 0;
   background: var(--black);
-  color: #f0f0f0;
+  color: white;
   z-index: 40;
   padding: var(--pagePadding);
 }
@@ -40,8 +40,7 @@
   cursor: pointer;
   padding-bottom: 1em;
   margin-top: 1em;
-  transition: var(--navAnimationSlow2);
-  border-bottom: var(--borderLine);
+  border-bottom: var(--border-line);
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;

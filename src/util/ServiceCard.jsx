@@ -8,20 +8,19 @@ const ServiceCard = ({
   serviceLists2,
   servicesIcon,
   tinyIcon1,
-  tinyIcon2,
   tinyIcon3,
   imgtext1,
   imgtext2,
 }) => {
   return (
-    <div className="service-div flexSB">
-      <div className="service-card">
-        <div className="service-card-btn pad-m">
+    <div className="service-div fStart">
+      <div className="service-card ">
+        <div className="service-card-btn pad-m ">
           <h2 className="headerh2">{title}</h2>
         </div>
 
-        <div className="service-card-wrapper">
-          <div>
+        <div className="service-card-wrapper fStart">
+          <div className="oneh">
             <div
               className="phonediv website-visual fJc"
               style={{ backgroundImage: `url(${servicesIcon})` }}
@@ -43,9 +42,9 @@ const ServiceCard = ({
             </ul>
           </div>
 
-          <div className="main-grid-2">
+          <div className="main-grid-2 service-mg2">
             <div className="tiny-div-2">
-              <div>
+              <div className="td-box">
                 <TinyDiv imageUrl={tinyIcon1} imgtext={imgtext1} />
               </div>
               <ul className="tiny-div-2-ul pad-m">
@@ -58,9 +57,11 @@ const ServiceCard = ({
                 })}
               </ul>
             </div>
-            <div className="sctext pad-m">
-              <p className="smallestp headerp">{servicesText}</p>
-            </div>
+            <article className="smallp article">
+              <div>
+                <p className="smallestp headerp">{servicesText}</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -68,4 +69,4 @@ const ServiceCard = ({
   );
 };
 
-export default ServiceCard;
+export default React.memo(ServiceCard);
