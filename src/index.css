@@ -199,6 +199,7 @@ select {
   background: rgba(0, 0, 0, 0.3);
   min-height: 100%;
   overflow: hidden;
+  padding-right: 1em;
 }
 
 #error-page {
@@ -227,6 +228,7 @@ b {
 .Text_XL__ku5Fh {
   font-size: 7vw;
   line-height: 0.9;
+  letter-spacing: 0.1px;
 }
 
 /* Header */
@@ -319,7 +321,14 @@ i {
   margin-bottom: .5em;
 }
 
+.overflow-Hide{
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 850px) {
+  .hero-overlay{
+    padding: 0;
+  }
   .doublegrid {
     grid-template-columns: 1fr;
     gap: 2em;

@@ -22,85 +22,93 @@ import pshot1 from "../images/pshot1.webp";
 import pshot2 from "../images/pshot2.webp";
 import TechSection from "../components/Techsec/TechSection.jsx";
 
-const HomePage = () => {
-  const [openDisplay, setOpenDisplay] = useState(false);
-  const [displayPageData, setDisplayPageData] = useState({
-    displayPageDataImg: "",
-    displayPageTitle: "",
-    displayPageText: "",
-    displayPageDataImages: [],
-  });
-
-  const handleOpenDisplay = useCallback(() => {
-    setOpenDisplay((prevState) => !prevState);
-  }, []);
-
-  const techCardData = useMemo(() => [
-    {
-      techstackTitle: "REACT",
-      techText: "As a highly skilled React frontend developer, I excel in creating dynamic and responsive user interfaces with a strong focus on performance and user experience...",
-      displayPageImg: ReactImgSvg,
-    },
-    {
-      techstackTitle: "JAVASCRIPT",
-      techText: "As a proficient JavaScript developer, I bring extensive experience in building robust and scalable web applications...",
-      displayPageImg: javascriptimgSvg,
-    },
-    {
-      techstackTitle: "SCSS/SC/GSAP",
-      techText: "As an adept frontend developer, I specialize in crafting visually appealing and responsive designs using SCSS, CSS, Styled Components, and Bootstrap...",
-      displayPageImg: scssimgSvg,
-    },
-    {
-      techstackTitle: "FIGMA",
-      techText: "With my expertise in Figma, I excel in translating design concepts into functional, responsive interfaces with precision...",
-      displayPageImg: figmaSvg,
-    },
-  ], []);
-
-  const hProjectImages = useMemo(() => [
-    {
-      projectImages: [pshot0, sf1, sf2, sf3, sf4],
-      image: pshot0,
-      title: "SHOEFANG",
-      projectTags: ["Basic E-commerce Website", "design", "development"]
-    },
-    {
-      projectImages: [vsp1, vsp2],
-      image: pshot2,
-      title: "VESPERTINE",
-      projectTags: ["Automated Restaurant", "design", "development"]
-    },
-    {
-      projectImages: [os1, os2],
-      image: pshot1,
-      title: "OSHINOWO STUDIO (REDESIGN)",
-      projectTags: ["Architecture-Firm", "design", "development"]
-    },
-  ], []);
-
-  return (
-    <>
-      <Hero />
-      <Main />
-      <ProjectDisplay
-        hProjectImages={hProjectImages}
-        setDisplayPageData={setDisplayPageData}
-        handleOpenDisplay={handleOpenDisplay}
-      />
-      <TechSection
-        techCardData={techCardData}
-        setDisplayPageData={setDisplayPageData}
-        handleOpenDisplay={handleOpenDisplay}
-      />
-      <Services />
-      <DisplayPage
-        displayPageData={displayPageData}
-        openDisplay={openDisplay}
-        handleOpenDisplay={handleOpenDisplay}
-      />
-    </>
-  );
-};
-
-export default React.memo(HomePage);
+  const HomePage = () => {
+    const [openDisplay, setOpenDisplay] = useState(false);
+    const [displayPageData, setDisplayPageData] = useState({
+      displayPageDataImg: "",
+      displayPageTitle: "",
+      displayPageText: "",
+      displayPageDataImages: [],
+    });
+  
+    const handleOpenDisplay = useCallback(() => {
+      setOpenDisplay((prevState) => !prevState);
+    }, []);
+  
+    const techCardData = useMemo(
+      () => [
+        {
+          techstackTitle: "REACT",
+          techText:
+            "As a highly skilled React frontend developer, I excel in creating dynamic and responsive user interfaces with a strong focus on performance and user experience...",
+          displayPageImg: ReactImgSvg,
+        },
+        {
+          techstackTitle: "JAVASCRIPT",
+          techText:
+            "As a proficient JavaScript developer, I bring extensive experience in building robust and scalable web applications...",
+          displayPageImg: javascriptimgSvg,
+        },
+        {
+          techstackTitle: "SCSS/SC/GSAP",
+          techText:
+            "As an adept frontend developer, I specialize in crafting visually appealing and responsive designs using SCSS, CSS, Styled Components, and Bootstrap...",
+          displayPageImg: scssimgSvg,
+        },
+        {
+          techstackTitle: "FIGMA",
+          techText:
+            "With my expertise in Figma, I excel in translating design concepts into functional, responsive interfaces with precision...",
+          displayPageImg: figmaSvg,
+        },
+      ],
+      []
+    );
+    const hProjectImages = [
+      {
+        projectImages: [pshot0, sf1, sf2, sf3, sf4],
+        image: pshot0,
+        title: "SHOEFANG",
+        projectTags:["Basic E-commerce Website","design", "development"]
+      },
+      {
+        projectImages: [vsp1, vsp2],
+        image: pshot2,
+        title: "VESPERTINE",
+        projectTags:["Automated Resturant","design", "development"]
+      },
+      {
+        projectImages: [os1, os2],
+        image: pshot1,
+        title: "OSHINOWO STUDIO(REDESIGN)",
+        projectTags:["Architecture-Firm","design", "development"]
+      },
+    ];
+  
+    return (
+      <div className="flexPage">
+        <Hero />
+        <Main />
+        <ProjectDisplay
+          hProjectImages={hProjectImages}
+          handleGetImage={(image, title, projectImages) =>
+            setDisplayPageData({
+              displayPageDataImg: image,
+              displayPageTitle: title,
+              displayPageDataImages: projectImages,
+            })
+          }
+          handleOpenDisplay={handleOpenDisplay}
+        />
+        <Services />
+        <TechSection techCardData={techCardData} />
+        <DisplayPage
+          openDisplay={openDisplay}
+          displayPageData={displayPageData}
+          handleOpenDisplay={handleOpenDisplay}
+        />
+      </div>
+    );
+  };
+  
+  export default HomePage;

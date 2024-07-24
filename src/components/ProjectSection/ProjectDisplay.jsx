@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import ProjectButton from "../../util/ProjectButton";
 import "./ProjectDisplay.css";
-import { Link } from "react-router-dom";
 
 const ProjectDisplay = ({
   handleGetImage,
@@ -24,9 +23,7 @@ const ProjectDisplay = ({
           Selected Works. <span className="o2">02</span>
         </h1>
 
-        <div
-          className={!grid3 ? "projectgrid" : "projectgrid Contactprojectgrid"}
-        >
+        <div className={!grid3 ? "projectgrid" : "projectgrid Contactprojectgrid"}>
           {hProjectImages.map((item, index) => (
             <ProjectButton
               key={index}
@@ -40,13 +37,11 @@ const ProjectDisplay = ({
       {!grid3 && (
         <div className="phone-btn-div">
           <p className="headerp">click to view more</p>
-          <Link to="/Projects">
-            <button className="phoneBtn fJc">
-              <div className="circle fC">
-                <div className="box"></div>
-              </div>
-            </button>
-          </Link>
+          <button className="phoneBtn fJc">
+            <div className="circle fC">
+              <div className="box"></div>
+            </div>
+          </button>
         </div>
       )}
     </div>

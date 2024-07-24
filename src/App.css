@@ -2,18 +2,21 @@ main {
   min-height: 70vh;
   padding: var(--pagePadding);
 }
+
 .maingrid1,
 .main-grid-2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
+
 .maingrid1 ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: flex-start;
   width: 100%;
 }
+
 .maingrid1 ul li {
   text-align: center;
 }
@@ -22,13 +25,16 @@ main {
   margin-top: 1em;
   border-top: var(--border-line);
 }
+
 .article {
   display: grid;
   gap: 2em;
 }
+
 .article h3 {
   padding: 1em 0;
 }
+
 .main-grid-2 {
   padding: 0 var(--contentPadding);
 }
@@ -40,29 +46,34 @@ main {
 .main-f-btn {
   padding-top: 1em;
 }
+
+/* Responsive Styles */
 @media (max-width: 850px) {
   .mfs li {
     font-size: 12px;
   }
+
   main {
-    padding: 0;
+    padding: var(--padding-mobile);
   }
+
   .main-f-btn {
     flex-direction: column;
     gap: 1em;
   }
-  main {
-    padding: var(--padding-mobile);
-  }
+
   .main-grid-2 {
     padding: 0;
   }
+
   .tech-cut li {
     padding: 0;
   }
+
   .aboutme-link {
     justify-content: flex-end;
   }
+
   main {
     text-align: center;
   }

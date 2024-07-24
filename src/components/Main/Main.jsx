@@ -23,7 +23,7 @@ const Main = () => {
         <div className="maingrid1">
           <div className="containerAnimate main-animate-txt fJc">
             <div className="containerAnimate-div fStart">
-              <h1 id="header2">What I Do?</h1>
+              <h1 id="header2" className="header--two">What I Do?</h1>
             </div>
           </div>
           <div className="mfs">

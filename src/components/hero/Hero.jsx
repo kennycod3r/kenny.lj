@@ -3,7 +3,7 @@ import HeroSection from "./HeroSection";
 
 const Hero = () => {
   return (
-    <section>
+    <section className="overflow-Hide">
       <HeroSection />
     </section>
   );

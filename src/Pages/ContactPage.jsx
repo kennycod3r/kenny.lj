@@ -9,7 +9,6 @@ const ContactPage = () => {
     clientName: "",
     clientEmail: "",
     clientPhone: "",
-    appointmentDate: "",
     clientMessage: "",
     clientService: [],
   });
@@ -39,7 +38,6 @@ const ContactPage = () => {
               clientName: "",
               clientEmail: "",
               clientPhone: "",
-              appointmentDate: "",
               clientMessage: "",
               clientService: [],
             });
@@ -109,10 +107,7 @@ const ContactPage = () => {
               <div className="gridDiv">
                 <form ref={formRef} onSubmit={sendEmail}>
                   <div className="form-group">
-                    <label htmlFor="clientService">
-                      I am looking for (select multiple if needed)
-                      <span className="orangeColor">*</span>
-                    </label>
+                    I am looking for (select multiple if needed)
                     <div className="fC flexbtn">
                       {["Web Development", "Web Design"].map((service) => (
                         <button
@@ -158,13 +153,7 @@ const ContactPage = () => {
                       placeholder: "ie +234 000 000 0000",
                       required: true,
                     },
-                    {
-                      label: "Appointment Date",
-                      name: "appointmentDate",
-                      type: "date",
-                      placeholder: "",
-                      required: false,
-                    },
+
                     {
                       label: "Message",
                       name: "message",

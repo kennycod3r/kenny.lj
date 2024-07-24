@@ -60,7 +60,7 @@ const HeroSection = () => {
             <div className="containerAnimate">
               <div className="hero-containerAnimate-div">
                 <h1 className="Text_XL__ku5Fh" id="heroHeader">
-                  Oguntola Kenny.
+                  Oguntola Kenny
                 </h1>
               </div>
             </div>

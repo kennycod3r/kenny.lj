@@ -58,7 +58,6 @@
         bottom: 0;
         transform: translateY(0);
         position: absolute;
-        overflow: hidden;
         background-color: transparent;
         right: 1em;
         z-index: 2;
@@ -112,25 +111,6 @@
         right: 10px;
         top: 10px;
       }
-
-      @keyframes logo-spin-open {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(40deg);
-        }
-      }
-
-      @keyframes logo-spin-close {
-        from {
-          transform: rotate(40deg);
-        }
-        to {
-          transform: rotate(0);
-        }
-      }
-
       .hero-headtextt {
         display: flex;
         flex-direction: column;
@@ -167,7 +147,7 @@
         justify-content: flex-end;
         line-height: 1.4;
         font-weight: 400;
-        width: 400px;
+        width: 450px;
         margin-top: 20px;
         margin-left: 50px;
       }
@@ -224,6 +204,23 @@
         line-height: normal;
         align-content: space-around;
         justify-items: center;
+      }
+      @keyframes logo-spin-open {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(40deg);
+        }
+      }
+
+      @keyframes logo-spin-close {
+        from {
+          transform: rotate(40deg);
+        }
+        to {
+          transform: rotate(0);
+        }
       }
 
       @media (max-width: 780px) {

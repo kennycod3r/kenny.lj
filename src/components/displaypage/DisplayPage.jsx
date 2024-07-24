@@ -14,7 +14,7 @@ const DisplayPage = React.memo(
       const animation = gsap.to(displayPageRef.current, {
         y: openDisplay ? 0 : "100%",
         duration: 1.1,
-        stagger:0,
+        stagger: 0,
         ease: "power4.out", // Use power4.out for a smoother deceleration effect
       });
       return () => animation.kill();
@@ -22,9 +22,11 @@ const DisplayPage = React.memo(
     return (
       <div ref={displayPageRef} data-lenis-prevent className="display-page">
         <div className="flex-header">
-          <span className="showmobile job-title underline whiteColor flexSB">
-            <ArrowLink /> VIEW LIVE PROJECT
-          </span>
+          <a target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
+            <span className="showmobile job-title underline whiteColor flexSB">
+              <ArrowLink /> VIEW LIVE PROJECT
+            </span>
+          </a>
           <div className="display-page-title">{displayPageTitle}</div>
           <div className="close-header" onClick={handleOpenDisplay}>
             <span className="job-title whiteColor">close</span>
@@ -38,14 +40,23 @@ const DisplayPage = React.memo(
             <div className="display-page-image snap-scroller">
               {displayPageDataImages.map((item, index) => (
                 <div className="project-imgs-con fJc" key={index}>
-                  <img className="project-imgs" src={item} alt={`project-${index}`} />
+                  <img
+                    className="project-imgs"
+                    src={item}
+                    alt={`project-${index}`}
+                  />
                 </div>
               ))}
               <div className="project-imgs project-imgs-link">
                 <div className="pili fJc">
-                  <span className="job-title underline whiteColor fC">
-                    <ArrowLink /> VIEW LIVE PROJECT
-                  </span>
+                  <a
+                    target="_blank"
+                    href="https://shoe-fang-v-indol.vercel.app/"
+                  >
+                    <span className="job-title underline whiteColor fC">
+                      <ArrowLink /> VIEW LIVE PROJECT
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>

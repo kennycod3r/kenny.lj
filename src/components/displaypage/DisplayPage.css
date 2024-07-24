@@ -42,9 +42,11 @@
   align-content: center;
   justify-content: space-evenly;
 }
-.project-imgs-con{
+
+.project-imgs-con {
   background-color: black;
 }
+
 .flex-header {
   display: flex;
   border-radius: 12px 12px 0 0;
@@ -126,10 +128,12 @@
   border: 1px solid #181818;
 }
 
+/* Hide scrollbar */
 .display-page::-webkit-scrollbar {
   display: none;
 }
 
+/* Responsive styles */
 @media only screen and (max-width: 720px) {
   .display-page-image {
     grid-auto-flow: row;
