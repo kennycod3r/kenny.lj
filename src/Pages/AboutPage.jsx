@@ -4,11 +4,11 @@ import AboutMe from "../components/About-me/AboutMe";
 const AboutPage = () => {
   return (
     <div className="aboutpage">
+      <div className="about-nav fC">
+        <div>Circle</div>
+        <div>Kenny</div>
+      </div>
       <div className="whitecontainer">
-        <div className="about-nav fC">
-          <div>Circle</div>
-          <div>Kenny</div>
-        </div>
         <AboutMe />
       </div>
     </div>
@@ -16,4 +16,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-

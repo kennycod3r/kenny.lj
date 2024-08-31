@@ -1,0 +1,85 @@
+.project-detail-sec{
+    display: grid;
+    color: var(--color1);
+    padding: var(--padding-mobile);
+}
+/* Intro Section */
+.pd-intro {
+    padding-top: 6vw;
+  }
+  
+  /* Global Margin */
+  .pd-margin {
+    margin: 4vw 0;
+  }
+  
+  /* Text Styles */
+  .pd-text-xl {
+    font-size: 7vw;
+    font-weight: 450;
+    line-height: 1.1;
+  }
+  
+  /* Intro Grid */
+  .pd-intro-grid {
+    display: grid;
+    margin-top: 2vw;
+    grid-template-areas: "Area Area-2 Area-3 Area-4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2vw;
+    row-gap: 2vw;
+    align-items: center;
+    align-content: center;
+}
+  
+  /* Tags Wrapper */
+  .pd-tags-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-area: Area-3;
+    justify-self: start;
+    align-self: start;
+  }
+
+  
+  /* Dash Inner with Dark Theme */
+  .pd-dash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .pd-dash-inner {
+    background-color: var(--black);
+    height: 1px;
+    width: 100%;
+  }
+  
+  /* Small Text */
+  .pd-text-xs {
+    font-size: 14px;
+    letter-spacing: -.02em;
+    margin-left: -.02em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pd-img-con{
+    width: 100%;
+    border: 1px solid #eeddcb;
+    margin: 4vw 0;
+  }
+
+  .pd-img-con img{
+    max-height: 100vh;
+    object-fit: cover;
+  }
+
+  @media only screen and (max-width: 720px) {
+    .pd-intro-grid{
+        margin-top: 4vh;
+    }
+  }

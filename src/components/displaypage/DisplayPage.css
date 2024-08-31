@@ -45,6 +45,8 @@
 
 .project-imgs-con {
   background-color: black;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-header {
@@ -147,8 +149,12 @@
 
   .project-imgs {
     inline-size: auto;
-    width: 80%;
+    width: 100%;
     height: 300px;
     object-fit: cover;
+  }
+  .pili{
+    align-items: center;
+    justify-content: center;
   }
 }

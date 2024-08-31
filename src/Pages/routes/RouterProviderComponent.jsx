@@ -4,9 +4,10 @@ import App from "../../App.jsx";
 import ErrorPage from "../ErrorPage.jsx";
 import AboutPage from "../AboutPage.jsx";
 import HomePage from "../HomePage.jsx";
-import Projects from "../../Pages/Projects.jsx";
 import ContactPage from "../../Pages/ContactPage.jsx";
 import TechSkillsPage from "../TechSkillsPage.jsx";
+import CaseStudy from "../CaseStudy.jsx";
+import CaseStudyDetail from "../../components/CaseStudyDetail/CaseStudyDetail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "AboutPage", element: <AboutPage /> },
-      { path: "Projects", element: <Projects /> },
+      { path: "CaseStudy", element: <CaseStudy /> },
+      { path: "case-study/:caseStudyId", element: <CaseStudyDetail /> },
       { path: "ContactPage", element: <ContactPage /> },
       { path: "TechSkills", element: <TechSkillsPage /> },
     ],

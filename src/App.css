@@ -8,13 +8,22 @@ main {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-content: flex-start;
+  width: 100%;
+  overflow: hidden;
+}
+
+.maingrid1{
+  height: 100%;
 }
 
 .maingrid1 ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: flex-start;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .maingrid1 ul li {
@@ -25,16 +34,18 @@ main {
   margin-top: 1em;
   border-top: var(--border-line);
 }
-
+.fC-wid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
 .article {
   display: grid;
   gap: 2em;
 }
-
-.article h3 {
-  padding: 1em 0;
-}
-
 .main-grid-2 {
   padding: 0 var(--contentPadding);
 }
@@ -45,6 +56,9 @@ main {
 
 .main-f-btn {
   padding-top: 1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 /* Responsive Styles */
@@ -56,7 +70,12 @@ main {
   main {
     padding: var(--padding-mobile);
   }
-
+  .maingrid1 ul li {
+    text-align: left;
+  }
+  .fC-wid {
+    margin-top: 4vh;
+  }
   .main-f-btn {
     flex-direction: column;
     gap: 1em;
@@ -72,9 +91,5 @@ main {
 
   .aboutme-link {
     justify-content: flex-end;
-  }
-
-  main {
-    text-align: center;
   }
 }

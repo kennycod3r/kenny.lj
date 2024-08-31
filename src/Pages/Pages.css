@@ -2,22 +2,160 @@
 .ProjectDisplaypage {
   background-color: var(--black);
   min-height: 100vh;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   color: white;
   border-bottom: 1px solid var(--border-line);
 }
-.containerAnimate {
+.fC-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fC-text h1 {
+  text-transform: uppercase;
+}
+.case-study {
+  min-height: 70vh;
+  background-color: var(--color2);
+  padding-top: 10vh;
+  min-width: 100%;
+}
+
+.containercs-grid{
+  background-color: var(--black);
+  width: 100%;
+  color: var(--color2);
+  position: relative;
+  padding: 1em;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+.cs-cg1{
+  margin: 4vh 0;
+}
+
+/* Container */
+.containercs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.containercs > * {
+  width: 100%;
+}
+
+
+
+/* Hover Card Base Styles */
+.hover-card {
+  flex: 1;
+  margin-bottom: 1em;
   position: relative;
   overflow: hidden;
+  border: 1px solid #404040;
+  transition: flex-basis 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+    max-width 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  max-width: 50%;
+  cursor: pointer;
+  color: white;
 }
-.containerAnimate-div,
-.hero-containerAnimate-div {
-  height: 60px;
+
+.hover-card__inner {
   width: 100%;
+  height: 100%;
+  min-height: 70vh;
+  position: relative;
+}
+
+.hover-card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay and Text Styles */
+.hover-card__info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.hover-card__title {
+  margin: 0;
+  font-size: 24px;
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-card__p {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Hover Effects */
+.hover-card:hover {
+  flex-basis: 65%;
+  max-width: 65%;
+}
+
+.hover-card:hover .hover-card__title {
+  transform: translate3d(0px, -10px, 0px);
+}
+
+.hover-card:hover .hover-card__p {
+  opacity: 1;
+}
+
+.container .hover-card:not(:hover) {
+  flex-basis: 35%;
+  max-width: 35%;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .containercs {
+    flex-direction: column;
+  }
+
+  .hover-card {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .hover-card:hover {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.containerAnimate-div {
+  height: 60px;
+  flex-wrap: wrap;
   max-height: 65px;
   overflow: hidden;
 }
+
 .ProjectDisplaypage {
   min-height: 100vh;
   display: flex;
@@ -27,12 +165,6 @@
   flex-direction: column;
 }
 
-.hero-containerAnimate-div {
-  min-height: 87px;
-  max-height: none;
-  padding: 0;
-  margin: 0;
-}
 .span-container {
   height: 40px;
   min-width: 100%;
@@ -42,7 +174,6 @@
 }
 
 #contacth1,
-#heroHeader,
 #header2 {
   min-width: 100%;
   display: flex;
@@ -137,35 +268,22 @@
 .mh40 {
   min-height: 35vh;
 }
+.flexsercon2{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 .specialize {
   display: grid;
   gap: 0.5em;
   margin-bottom: 4em;
 }
-.tech-card {
-  min-height: 300px;
-  min-width: 300px;
-  align-items: flex-start;
-  justify-content: space-between;
-}
 
-.tech-skills-page {
-  min-height: 100vh;
-  padding: 4em;
-}
-.iconSvg {
-  width: 40px;
-  height: 40px;
-}
-.tsheader {
-  border-top: 1px dotted
-    linear-gradient(to right, rgb(var(black)) 0 10%, rgba(255, 255, 255, 0) 10%);
-}
 .tech-section {
-  min-height: 20vh;
-  border-top: var(--border-line);
   gap: 2em;
   padding: 2em 0;
+  background-color: #f0f0f0;
+  color: #2a2a2a;
 }
 
 .tech-section-wrapper {
@@ -177,10 +295,29 @@
 
 .ts-div2 {
   display: grid;
-  width: 100%;
-  gap: 2em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2vw;
+  column-gap: 2vw;
+  grid-row-gap: 4vw;
+  row-gap: 2vw;
 }
 
+.tslists {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.tslists ul {
+  gap: 0.2vw;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 .ts-div2-lists-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -192,15 +329,34 @@
 }
 
 .ts-div2 li {
-  font-size: 12px;
   line-height: 1.5em;
 }
-
+.available-btn {
+  background-color: rgba(0, 0, 0, 0.709);
+  padding: 2px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+}
+.flex-text-an{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 @media (max-width: 780px) {
+  .conAb {
+    margin:2em;
+    
+  }
   #header2 {
     font-weight: 450;
     font-size: 1.9em;
     line-height: 0.9;
+  }
+  .mh40 {
+    min-height: 20vh;
   }
   .contact-grid {
     grid-template-columns: 1fr;
@@ -215,4 +371,24 @@
   .span-container {
     height: 25px;
   }
+  .tslists{
+    gap: 1vh;
+  }
+  .ts-div2 li{
+    line-height: normal;
+    margin: 1vh 0;
+    color: #555555;
+    width: 100%;
+    letter-spacing: normal;
+  }
+  .ts-div2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2vw;
+    column-gap: 4vw;
+    grid-row-gap: 4vw;
+    row-gap: 4vw;
+    padding-top: 4vh;
+    border-top: 0.1px solid #1c1414;
+}
 }

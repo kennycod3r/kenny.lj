@@ -1,12 +1,11 @@
-import React from "react";
-import HeroSection from "./HeroSection";
+import React from 'react';
+import HeroSection from './HeroSection';
+import './Hero.css';
 
-const Hero = () => {
-  return (
-    <section className="overflow-Hide">
-      <HeroSection />
-    </section>
-  );
-};
+const Hero = () => (
+  <section>
+    <HeroSection />
+  </section>
+);
 
 export default React.memo(Hero);

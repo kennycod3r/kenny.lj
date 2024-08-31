@@ -35,16 +35,16 @@ const TextAbout = () => {
   }, [runAnimation]);
 
   return (
-    <div className="containerAnimate">
+    <div className="containerAnimate conAb">
       <div className="containerAnimate-div fC">
-        <h1 id="animatetext1">Developer.</h1>
-        <span className="o2">05</span>
+        <h1 id="animatetext1" className="headerAB">Developer.</h1>
+        
       </div>
       <div className="containerAnimate-div fC">
-        <h1 id="animatetext2">Designer.</h1>
+        <h1 id="animatetext2" className="headerAB">Designer.</h1>
       </div>
       <div className="containerAnimate-div fC">
-        <h1 id="animatetext3">Creator.</h1>
+        <h1 id="animatetext3" className="headerAB">Creator.</h1>
       </div>
     </div>
   );

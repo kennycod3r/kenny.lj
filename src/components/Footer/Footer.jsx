@@ -1,124 +1,218 @@
 import React from "react";
 import "./Footer.css";
-import BackToTop from "./BackToTop";
+import { Link } from "react-router-dom";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
+const Footer = () => {
   return (
-    <>
-      <BackToTop />
-
-      <footer className="Homefooter">
-        <div className="Homefooter-wrapper">
-          <div className="containerAnimate-div fStart">
-            <h3>
-              INFORMATION. <span className="o2">06</span>
-            </h3>
-          </div>
-
-          <div className="footer-container">
-            <div className="footer--text footer-col">
-              <div>
-                <h1 className="job-title fhs">
-                  Get in touch <br />
-                  LET'S WORK — TOGETHER!
-                </h1>
-                <div className="more-btn-div footer-btn">
-                  <button
-                    className="more-button"
-                    onClick={() => window.location.href = "mailto:oguntolakenny6@gmail.com"}
-                  >
-                    <p>Get in touch</p>
-                  </button>
+    <footer className="footer">
+      <div className="footer-top">
+        <div className="container">
+          <div className="row ">
+            <div className="col col1 showmobile">
+              <div className="logo-text fcb">
+                <div className="logo-main fcb">
+                  <span className="orangeColor">©</span>KNNY
                 </div>
               </div>
-              <div className="small-footertext">
-                <li className="job-title">
-                  Embracing the power of digital, I love working with brands
-                  that feel the same. Let's connect.
-                </li>
-              </div>
             </div>
-            <div className="footer-col">
-              <p>CONTACT</p>
-              <ul className="aligned-paragraphs footer-ap">
-                <li className="small-text headerp pointer">
-                  <a href="tel:+2348138191796" className="headerp underline">
-                    +234 813 8191796
+            <div className="col">
+              <ul>
+                <li>
+                  <div className="footer-item footer-item-title headerp">
+                    Sitemap
+                  </div>
+                </li>
+                <li className="rel-link">
+                  <a className="footer-item headerp" href="/">
+                    Home
                   </a>
                 </li>
-                <li className="small-text headerp pointer">
+
+                <li className="rel-link">
+                  <Link className="footer-item  headerp" to="/AboutPage">
+                    About Me
+                  </Link>
+                </li>
+                <li className="rel-link">
+                  <Link to="/CaseStudy" className="footer-item headerp  ">
+                    Case Studies
+                  </Link>
+                </li>
+                <li className="rel-link">
+                  <a className="footer-item headerp" href="/">
+                    Project
+                  </a>
+                </li>
+                <li className="rel-link">
+                  <Link to="/ContactPage" className="footer-item headerp">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <div className="footer-item headerp">
+                    Availability: <span className="orangeColor"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="col">
+              <ul>
+                <li>
                   <a
-                    target="_blank"
-                    className="headerp underline"
-                    rel="noopener noreferrer"
-                    href="mailto:oguntolakenny6@gmail.com"
+                    className="footer-item footer-item-title headerp"
+                    href="https://avvr.nl/actueel"
                   >
-                    oguntolakenny6@gmail.com
+                    socials
                   </a>
                 </li>
-                <li className="small-text headerp pointer">
+                <li>
                   <a
+                    className="footer-item headerp"
+                    href="mailto:oguntolakenny6@gmail.com"
                     target="_blank"
-                    className="headerp underline"
                     rel="noopener noreferrer"
+                  >
+                    Mail
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="footer-item headerp"
                     href="https://github.com/kennycod3r?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     GitHub
                   </a>
                 </li>
-                <li className="small-text headerp pointer">
+                <li>
                   <a
-                    target="_blank"
-                    className="headerp underline"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/kehinde-oguntola-270903198/"
+                    className="footer-item headerp"
+                    href="https://avvr.nl/actueel/bijeenkomsten"
                   >
-                    LinkedIn
+                    Meetings
                   </a>
+                </li>
+                <li>
+                  <div className="footer-item footer-item-empty"></div>
+                </li>
+                <li>
+                  <div className="footer-item footer-item-title headerp">
+                    Expertises
+                  </div>
+                </li>
+                <li>
+                  <div className="footer-item headerp">React.js</div>
+                </li>
+                <li>
+                  <div className="footer-item headerp">Javascript</div>
                 </li>
               </ul>
             </div>
-            <div className="footer-col">
-              <p>SOCIALS</p>
-              <ul className="aligned-paragraphs footer-ap">
-                <li className="small-text headerp pointer">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/kenny.lj/"
-                    className="headerp underline"
-                  >
-                    Instagram
-                  </a>
+            <div className="col">
+              <ul>
+                <li>
+                  <div className="footer-item footer-item-icon">
+                    <div className="icon outline">{/* SVG icon here */}</div>
+                    <span className="footer-item footer-item-title headerp">
+                      Recources (Tech)
+                    </span>
+                  </div>
                 </li>
-                <li className="small-text headerp pointer">
+                <li>
+                  <div className="footer-item footer-item-icon">
+                    <div className="icon"></div>
+                    <span className="headerp">React.js</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="footer-item footer-item-icon">
+                    <div className="icon"></div>
+                    <span className="headerp">Greenstock</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="footer-item footer-item-icon">
+                    <div className="icon outline">{/* SVG icon here */}</div>
+                    <span className="headerp">scss/css</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="footer-item footer-item-icon">
+                    <div className="icon"></div>
+                    <span className="headerp ">ReactRouter</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="col">
+              <ul>
+                <li>
                   <a
-                    target="_blank"
-                    className="headerp underline"
-                    rel="noopener noreferrer"
+                    className="footer-item headerp footer-item-icon footer-item-link-icon"
                     href="https://x.com/kenny_lj"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Twitter
                   </a>
                 </li>
+
+                <li>
+                  <a
+                    className="footer-item headerp footer-item-icon footer-item-link-icon"
+                    href="https://www.linkedin.com/in/kehinde-oguntola-270903198/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                    <div className="icon filled">{/* SVG icon here */}</div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="footer-item footer-item-icon footer-item-link-icon"
+                    href="https://www.instagram.com/kenny.lj/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="icon filled"></div>
+                    <span className="headerp">Instagram</span>
+                  </a>
+                </li>
               </ul>
-              <div className="fc-resource">
-                <div>
-                  <p>RESOURCES</p>
-                </div>
-                <ul className="flexSb">
-                  <li className="job-title">REACTJS</li>
-                  <li className="job-title">GSAP</li>
-                  <li className="job-title">FIGMA</li>
-                  <li className="job-title">VITE</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+      <div className="footer-bottom">
+        <nav className="nav-secondary">
+          <div className="credits">
+            <div className="credits-item" target="_blank">
+              <span className="nav-secondary-link">Bykenny</span>
+            </div>
+            <div className="credits-item">
+              <span className="nav-secondary-link">© 2024 portfoliio</span>
+            </div>
+          </div>
+          <ul className="credits-item-list">
+            <li className="nav-secondary-link">© 2024 oguntolakenny</li>
+            <li className="nav-secondary-link">All rights reserved.</li>
+
+            <li>
+              <div
+                className="nav-secondary-link nav-secondary-language nl"
+                data-toggle="modal-language"
+              >
+                <div className="flag nl"></div>
+                <span>🇬🇧 en</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   );
-}
+};
+
+export default Footer;

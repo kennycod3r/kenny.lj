@@ -5,13 +5,13 @@ import HamburgerMenu from "../Hamburger/HamburgerMenu";
 
 const Navbar = ({ handleSidebar, openSidebar }) => {
   return (
-    <nav className="static-nav fJc">
+    <nav className="static-nav ">
       <div className="static-nav-inner flexSB">
-        <div className="nav-links-container fJc">
+        <div className="nav-links-container ">
           <Link to="/">
             <div className="logo-text fcb">
               <div className="spin-logodiv  fJc">
-                <span className="spinlogo fJc">©</span>
+                <span className="spinlogo fJc orangeColor">©</span>
               </div>
               <div className="logo-main fcb">KNNY</div>
             </div>
@@ -19,24 +19,25 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
         </div>
         <div className="nav-links-container nlc-with-menu flexSB">
           <div className="nav-items-container showmobile">
-            <ul className="showmobile">
+            <ul className="showmobile nav-items-inner">
               <li id="navabout">
                 <Link to="/AboutPage">
-                  <div className="nav-link fJc" data-text="About">
+                  <div className="nav-link " data-text="About">
                     About
                   </div>
                 </Link>
               </li>
               <li>
-                <Link to="/Projects">
-                  <div className="nav-link  fJc" data-text="Projects">
-                    Projects
+                <Link to="/CaseStudy">
+                  <div className="nav-link " data-text="case studies">
+                    Case Studies
                   </div>
                 </Link>
               </li>
+              
               <li>
                 <Link to="/ContactPage">
-                  <div className="nav-link  fJc" data-text="Contact">
+                  <div className="nav-link  " data-text="Contact">
                     Contact
                   </div>
                 </Link>
@@ -44,7 +45,10 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
             </ul>
           </div>
           <div className="fixed-ham animated-btn">
-            <HamburgerMenu handleSidebar={handleSidebar} openSidebar={openSidebar} />
+            <HamburgerMenu
+              handleSidebar={handleSidebar}
+              openSidebar={openSidebar}
+            />
           </div>
         </div>
       </div>

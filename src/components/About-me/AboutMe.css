@@ -1,24 +1,41 @@
 
 .aboutme-pages {
-  padding: 1em;
+  margin: .3em;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background-color: black;
 }
 
 .about-content-wrapper {
   width: 100%;
   display: flex;
+  height: 100%;
+  padding-top: 4vh;
+  padding:4em;
+  gap: 4vh;
   flex-direction: column;
+}
+
+.about-content-wrapper2{
+  padding-top: 4vh;
+}
+.ab-div2{
+  display: grid;
+  gap: 4vh;
 }
 
 .about-nav {
   background-color: black;
   justify-content: space-between;
   padding: 0.5em 1em;
+  border-radius: 12px 12px 0 0;
 }
 
 .whitecontainer, .whitecontainerorange {
   min-height: 100vh;
   width: 100%;
-  margin: 0 auto;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
   background-position: center;
   background-size: cover;
   background: rgb(216, 162, 243);
@@ -38,20 +55,24 @@
 }
 
 .aboutpage {
-  padding: 4.2rem;
+  padding-top: 10vh;
 }
 
 .aboutherocontainer {
   display: grid;
+  width: 100%;
+  overflow: hidden;
   min-height: 100vh;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 1fr 1fr;
   background-color: black;
 }
 
-.aboutherocontainer div {
-  padding: 2em;
+.aboutherocontainer .p-20{
+  padding: 2em 0;
 }
-
+.p-2{
+padding: 0 2em;
+}
 .aboutherocontainer .fadeIndiv {
   animation: fadeIn 1s ease-in-out;
 }
@@ -59,6 +80,7 @@
 .profilegrid {
   display: flex;
   gap: 0.1em;
+  padding: 2em;
 }
 
 .profilediv, .contactprofilediv{
@@ -111,9 +133,10 @@
 
 .textexpandDiv {
   min-height: 150px;
-  width: 90%;
+  max-width: 80%;
   padding: 0;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 #animatetext1,
@@ -122,12 +145,22 @@
   transform: translateY(100%);
 }
 
+.about-wrapper2{
+  width: 100%;
+  display: flex;
+  height: 100%;
+  padding-top: 4vh;
+  padding-left: 4vh;
+  gap: 4vh;
+  flex-direction: column;
+}
+
 @media only screen and (max-width: 867px) {
   .aboutherocontainer div {
-    padding: 2em 10px;
+    overflow: hidden;
   }
   .aboutpage {
-    padding: 0;
+    padding-top:4vh ;
   }
 
   .aboutherocontainer {
@@ -145,6 +178,19 @@
   }
   .aboutme-pages{
     padding: 3px;
+  }
+  
+
+  .about-content-wrapper {
+    width: 100%;
+    display: flex;
+    padding-top: 4vh;
+    padding: 0;
+    gap: 0;
+  }
+  .pad-20{
+    display: grid;
+    padding: 2em;
   }
 }
 

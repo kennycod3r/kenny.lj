@@ -1,79 +1,99 @@
 import React from "react";
-import TextAbout from "../../util/TextAbout";
 import "../../Pages/Pages.css";
+import { Link } from "react-router-dom";
+import CardAnimation from "../HeaderText/CardCom";
 
 const TechSection = () => {
   return (
-    <section className="tech-section fJc flexDC">
+    <section className="tech-section fC flexDC">
       <div className="tech-section-wrapper">
         <div className="doublegrid">
-          <div className="mh40">
-            <TextAbout />
-          </div>
-          <div>
-            <div className="specialize tac">
-              <h3>
-                My specialties are — Front-End Development with React.js,
-                Motion/Animation, and CMS-driven websites.
-              </h3>
-              <p className="headerp">
-                However, I'm open to taking on these roles as well:
-              </p>
+          <div className="mh40 flexsercon2">
+            <div>
+              <div className="flex-text-an">
+                {" "}
+                <h1 className="header--two">How Can i</h1>
+                
+                <h1 className="header--two">Assist</h1>
+                <h1 className="header--two">You</h1>
+              </div>
             </div>
-
+            <Link to="/ContactPage" className="block">
+              <button className="more-button small-btn">
+                <p className="headerp">Contact Me</p>
+              </button>
+            </Link>
+          </div>
+          <>
             <div className="ts-div2">
-              <div className="ts-div2-lists-container">
-                <ul className="tslists">
-                  <li className="tinyp tinypHeader">DEVELOPMENT</li>
-                  <li className="tinyp">Cross-Browser/Cross-Device Testing</li>
-                  <li className="tinyp">Shopify or Webflow Development</li>
-                  <li className="tinyp">React / Next.js Development</li>
-                  <li className="tinyp">Automation and Integration</li>
-                  <li className="tinyp">JavaScript Development</li>
-                </ul>
-
-                <ul className="tslists">
-                  <li className="tinyp tinypHeader">STRATEGY</li>
-                  <li className="tinyp">Brand Strategy & Architecture</li>
-                  <li className="tinyp">Information Architecture</li>
-                  <li className="tinyp">Post-Launch Strategy</li>
-                  <li className="tinyp">Analytics Reporting</li>
-                  <li className="tinyp">Digital Analysis</li>
-                </ul>
-                <ul className="tslists">
-                  <li className="tinyp tinypHeader">DESIGN</li>
-                  <li className="tinyp">User Interface, Experience</li>
-                  <li className="tinyp">Interaction Design</li>
-                  <li className="tinyp">Creative Direction</li>
-                  <li className="tinyp">Brand Identity</li>
-                  <li className="tinyp">Wireframing</li>
+              <div className="tslists">
+                <CardAnimation text={"DEVELOPMENT"} />
+                <h3 className="headerp showmobile">DEVELOPMENT</h3>
+                <ul>
+                  <li className="headerp">
+                    Cross-Browser/Cross-Device Testing
+                  </li>
+                  <li className="headerp">Shopify or Webflow Development</li>
+                  <li className="headerp">React / Next.js Development</li>
+                  <li className="headerp">Automation and Integration</li>
                 </ul>
               </div>
-              <div className="ts-div2-lists-container">
-                <ul className="tslists">
-                  <li className="tinyp tinypHeader">
-                    SEO & Performance Optimization
-                  </li>
-                  <li className="tinyp">SEO Copy Optimization</li>
-                  <li className="tinyp">Content Management</li>
-                  <li className="tinyp">Quality Assurance</li>
-                  <li className="tinyp">Content Writing</li>
-                  <li className="tinyp">Copywriting</li>
+
+              <div className="tslists">
+                <CardAnimation text={"STRATEGY"} />
+                <h3 className="headerp showmobile">STRATEGY</h3>
+                <ul>
+                  <li className="headerp">Brand Strategy & Architecture</li>
+                  <li className="headerp">Information Architecture</li>
+                  <li className="headerp">Post-Launch Strategy</li>
+                  <li className="headerp">Analytics Reporting</li>
+                  <li className="headerp">Digital Analysis</li>
                 </ul>
-                <ul className="tslists">
-                  <li className="tinyp tinypHeader">Branding/3D Design</li>
-                  <li className="tinyp">Digital Product Design</li>
-                  <li className="tinyp">Quality Assurance</li>
-                  <li className="tinyp">Prototyping</li>
+              </div>
+              <div className="tslists">
+                <CardAnimation text={"DESIGN"} />
+                <h3 className="headerp showmobile">DESIGN</h3>
+                <ul>
+                  <li className="headerp">User Interface, Experience</li>
+                  <li className="headerp">Interaction Design</li>
+                  <li className="headerp">Creative Direction</li>
+                  <li className="headerp">Brand Identity</li>
+                  <li className="headerp">Wireframing</li>
                 </ul>
-                <ul className="tslists">
-                  <li className="tinyp tinypHeader">RESEARCH</li>
-                  <li className="tinyp">Best Practices Review</li>
-                  <li className="tinyp">Customer Insights</li>
+              </div>
+
+              <div className="tslists">
+                <CardAnimation text={["S", "E", "O"]} />
+                <h3 className="headerp showmobile">
+                  SEO & Performance Optimization
+                </h3>
+                <ul>
+                  <li className="headerp">SEO Optimization</li>
+                  <li className="headerp">Content Management</li>
+                  <li className="headerp">Quality Assurance</li>
+                  <li className="headerp">Content Writing</li>
+                  <li className="headerp">Copywriting</li>
+                </ul>
+              </div>
+              <div className="tslists">
+                <CardAnimation text={"Branding/3D-Design"} />
+                <h3 className="headerp showmobile">Branding/3D Design</h3>
+                <ul>
+                  <li className="headerp">Digital Product Design</li>
+                  <li className="headerp">Quality Assurance</li>
+                  <li className="headerp">Prototyping</li>
+                </ul>
+              </div>
+              <div className="tslists">
+                <CardAnimation text={"RESEARCH"} />
+                <h3 className="headerp showmobile">RESEARCH</h3>
+                <ul>
+                  <li className="headerp">Best Practices Review</li>
+                  <li className="headerp">Customer Insights</li>
                 </ul>
               </div>
             </div>
-          </div>
+          </>
         </div>
       </div>
     </section>

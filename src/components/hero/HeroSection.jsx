@@ -1,17 +1,18 @@
 import "./Hero.css";
 import React, { useState, useEffect, useCallback } from "react";
 import gsap from "gsap";
-import "../../Pages/Pages.css";
+import "../../index.css";
 
 const HeroSection = () => {
   const runAnimation = useCallback(() => {
-    const tl = gsap.timeline();
-    tl.to("#heroHeader", {
-      yPercent: -100,
-      delay: 1.7,
-      duration: 0.5,
-      ease: "cubic-bezier(0.16, 1, 0.3, 1)",
-    })
+    gsap.timeline()
+      .to("#heroHeader", {
+        yPercent: -100,
+        rotate: 0.001, 
+        delay: 1.7,
+        duration: 1.5,
+        ease: "power3.out",
+      })
       .to(
         "#line1",
         {
@@ -47,21 +48,19 @@ const HeroSection = () => {
 
   const [openAvailability, setOpenAvailability] = useState(false);
 
-  function handleOpenAvailability() {
+  const handleOpenAvailability = () => {
     setOpenAvailability((prevState) => !prevState);
-  }
+  };
 
   return (
-    <section className="hero-container fJc" role="banner">
+    <section className="hero-container fC" role="banner">
       <div className="overlay-base hero-overlay">
         <div className="hero-caption flexStartC">
           <header className="hero-headtext">
             <span className="number o2">00</span>
-            <div className="containerAnimate">
-              <div className="hero-containerAnimate-div">
-                <h1 className="Text_XL__ku5Fh" id="heroHeader">
-                  Oguntola Kenny
-                </h1>
+            <div className="hero-animate">
+              <div id="heroHeader">
+                <h1 className="Text_XL__ku5Fh">Oguntola Kenny</h1>
               </div>
             </div>
             <div className="arrowdiv showmobile">
@@ -105,7 +104,7 @@ const HeroSection = () => {
       </div>
       <div className={openAvailability ? `dd dd-open` : `dd`}>
         <div className="nav-dd">
-          <div className="expand-icon  fJc " onClick={handleOpenAvailability}>
+          <div className="expand-icon  fJc" onClick={handleOpenAvailability}>
             <svg
               className={openAvailability ? `spinIcon` : "spinIcon-open"}
               width="24px"
@@ -123,32 +122,32 @@ const HeroSection = () => {
             </svg>
           </div>
           <div className="transparent-div">
-            <a aria-label="status" href="/ContactPage" className="dd-link">
+            <div className="dd-link">
               <h3 className="headerp">Status</h3>
               <div className="smallestp showmobile">
                 Currently available for company hire
               </div>
-            </a>
+            </div>
           </div>
           <div className="transparent-div">
-            <a aria-label="Save" href="/save" className="dd-link">
+            <div className="dd-link">
               <h3 className="headerp orangeColor available-btn">Available</h3>
               <div className="smallestp showmobile">
                 for Freelance projects
                 <br />
                 From 23, July
               </div>
-            </a>
+            </div>
           </div>
           <div className="transparent-div">
-            <a aria-label="Invest" href="/invest" className="dd-link">
+            <div className="dd-link">
               <h3 className="headerp">Collaborations</h3>
               <div className="smallestp showmobile">
                 currently unavailable.
                 <br />
                 still contact!
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -156,4 +155,4 @@ const HeroSection = () => {
   );
 };
 
-export default React.memo(HeroSection);
+export default HeroSection;

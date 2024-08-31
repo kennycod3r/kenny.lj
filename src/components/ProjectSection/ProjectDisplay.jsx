@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import ProjectButton from "../../util/ProjectButton";
 import "./ProjectDisplay.css";
+import { Link } from "react-router-dom";
 
 const ProjectDisplay = ({
   handleGetImage,
@@ -19,11 +20,11 @@ const ProjectDisplay = ({
   return (
     <div className="project-section">
       <div className="project-wrapper">
-        <h1 className="header--two">
-          Selected Works. <span className="o2">02</span>
+        <h1 className="header--two ">
+          Selected Works.<span className="o2">02</span>
         </h1>
 
-        <div className={!grid3 ? "projectgrid" : "projectgrid Contactprojectgrid"}>
+        <div className={`projectgrid ${grid3 ? "Contactprojectgrid" : ""}`}>
           {hProjectImages.map((item, index) => (
             <ProjectButton
               key={index}
@@ -37,15 +38,17 @@ const ProjectDisplay = ({
       {!grid3 && (
         <div className="phone-btn-div">
           <p className="headerp">click to view more</p>
-          <button className="phoneBtn fJc">
-            <div className="circle fC">
-              <div className="box"></div>
-            </div>
-          </button>
+          <Link to={"CaseStudy"}>
+            <button className="phoneBtn fJc">
+              <div className="circle fC">
+                <div className="box"></div>
+              </div>
+            </button>
+          </Link>
         </div>
       )}
     </div>
   );
 };
 
-export default React.memo(ProjectDisplay);
+export default ProjectDisplay;
