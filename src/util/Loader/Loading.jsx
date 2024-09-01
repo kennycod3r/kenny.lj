@@ -42,11 +42,11 @@ const Loading = ({ isLoading }) => {
           </div>
           <div className="loader-container">
             <div id="Loaderline3" className="flexSB inner-loader-container">
-              <h3 className="headerp">DEVELOPER</h3>
+              <h3 className="sP">DEVELOPER</h3>
               <span className="orangeColor mr1">•</span>
-              <h3 className="headerp">DESIGNER</h3>
+              <h3 className="sP">DESIGNER</h3>
               <span className="orangeColor mr1">•</span>
-              <h3 className="headerp">CREATOR</h3>
+              <h3 className="sP">CREATOR</h3>
             </div>
           </div>
         </div>

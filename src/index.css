@@ -152,17 +152,6 @@
 .hero-headtext .o2 {
   color: var(--orange);
 }
-.smallp {
-  font-size: 15px;
-  text-align: left;
-  line-height: 1.4;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
-.smallestp {
-  font-size: 14px;
-}
 
 .view-hero-header {
   position: absolute;
@@ -228,7 +217,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: -0.03em;
 }
-p {
+/* p {
   text-align: left;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -236,7 +225,7 @@ p {
   font-size: 1em;
   line-height: 1.7;
   font-size: 14px;
-}
+} */
 
 .link-copy__icon {
   height: 100%;
@@ -375,8 +364,6 @@ select {
   flex-direction: column;
   min-height: 100%;
   max-width: 100vw;
-  font-size: 100%;
-  font-weight: 400;
 }
 
 .overlay-base {
@@ -443,18 +430,10 @@ b {
   line-height: 1.15;
 }
 
-.headerp,
 .o2,
-.number,
-.tinyp {
+.number {
   font-size: 14px;
   letter-spacing: -0.8px;
-}
-
-.headerp,
-.tinyp {
-  font-weight: 400;
-  letter-spacing: -0.5px;
 }
 
 .o2 {
@@ -516,18 +495,6 @@ i {
   align-items: flex-start;
 }
 
-.tinyp {
-  font-size: 12px;
-  line-height: 1.4;
-  text-transform: capitalize;
-}
-
-.tinypHeader {
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 0.5em;
-}
 .more-button {
   height: 3.8em;
   width: 15em;
@@ -590,7 +557,19 @@ i {
   width: fit-content;
 }
 
+.sP {
+  font-size: 16px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+}
 @media only screen and (max-width: 850px) {
+  .sP {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
   .hero-overlay {
     padding: 0;
   }

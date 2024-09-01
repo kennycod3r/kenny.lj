@@ -64,12 +64,12 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="arrowdiv showmobile">
-              <p className="smallestp whiteColor" id="arrow">
+              <p className="sP whiteColor" id="arrow">
                 kenny.lj
               </p>
             </div>
             <div className="oshin-container">
-              <div className="headerp smallp whiteColor">
+              <div className="sP whiteColor">
                 <div className="span-container">
                   <span id="line1" className="linehero">
                     — A freelance front-end developer and
@@ -93,13 +93,13 @@ const HeroSection = () => {
       <div className="slide-container" aria-hidden="true"></div>
       <div className="view-hero-header">
         <div className="explore-text">
-          <p className="headerp whiteColor">00 - 09</p>
+          <p className="sP whiteColor">00 - 09</p>
         </div>
 
         <div className="view-hero-header-details">
-          <span className="hidemobile headerp">Web-Creator</span>
-          <span className="headerp">Front-End Developer</span>
-          <span className="hidemobile headerp">Interactive Designer</span>
+          <span className="hidemobile sP">Web-Creator</span>
+          <span className="sP">Front-End Developer</span>
+          <span className="hidemobile sP">Interactive Designer</span>
         </div>
       </div>
       <div className={openAvailability ? `dd dd-open` : `dd`}>
@@ -123,16 +123,16 @@ const HeroSection = () => {
           </div>
           <div className="transparent-div">
             <div className="dd-link">
-              <h3 className="headerp">Status</h3>
-              <div className="smallestp showmobile">
+              <h3 className="sP">Status</h3>
+              <div className="sP showmobile">
                 Currently available for company hire
               </div>
             </div>
           </div>
           <div className="transparent-div">
             <div className="dd-link">
-              <h3 className="headerp orangeColor available-btn">Available</h3>
-              <div className="smallestp showmobile">
+              <h3 className="sP orangeColor available-btn">Available</h3>
+              <div className="sP showmobile">
                 for Freelance projects
                 <br />
                 From 23, July
@@ -141,8 +141,8 @@ const HeroSection = () => {
           </div>
           <div className="transparent-div">
             <div className="dd-link">
-              <h3 className="headerp">Collaborations</h3>
-              <div className="smallestp showmobile">
+              <h3 className="sP">Collaborations</h3>
+              <div className="sP showmobile">
                 currently unavailable.
                 <br />
                 still contact!

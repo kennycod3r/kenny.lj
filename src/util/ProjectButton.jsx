@@ -37,11 +37,11 @@ const ProjectButton = ({ item, handleSendImg, grid3 }) => {
         </div>
       </div>
       <div className="project-description">
-      <h3 className="headerp name">{item.title}</h3>
+      <h3 className="sP name">{item.title}</h3>
         <ul className="project-tags">
           {item.projectTags.map((item, index) => {
             return (
-              <li className="smallestp headerp" key={index}>
+              <li className="sP" key={index}>
                 {item}
               </li>
             );

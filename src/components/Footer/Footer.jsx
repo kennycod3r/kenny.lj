@@ -18,38 +18,38 @@ const Footer = () => {
             <div className="col">
               <ul>
                 <li>
-                  <div className="footer-item footer-item-title headerp">
+                  <div className="footer-item footer-item-title sP">
                     Sitemap
                   </div>
                 </li>
                 <li className="rel-link">
-                  <a className="footer-item headerp" href="/">
+                  <a className="footer-item sP" href="/">
                     Home
                   </a>
                 </li>
 
                 <li className="rel-link">
-                  <Link className="footer-item  headerp" to="/AboutPage">
+                  <Link className="footer-item  sP" to="/AboutPage">
                     About Me
                   </Link>
                 </li>
                 <li className="rel-link">
-                  <Link to="/CaseStudy" className="footer-item headerp  ">
+                  <Link to="/CaseStudy" className="footer-item sP  ">
                     Case Studies
                   </Link>
                 </li>
                 <li className="rel-link">
-                  <a className="footer-item headerp" href="/">
+                  <a className="footer-item sP" href="/">
                     Project
                   </a>
                 </li>
                 <li className="rel-link">
-                  <Link to="/ContactPage" className="footer-item headerp">
+                  <Link to="/ContactPage" className="footer-item sP">
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <div className="footer-item headerp">
+                  <div className="footer-item sP">
                     Availability: <span className="orangeColor"></span>
                   </div>
                 </li>
@@ -59,7 +59,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <a
-                    className="footer-item footer-item-title headerp"
+                    className="footer-item footer-item-title sP"
                     href="https://avvr.nl/actueel"
                   >
                     socials
@@ -67,7 +67,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    className="footer-item headerp"
+                    className="footer-item sP"
                     href="mailto:oguntolakenny6@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -77,7 +77,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    className="footer-item headerp"
+                    className="footer-item sP"
                     href="https://github.com/kennycod3r?tab=repositories"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -87,7 +87,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    className="footer-item headerp"
+                    className="footer-item sP"
                     href="https://avvr.nl/actueel/bijeenkomsten"
                   >
                     Meetings
@@ -97,15 +97,15 @@ const Footer = () => {
                   <div className="footer-item footer-item-empty"></div>
                 </li>
                 <li>
-                  <div className="footer-item footer-item-title headerp">
+                  <div className="footer-item footer-item-title sP">
                     Expertises
                   </div>
                 </li>
                 <li>
-                  <div className="footer-item headerp">React.js</div>
+                  <div className="footer-item sP">React.js</div>
                 </li>
                 <li>
-                  <div className="footer-item headerp">Javascript</div>
+                  <div className="footer-item sP">Javascript</div>
                 </li>
               </ul>
             </div>
@@ -114,7 +114,7 @@ const Footer = () => {
                 <li>
                   <div className="footer-item footer-item-icon">
                     <div className="icon outline">{/* SVG icon here */}</div>
-                    <span className="footer-item footer-item-title headerp">
+                    <span className="footer-item footer-item-title sP">
                       Recources (Tech)
                     </span>
                   </div>
@@ -122,25 +122,25 @@ const Footer = () => {
                 <li>
                   <div className="footer-item footer-item-icon">
                     <div className="icon"></div>
-                    <span className="headerp">React.js</span>
+                    <span className="sP">React.js</span>
                   </div>
                 </li>
                 <li>
                   <div className="footer-item footer-item-icon">
                     <div className="icon"></div>
-                    <span className="headerp">Greenstock</span>
+                    <span className="sP">Greenstock</span>
                   </div>
                 </li>
                 <li>
                   <div className="footer-item footer-item-icon">
                     <div className="icon outline">{/* SVG icon here */}</div>
-                    <span className="headerp">scss/css</span>
+                    <span className="sP">scss/css</span>
                   </div>
                 </li>
                 <li>
                   <div className="footer-item footer-item-icon">
                     <div className="icon"></div>
-                    <span className="headerp ">ReactRouter</span>
+                    <span className="sP ">ReactRouter</span>
                   </div>
                 </li>
               </ul>
@@ -149,7 +149,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <a
-                    className="footer-item headerp footer-item-icon footer-item-link-icon"
+                    className="footer-item sP footer-item-icon footer-item-link-icon"
                     href="https://x.com/kenny_lj"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -160,7 +160,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    className="footer-item headerp footer-item-icon footer-item-link-icon"
+                    className="footer-item sP footer-item-icon footer-item-link-icon"
                     href="https://www.linkedin.com/in/kehinde-oguntola-270903198/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -177,7 +177,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <div className="icon filled"></div>
-                    <span className="headerp">Instagram</span>
+                    <span className="sP">Instagram</span>
                   </a>
                 </li>
               </ul>

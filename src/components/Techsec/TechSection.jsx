@@ -20,7 +20,7 @@ const TechSection = () => {
             </div>
             <Link to="/ContactPage" className="block">
               <button className="more-button small-btn">
-                <p className="headerp">Contact Me</p>
+                <p className="bP">Contact Me</p>
               </button>
             </Link>
           </div>
@@ -28,68 +28,68 @@ const TechSection = () => {
             <div className="ts-div2">
               <div className="tslists">
                 <CardAnimation text={"DEVELOPMENT"} />
-                <h3 className="headerp showmobile">DEVELOPMENT</h3>
+                <h3 className="sP showmobile">DEVELOPMENT</h3>
                 <ul>
-                  <li className="headerp">
+                  <li className="sP">
                     Cross-Browser/Cross-Device Testing
                   </li>
-                  <li className="headerp">Shopify or Webflow Development</li>
-                  <li className="headerp">React / Next.js Development</li>
-                  <li className="headerp">Automation and Integration</li>
+                  <li className="sP">Shopify or Webflow Development</li>
+                  <li className="sP">React / Next.js Development</li>
+                  <li className="sP">Automation and Integration</li>
                 </ul>
               </div>
 
               <div className="tslists">
                 <CardAnimation text={"STRATEGY"} />
-                <h3 className="headerp showmobile">STRATEGY</h3>
+                <h3 className="sP showmobile">STRATEGY</h3>
                 <ul>
-                  <li className="headerp">Brand Strategy & Architecture</li>
-                  <li className="headerp">Information Architecture</li>
-                  <li className="headerp">Post-Launch Strategy</li>
-                  <li className="headerp">Analytics Reporting</li>
-                  <li className="headerp">Digital Analysis</li>
+                  <li className="sP">Brand Strategy & Architecture</li>
+                  <li className="sP">Information Architecture</li>
+                  <li className="sP">Post-Launch Strategy</li>
+                  <li className="sP">Analytics Reporting</li>
+                  <li className="sP">Digital Analysis</li>
                 </ul>
               </div>
               <div className="tslists">
                 <CardAnimation text={"DESIGN"} />
-                <h3 className="headerp showmobile">DESIGN</h3>
+                <h3 className="sP showmobile">DESIGN</h3>
                 <ul>
-                  <li className="headerp">User Interface, Experience</li>
-                  <li className="headerp">Interaction Design</li>
-                  <li className="headerp">Creative Direction</li>
-                  <li className="headerp">Brand Identity</li>
-                  <li className="headerp">Wireframing</li>
+                  <li className="sP">User Interface, Experience</li>
+                  <li className="sP">Interaction Design</li>
+                  <li className="sP">Creative Direction</li>
+                  <li className="sP">Brand Identity</li>
+                  <li className="sP">Wireframing</li>
                 </ul>
               </div>
 
               <div className="tslists">
                 <CardAnimation text={["S", "E", "O"]} />
-                <h3 className="headerp showmobile">
+                <h3 className="sP showmobile">
                   SEO & Performance Optimization
                 </h3>
                 <ul>
-                  <li className="headerp">SEO Optimization</li>
-                  <li className="headerp">Content Management</li>
-                  <li className="headerp">Quality Assurance</li>
-                  <li className="headerp">Content Writing</li>
-                  <li className="headerp">Copywriting</li>
+                  <li className="sP">SEO Optimization</li>
+                  <li className="sP">Content Management</li>
+                  <li className="sP">Quality Assurance</li>
+                  <li className="sP">Content Writing</li>
+                  <li className="sP">Copywriting</li>
                 </ul>
               </div>
               <div className="tslists">
                 <CardAnimation text={"Branding/3D-Design"} />
-                <h3 className="headerp showmobile">Branding/3D Design</h3>
+                <h3 className="sP showmobile">Branding/3D Design</h3>
                 <ul>
-                  <li className="headerp">Digital Product Design</li>
-                  <li className="headerp">Quality Assurance</li>
-                  <li className="headerp">Prototyping</li>
+                  <li className="sP">Digital Product Design</li>
+                  <li className="sP">Quality Assurance</li>
+                  <li className="sP">Prototyping</li>
                 </ul>
               </div>
               <div className="tslists">
                 <CardAnimation text={"RESEARCH"} />
-                <h3 className="headerp showmobile">RESEARCH</h3>
+                <h3 className="sP showmobile">RESEARCH</h3>
                 <ul>
-                  <li className="headerp">Best Practices Review</li>
-                  <li className="headerp">Customer Insights</li>
+                  <li className="sP">Best Practices Review</li>
+                  <li className="sP">Customer Insights</li>
                 </ul>
               </div>
             </div>

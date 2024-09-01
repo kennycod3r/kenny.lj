@@ -37,7 +37,7 @@ const ProjectDisplay = ({
       </div>
       {!grid3 && (
         <div className="phone-btn-div">
-          <p className="headerp">click to view more</p>
+          <p className="sP">click to view more</p>
           <Link to={"CaseStudy"}>
             <button className="phoneBtn fJc">
               <div className="circle fC">

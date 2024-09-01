@@ -17,22 +17,22 @@ const Main = () => {
 
           <div className="mfs">
             <ul>
-              <li className="smallestp headerp">SEO Services</li>
-              <li className="smallestp headerp">Motion & Animations</li>
-              <li className="smallestp headerp">Web Articles</li>
+              <li className=" sP">SEO Services</li>
+              <li className=" sP">Motion & Animations</li>
+              <li className=" sP">Web Articles</li>
             </ul>
           </div>
         </div>
         <div className="main-grid-2">
-          <article className="smallp article">
+          <article className="sP article">
             <div>
               <div className="fStart">
-                <h3 className="headerp name name2 header--three">
+                <h3 className="sP name name2 header--three">
                   Interactive Developer.
                 </h3>
                 <span className="o2">01</span>
               </div>
-              <p className="smallestp headerp">
+              <p className="sP">
                 I create engaging and purposeful web experiences. As a frontend
                 developer skilled in React and essential frontend
                 technologies, I excel in API integration and work seamlessly
@@ -46,10 +46,10 @@ const Main = () => {
               </p>
             </div>
             <div className="mobileBorder">
-              <h3 className="headerp name name2 header--three">
+              <h3 className="sP name name2 header--three">
                 Interactive Designer.
               </h3>
-              <p className="smallestp headerp">
+              <p className="sP">
                 I specialize in helping brands stand out in the digital world by
                 creating engaging and purposeful web experiences. My design
                 approach prioritizes intuitive user interfaces, seamless
@@ -70,7 +70,7 @@ const Main = () => {
             </Link>
             <Link to="/ContactPage">
               <button className="more-button small-btn">
-                <p>Contact</p>
+                <p className="bP">Contact</p>
               </button>
             </Link>
           </div>

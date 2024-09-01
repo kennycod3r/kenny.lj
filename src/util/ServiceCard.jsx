@@ -4,12 +4,12 @@ import "./../components/MyService/Services.css";
 const ServiceCard = ({ title, servicesText }) => {
   return (
     <div className="s-text-grid mobileborde">
-      <article className=" mobileBorder smallp article">
+      <article className=" mobileBorder sP article">
         <div>
           <div className="fStart">
-            <h3 className="headerp name name1 header--three">{title}.</h3>
+            <h3 className="sP name name1 header--three">{title}.</h3>
           </div>
-          <p className="smallestp headerp">{servicesText}</p>
+          <p className="sP">{servicesText}</p>
         </div>
       </article>
     </div>

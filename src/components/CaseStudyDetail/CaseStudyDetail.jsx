@@ -94,17 +94,17 @@ const CaseStudyDetail = () => {
           </div>
 
           <div className="fC">
-            <div className="pd-text-xs headerp">007</div>
+            <div className="pd-text-xs sP">007</div>
           </div>
           <div className="pd-tags-wrap">
             <div className="pd-tag-wrap">
-              <div className="pd-text-xs headerp">Research</div>
+              <div className="pd-text-xs sP">Research</div>
             </div>
             <div className="pd-tag-wrap">
-              <div className="pd-text-xs headerp">Strategy</div>
+              <div className="pd-text-xs sP">Strategy</div>
             </div>
             <div className="pd-tag-wrap">
-              <div className="pd-text-xs headerp">development</div>
+              <div className="pd-text-xs sP">development</div>
             </div>
             
           </div>
@@ -129,24 +129,24 @@ const CaseStudyDetail = () => {
             <div className="mfs">
               <ul>
               
-                <li className="smallestp headerp">Design</li>
-                <li className="smallestp headerp">Development</li>
-                <li className="smallestp headerp">Functionality</li>
+                <li className="sP">Design</li>
+                <li className="sP">Development</li>
+                <li className="sP">Functionality</li>
               </ul>
             </div>
           </div>
           <div className="main-grid-2">
-            <article className="smallp article">
+            <article className="sP article">
               <div>
                 <div className="fStart">
-                  <h3 className="headerp name name2 header--three">Primary Challenge.</h3>
+                  <h3 className="sP name name2 header--three">Primary Challenge.</h3>
 
                 </div>
-                <p className="smallestp headerp">{caseStudy.para1}</p>
+                <p className="sP">{caseStudy.para1}</p>
               </div>
               <div className="mobileBorder">
-                <h3 className="headerp name name2 header--three">Solution</h3>
-                <p className="smallestp headerp">{caseStudy.para2}</p>
+                <h3 className="sP name name2 header--three">Solution</h3>
+                <p className="sP">{caseStudy.para2}</p>
               </div>
             </article>
             <div className="mfs main-f-btn footer-btn">
@@ -155,7 +155,7 @@ const CaseStudyDetail = () => {
               </div>
               <div>
                 <button className="more-button small-btn">
-                  <p className="tinyp">View Project Live</p>
+                  <p className="bP">View Project Live</p>
                 </button>
               </div>
             </div>
@@ -184,7 +184,7 @@ const CaseStudyDetail = () => {
         </div>
       )}
 
-      <p>
+      <p className="sP">
         {caseStudy.description ||
           `Details for case study ${caseStudyId} will go here.`}
       </p>

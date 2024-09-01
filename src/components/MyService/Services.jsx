@@ -59,7 +59,7 @@ const Services = () => {
       </div>
        
         <div>
-          <p className="m-small300 headerp">
+          <p className="m-small300 sP">
             In today's competitive landscape, being adequate is no longer
             enough. We pursue holistic excellence in every facet of our work.
             Our solutions exceed expectations, unlocking opportunities our

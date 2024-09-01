@@ -98,7 +98,7 @@ const ContactPage = () => {
                     <div className="contactprofilediv mediv">
                       <div className="overlay-base hero-overlay"></div>
                     </div>
-                    <p className="smallestp whitecolor">
+                    <p className="sP whitecolor">
                       To: oguntolakenny6@gmail.com
                     </p>
                   </div>
@@ -192,7 +192,7 @@ const ContactPage = () => {
                   ))}
                   <div className="more-btn-div footer-btn">
                     <button type="submit" className="more-button">
-                      <p>{buttonText}</p>
+                      <p className="bP">{buttonText}</p>
                     </button>
                   </div>
                 </form>

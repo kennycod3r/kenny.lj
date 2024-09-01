@@ -28,7 +28,7 @@ const CaseStudy = () => {
               </div>
               <div className="hover-card__info">
                 <h4 className="hover-card__title">E-commerce Project</h4>
-                <p className="hover-card__p">skincare e-commerce project</p>
+                <p className="sP">skincare e-commerce project</p>
               </div>
             </div>
           </Link>
@@ -39,7 +39,7 @@ const CaseStudy = () => {
               </div>
               <div className="hover-card__info">
                 <h4 className="hover-card__title">E-commerce Project</h4>
-                <p className="hover-card__p">sneekers e-commerce project</p>
+                <p className="sP">sneekers e-commerce project</p>
               </div>
             </div>
           </Link>
@@ -52,7 +52,7 @@ const CaseStudy = () => {
               </div>
               <div className="hover-card__info">
                 <h4 className="hover-card__title">Project 1</h4>
-                <p className="hover-card__p">Description of Project 1</p>
+                <p className="sP">Description of Project 1</p>
               </div>
             </div>
           </Link>
@@ -63,7 +63,7 @@ const CaseStudy = () => {
               </div>
               <div className="hover-card__info">
                 <h4 className="hover-card__title">Project 2</h4>
-                <p className="hover-card__p">Description of Project 2</p>
+                <p className="sP">Description of Project 2</p>
               </div>
             </div>
           </Link>

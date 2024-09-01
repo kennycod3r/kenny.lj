@@ -31,7 +31,7 @@ export default function AboutMe() {
               </div>
             </div>
             <div className="  p-20 textexpandDiv">
-              <p className="smallestp">
+              <p className="sP">
                 {openText
                   ? "Sid from Ice Age is my favorite animated character."
                   : "I began my frontend career in 2019, gaining extensive knowledge and experience. I continually strive to improve and seek new opportunities with future partners."}
@@ -52,17 +52,17 @@ export default function AboutMe() {
               <h1 className="fStart fadeIndiv ">
                 Front-End Developer<span className="o2">04</span>
               </h1>
-              <p className="headerp orangeColor">
+              <p className="sP orangeColor">
                 Interactive Developer, Creator
               </p>
             </div>
-            <div className=" pad-20 headerp textexpandDiv fadeIndiv">
+            <div className=" pad-20 sP textexpandDiv fadeIndiv">
               Driven by a passion for design and development, I take projects
               from ideation to launch, ensuring a seamless journey that leaves a
               lasting positive impact on both the digital landscape and your
               business.
             </div>
-            <div className=" pad-20 headerp textexpandDiv fadeIndiv">
+            <div className=" pad-20 sP textexpandDiv fadeIndiv">
               Creating exceptional web experiences is my primary focus. I ensure
               each project evokes a feel-good sensation through meticulous
               attention to detail and user-centric design principles. Outside of

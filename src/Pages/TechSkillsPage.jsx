@@ -60,7 +60,7 @@ const TechSkillsPage = () => {
               <li key={index} className="tech-card flexDC">
                 <img className="iconSvg" src={item.displayPageImg} alt={item.techstackTitle}/>
                 <h2 className="headerh2">{item.techstackTitle}</h2>
-                <p className="smallestp">{item.techText}</p>
+                <p className="sP">{item.techText}</p>
               </li>
             );
           })}
