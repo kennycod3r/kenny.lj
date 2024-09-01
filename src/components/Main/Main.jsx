@@ -6,7 +6,7 @@ import TextAnimation from "../HeaderText/TextAnimation";
 
 const Main = () => {
   return (
-    <main className="fC">
+    <main className="fC gPadBig">
       <div className="doublegrid">
         <div className="maingrid1">
           <div className="fC-wid ">
@@ -32,17 +32,20 @@ const Main = () => {
                 </h3>
                 <span className="o2">01</span>
               </div>
-              <p className="sP">
+              <p className="sP mB2">
                 I create engaging and purposeful web experiences. As a frontend
-                developer skilled in React and essential frontend
-                technologies, I excel in API integration and work seamlessly
-                with APIs to enhance functionality. My services encompass
-                customer research, trend analysis, and competitor review to
-                guide strategic decisions. From product ideation and brand
-                positioning to detailed web engineering and development, I
-                ensure seamless integration of complex functionalities, optimal
-                performance, and the latest technologies, empowering businesses
-                with a competitive edge in the digital landscape.
+                developer skilled in React and essential frontend technologies,
+                I excel in API integration and work seamlessly with APIs to
+                enhance functionality.
+              </p>
+              <p className="sP">
+                My services encompass customer research, trend analysis, and
+                competitor review to guide strategic decisions. From product
+                ideation and brand positioning to detailed web engineering and
+                development, I ensure seamless integration of complex
+                functionalities, optimal performance, and the latest
+                technologies, empowering businesses with a competitive edge in
+                the digital landscape.
               </p>
             </div>
             <div className="mobileBorder">
@@ -60,7 +63,7 @@ const Main = () => {
               </p>
             </div>
           </article>
-          <div className="mfs main-f-btn footer-btn">
+          <div className="mfs main-f-btn bT4">
             <Link
               className="grey-text underline aboutme-link number fC"
               to="/AboutPage"

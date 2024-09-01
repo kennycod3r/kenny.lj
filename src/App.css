@@ -39,6 +39,7 @@ main {
   align-items: center;
   gap: 10px;
   width: 100%;
+  overflow: hidden;
   margin: 0 auto;
   justify-content: flex-start;
 }
@@ -66,7 +67,17 @@ main {
   .mfs li {
     font-size: 12px;
   }
+  .mfs{
+    margin-top: 6vw;
+    padding-top: 4vw;
+  }
+  .article {
+    display: grid;
+  }
 
+  .article .mobileBorder{
+    margin: 1em 0;
+  }
   main {
     padding: var(--padding-mobile);
   }

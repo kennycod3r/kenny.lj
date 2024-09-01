@@ -217,15 +217,11 @@ h1 {
   text-transform: uppercase;
   letter-spacing: -0.03em;
 }
-/* p {
-  text-align: left;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
-  line-height: 1.7;
-  font-size: 14px;
-} */
+p {
+  overflow-wrap: break-word;
+  font-size: unset;
+  font-weight: unset;
+}
 
 .link-copy__icon {
   height: 100%;
@@ -559,12 +555,21 @@ i {
   line-height: 1.2;
   font-weight: 300;
 }
+.mB2 {
+  margin-bottom: 2.8vw;
+}
+
 @media only screen and (max-width: 850px) {
   .sP {
     font-size: 14px;
     line-height: 1.39;
     font-weight: 300;
   }
+  .gPadBig {
+    padding-top: 6vw;
+    padding-bottom: 4vh;
+  }
+
   .hero-overlay {
     padding: 0;
   }
@@ -573,11 +578,20 @@ i {
   }
   .doublegrid {
     grid-template-columns: 1fr;
-    gap: 4vh;
+    gap: 5vh;
     margin-top: 4vh;
   }
   .mobileBorder {
     border-top: var(--border-line);
+  }
+  .bP{
+    font-size: 12px;
+    line-height: 14px;
+    white-space: nowrap;
+    text-transform: capitalize;
+  }
+  .bT4{
+    padding-top: 4vh;
   }
   .header--two,
   .animateh1 {
