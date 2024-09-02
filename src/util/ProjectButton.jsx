@@ -22,7 +22,6 @@ const ProjectButton = ({ item, handleSendImg }) => {
           className="project-image"
           loading="lazy"
         />
-        <div className="overlay-base btn-overlay"></div>
         <div className="view-btn fC">
           <span className="vd1">
             <ArrowLink />
