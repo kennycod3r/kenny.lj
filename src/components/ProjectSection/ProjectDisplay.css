@@ -146,9 +146,14 @@
   }
 
   .projectgrid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
-  }
+    align-content: center;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: stretch;
+}
 }
 
 

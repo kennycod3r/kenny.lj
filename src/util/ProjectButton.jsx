@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowLink from "./ArrowLink";
-import "../components/ProjectSection/ProjectDisplay.css";
+import '../components/ProjectSection/ProjectDisplay.css';
 
 const ProjectButton = ({ item, handleSendImg }) => {
   return (
