@@ -4,61 +4,70 @@
   background: var(--black);
   color: var(--color2);
   padding: var(--pagePadding);
+  position: relative;
   min-height: 70vh;
 }
 
 .project-wrapper {
   padding-top: 1rem;
   display: flex;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  width: 100%;
   margin-bottom: 2em;
 }
 
 .projectgrid {
   display: grid;
-  grid-template-columns:1fr 1fr;
-  flex-wrap: nowrap;
-  max-width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
+  overflow: hidden;
+  border-top: 0.1px solid #ccc;
 }
 
-.project-button {
+.project-description {
+  margin-top: 1em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  border-top: 0.1px solid red;
-  margin-bottom: 1vw;
-  justify-content: space-between;
-  padding: 10px 10px 0px;
+  align-items: flex-start;
+  gap: 1em;
 }
 
-.btn-image-div {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.btn-image-div img {
+.view-btn {
+  justify-content: center;
+  opacity: 0;
+  box-shadow: var(--box-shadow);
+  margin: 0 auto;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: flex;
+  gap: 1em;
+  z-index: 9;
+  transition: var(--animationSmooth);
+  background-color: #333;
+  padding: 0.6em 0.5em;
+  border-radius: 5px;
 }
 
-.project-tags {
+.vd1 {
+  background-color: gray;
+  padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.btn-image-div:hover .view-btn {
+  opacity: 1;
+}
+
+.project-description ul {
+  display: flex;
+  gap: 2em;
+  text-transform: capitalize;
 }
 
 .phone-btn-div {
@@ -93,21 +102,48 @@
   border: 2px solid var(--orange);
 }
 
-.product-description {
+.single-team-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1vw;
-  margin: 1vw 0;
+  width: 100%;
+  padding: 1vw 1vw 0px;
+  border-right:0.1px solid #ccc;;
+  border-bottom: 0.1px solid #ccc;
+ 
+  
+  position: relative;
 }
 
-.product-dis-list {
+.single-team-item .col {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+}
+
+.single-team-item .col-image .image {
+  position: relative;
   overflow: hidden;
+  margin-bottom: 1.5em;
+  transition: var(--animation-primary);
+  transform: scale(1) rotate(0.001deg);
+  width: 100%;
+}
+
+.single-team-item .col-image .image::before {
+  content: "";
+  display: block;
+  padding-top: 63.333%;
+}
+
+img.overlay,
+video.overlay {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -118,19 +154,13 @@
 
   .projectgrid {
     grid-template-columns: 1fr;
-    grid-row-gap: 3vw;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    justify-items: stretch;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
   }
-
-  .project-button {
-    width: 100%;
-  }
-
-  .btn-image-div img {
-    object-fit: cover;
+  .single-team-item .col-image .image::before {
+    content: "";
+    display: block;
+    padding-top: 93.333%;
   }
 }
 

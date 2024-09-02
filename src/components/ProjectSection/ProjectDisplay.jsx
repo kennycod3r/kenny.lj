@@ -3,7 +3,11 @@ import ProjectButton from "../../util/ProjectButton";
 import "./ProjectDisplay.css";
 import { Link } from "react-router-dom";
 
-const ProjectDisplay = ({ handleGetImage, handleOpenDisplay, hProjectImages }) => {
+const ProjectDisplay = ({
+  handleGetImage,
+  handleOpenDisplay,
+  hProjectImages,
+}) => {
   const handleSendImg = useCallback(
     (image, title, projectImages) => {
       handleGetImage(image, title, projectImages);
