@@ -184,6 +184,7 @@
   }
   .static-nav {
     background-color: inherit;
-    padding-top: 2vh;
+    padding-top: 3vh;
+    padding-right: .7em;
   }
 }
