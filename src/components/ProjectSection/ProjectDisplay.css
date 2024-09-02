@@ -30,18 +30,18 @@
 }
 
 .project-button {
-  border: none;
-  display: inline-flex;
+  display: flex;
   text-align: left;
   background-color: inherit;
   color: var(--color2);
-  height: 100%;
   gap: 0.7em;
   cursor: pointer;
+  min-height: 100%;
   border-bottom: 1px solid #939393;
   flex-direction: column;
   align-items: flex-start;
   overflow: hidden;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
