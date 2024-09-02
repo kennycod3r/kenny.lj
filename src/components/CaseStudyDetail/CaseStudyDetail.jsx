@@ -139,13 +139,13 @@ const CaseStudyDetail = () => {
             <article className="sP article">
               <div>
                 <div className="fStart">
-                  <h3 className="sP name name2 header--three">Primary Challenge.</h3>
+                  <h3 className="sP name name2 mP">Primary Challenge.</h3>
 
                 </div>
                 <p className="sP">{caseStudy.para1}</p>
               </div>
               <div className="mobileBorder">
-                <h3 className="sP name name2 header--three">Solution</h3>
+                <h3 className="sP name name2 mP">Solution</h3>
                 <p className="sP">{caseStudy.para2}</p>
               </div>
             </article>

@@ -27,7 +27,7 @@ const Main = () => {
           <article className="sP article">
             <div>
               <div className="fStart">
-                <h3 className="sP name name2 header--three">
+                <h3 className="sP name name2 mP">
                   Interactive Developer.
                 </h3>
                 <span className="o2">01</span>
@@ -49,7 +49,7 @@ const Main = () => {
               </p>
             </div>
             <div className="mobileBorder">
-              <h3 className="sP name name2 header--three">
+              <h3 className="sP name name2 mP">
                 Interactive Designer.
               </h3>
               <p className="sP">

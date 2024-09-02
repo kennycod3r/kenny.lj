@@ -7,7 +7,7 @@ const ServiceCard = ({ title, servicesText }) => {
       <article className=" mobileBorder sP article">
         <div>
           <div className="fStart">
-            <h3 className="sP name name1 header--three">{title}.</h3>
+            <h3 className="sP name name1 mP">{title}.</h3>
           </div>
           <p className="sP">{servicesText}</p>
         </div>

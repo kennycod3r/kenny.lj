@@ -407,10 +407,7 @@ b {
   align-items: flex-start;
 }
 
-.header--three {
-  font-weight: 400;
-  color: #0f0f0f;
-}
+
 .headerCA {
   font-weight: 450;
   font-size: 1.7em;
@@ -553,6 +550,14 @@ i {
   line-height: 1.2;
   font-weight: 300;
 }
+
+.mP {
+  color: #0f0f0f;
+  font-weight: 450;
+  font-style: normal;
+  font-size: clamp(1.55em, 2.3vw, 2.5em);
+  line-height: 1.45;
+}
 .mB2 {
   margin-bottom: 2.8vw;
 }
@@ -564,6 +569,12 @@ i {
     letter-spacing: -0.5px;
     font-style: normal;
     line-height: 1.6;
+  }
+  .mP {
+    font-weight: 450;
+    font-style: normal;
+    font-size: clamp(1.55em, 2.3vw, 2.5em);
+    line-height: 1.45;
   }
   .gPadBig {
     padding-top: 6vw;
