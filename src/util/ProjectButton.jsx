@@ -14,7 +14,6 @@ const ProjectButton = ({ item, handleSendImg }) => {
         )
       }
       className="project-button"
-      style={{ position: "relative" }}
     >
       <div className="btn-image-div">
         <img
@@ -26,8 +25,7 @@ const ProjectButton = ({ item, handleSendImg }) => {
         <div className="overlay-base btn-overlay"></div>
         <div className="view-btn fC">
           <span className="vd1">
-            {" "}
-            <ArrowLink />{" "}
+            <ArrowLink />
           </span>
           VIEW PROJECT
         </div>
@@ -35,9 +33,9 @@ const ProjectButton = ({ item, handleSendImg }) => {
       <div className="project-description">
         <h3 className="sP name">{item.title}</h3>
         <ul className="project-tags">
-          {item.projectTags.map((item, index) => (
+          {item.projectTags.map((tag, index) => (
             <li className="sP" key={index}>
-              {item}
+              {tag}
             </li>
           ))}
         </ul>
