@@ -20,6 +20,7 @@ const ProjectDisplay = ({ handleGetImage, handleOpenDisplay, hProjectImages }) =
         </h1>
 
         <div className="projectgrid">
+          
           {hProjectImages.map((item, index) => (
             <ProjectButton
               key={index}
