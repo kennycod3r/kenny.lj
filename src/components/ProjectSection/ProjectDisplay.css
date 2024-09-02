@@ -141,7 +141,7 @@
 @media only screen and (max-width: 720px) {
   .project-section {
     margin-top: 4vh;
-    border-radius: 4em;
+    border-radius: 38px;
   }
   .projectgrid,
   .Contactprojectgrid {
