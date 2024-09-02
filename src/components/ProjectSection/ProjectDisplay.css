@@ -17,10 +17,48 @@
   justify-content: space-between;
   margin-bottom: 2em;
 }
-.projectgrid{
+
+.projectgrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-columns:1fr 1fr;
+  width: 100%;
 }
+
+.project-button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-top: 0.1px solid red;
+  margin-bottom: 1vw;
+  justify-content: space-between;
+  padding: 1vw 1vw 0px;
+}
+
+.btn-image-div {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.btn-image-div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .phone-btn-div {
   width: 100%;
   display: flex;
@@ -53,6 +91,23 @@
   border: 2px solid var(--orange);
 }
 
+.product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vw;
+  margin: 1vw 0;
+}
+
+.product-dis-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 720px) {
   .project-section {
     margin-top: 4vh;
@@ -60,9 +115,8 @@
   }
 
   .projectgrid {
-    display: grid;
-    grid-row-gap: 3vw;
     grid-template-columns: 1fr;
+    grid-row-gap: 3vw;
     align-content: center;
     justify-content: space-between;
     align-items: center;
@@ -74,8 +128,6 @@
   }
 
   .btn-image-div img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
   }
 }

@@ -1,6 +1,5 @@
 import React from "react";
-import ArrowLink from "./ArrowLink";
-import '../components/ProjectSection/ProjectDisplay.css';
+import "../components/ProjectSection/ProjectDisplay.css";
 
 const ProjectButton = ({ item, handleSendImg }) => {
   return (
@@ -22,22 +21,16 @@ const ProjectButton = ({ item, handleSendImg }) => {
           className="project-image"
           loading="lazy"
         />
-        <div className="view-btn fC">
-          <span className="vd1">
-            <ArrowLink />
-          </span>
-          VIEW PROJECT
-        </div>
       </div>
-      <div className="project-description">
+      <div className="product-description">
         <h3 className="sP name">{item.title}</h3>
-        <ul className="project-tags">
+        <div className="product-dis-list fC">
           {item.projectTags.map((tag, index) => (
-            <li className="sP" key={index}>
+            <div className="sP" key={index}>
               {tag}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

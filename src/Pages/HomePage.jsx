@@ -63,7 +63,7 @@ const HomePage = () => {
       projectImages: [pshot0, sf1, sf2, sf3, sf4],
       image: pshot0,
       title: 'SHOEFANG',
-      projectTags: ['Basic E-commerce Website', 'design', 'development'],
+      projectTags: ['strategy E-commerce Website', 'design', 'development'],
     },
     {
       projectImages: [vsp1, vsp2],
