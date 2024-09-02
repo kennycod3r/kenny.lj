@@ -1,6 +1,6 @@
 import './Hamburger.css';
 
-export default function HamburgerMenu({ handleSidebar, openSidebar }) {
+export default function HamburgerMenu({openSidebar }) {
   return (
     
       <button
@@ -10,7 +10,7 @@ export default function HamburgerMenu({ handleSidebar, openSidebar }) {
             : "hamburger hamburger--3dx"
         }
         type="button"
-        onClick={handleSidebar}
+        
       >
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>

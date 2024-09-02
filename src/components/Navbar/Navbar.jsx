@@ -44,12 +44,11 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
               </li>
             </ul>
           </div>
-          <div className="fixed-ham animated-btn">
-            <div className="fixed-ham-inner">
+          <div className="fixed-ham animated-btn" onClick={handleSidebar}>
+            <div className="fixed-ham-inner" >
               <div className="fill-btn"></div>
               <div className="hamburger-content">
                 <HamburgerMenu
-                  handleSidebar={handleSidebar}
                   openSidebar={openSidebar}
                 />
               </div>
