@@ -550,8 +550,6 @@ i {
 
 .sP {
   font-size: 16px;
-  margin-top: 0;
-  font-size: 14px;
   line-height: 1.2;
   font-weight: 300;
 }
@@ -562,8 +560,12 @@ i {
 @media only screen and (max-width: 850px) {
   .sP {
     font-size: 14px;
-    line-height: 1.39;
     font-weight: 300;
+    font-weight: 450;
+    font-style: normal;
+    color: var(--black);
+    font-size: 1em;
+    line-height: 1.66;
   }
   .gPadBig {
     padding-top: 6vw;
@@ -584,13 +586,13 @@ i {
   .mobileBorder {
     border-top: var(--border-line);
   }
-  .bP{
+  .bP {
     font-size: 12px;
     line-height: 14px;
     white-space: nowrap;
     text-transform: capitalize;
   }
-  .bT4{
+  .bT4 {
     padding-top: 4vh;
   }
   .header--two,
