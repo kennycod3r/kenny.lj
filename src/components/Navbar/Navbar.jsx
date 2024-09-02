@@ -34,7 +34,7 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
                   </div>
                 </Link>
               </li>
-              
+
               <li>
                 <Link to="/ContactPage">
                   <div className="nav-link  " data-text="Contact">
@@ -45,10 +45,15 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
             </ul>
           </div>
           <div className="fixed-ham animated-btn">
-            <HamburgerMenu
-              handleSidebar={handleSidebar}
-              openSidebar={openSidebar}
-            />
+            <div className="fixed-ham-inner">
+              <div className="fill-btn"></div>
+              <div className="hamburger-content">
+                <HamburgerMenu
+                  handleSidebar={handleSidebar}
+                  openSidebar={openSidebar}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

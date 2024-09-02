@@ -2,7 +2,7 @@ import './Hamburger.css';
 
 export default function HamburgerMenu({ handleSidebar, openSidebar }) {
   return (
-    <div>
+    
       <button
         className={
           openSidebar
@@ -16,6 +16,6 @@ export default function HamburgerMenu({ handleSidebar, openSidebar }) {
           <span className="hamburger-inner"></span>
         </span>
       </button>
-    </div>
+    
   );
 }
