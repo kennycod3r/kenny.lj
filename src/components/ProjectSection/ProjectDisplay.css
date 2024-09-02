@@ -144,11 +144,13 @@
   }
 
   .projectgrid {
+    display: grid;
     grid-row-gap: 3vw;
     grid-template-columns: 1fr;
     align-content: center;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
+    justify-items: stretch
   }
 
   .project-button {
