@@ -4,7 +4,7 @@ import '../components/ProjectSection/ProjectDisplay.css';
 
 const ProjectButton = ({ item, handleSendImg }) => {
   return (
-    <button
+    <div
       onClick={() =>
         handleSendImg(
           item.image,
@@ -39,7 +39,7 @@ const ProjectButton = ({ item, handleSendImg }) => {
           ))}
         </ul>
       </div>
-    </button>
+    </div>
   );
 };
 
