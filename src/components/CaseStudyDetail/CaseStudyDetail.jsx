@@ -85,7 +85,7 @@ const CaseStudyDetail = () => {
   return (
     <div className="project-detail-sec">
       <section className="pd-intro pd-margin">
-        <h1 className="pd-text-xl" aria-label="skincare">
+        <h1 className="header--two" aria-label="skincare">
           {caseStudy.title || `Case Study ${caseStudyId}`}
         </h1>
         <div className="pd-intro-grid">

@@ -40,7 +40,7 @@ const TextAnimation = ({ text }) => {
   return (
     <div className="text-animation-container">
       <h1 className="header--two text-center text-heading-1 font-semibold uppercase text-accent-400">
-        <span aria-hidden="true" className="leading-tighter">
+        <span aria-hidden="true">
           <span className="inline-block">{renderLetters()}</span>
         </span>
       </h1>

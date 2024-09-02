@@ -15,9 +15,13 @@
   --navanimationslow2: all 0.5s cubic-bezier(0.7, 0, 0.1, 1);
   --orange: #f96d3f;
 }
+
 html::-webkit-scrollbar {
   display: none;
   width: 0;
+}
+html.w-mod-touch * {
+  background-attachment: scroll !important;
 }
 
 html {
@@ -125,13 +129,7 @@ html {
   right: 10px;
   top: 10px;
 }
-.hero-headtextt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  font-weight: bold;
-}
+
 
 .arrowdiv {
   width: 30px;
@@ -139,11 +137,6 @@ html {
   margin-top: 20px;
 }
 
-.hero-headtextt h1 {
-  font-size: 4em;
-  margin-top: 12px;
-  letter-spacing: -2px;
-}
 .linehero,
 .span-container {
   width: 100%;
@@ -222,17 +215,6 @@ html {
   align-items: center;
 }
 
-h1 {
-  font-weight: 400;
-  font-size: 3em;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: inherit;
-  text-wrap: balance;
-  letter-spacing: -0.045em;
-  line-height: 0.6;
-  text-transform: uppercase;
-}
 .headerh2 {
   font-weight: 400;
   font-size: 1.3em;
@@ -395,16 +377,6 @@ b {
   align-items: flex-start;
 }
 
-.headerCA {
-  font-weight: 450;
-  font-size: 1.7em;
-  letter-spacing: -1.1px;
-  text-transform: uppercase;
-  font-style: normal;
-  font-size: calc(var(5vw, 5vw) * 0.55);
-  line-height: 1.15;
-}
-
 .o2,
 .number {
   font-size: 14px;
@@ -414,6 +386,7 @@ b {
 .o2 {
   color: var(--orange);
   margin-left: 5px;
+  font-size: 10px;
 }
 
 .number {
@@ -449,11 +422,6 @@ label {
 label {
   color: white;
   font-weight: 400;
-}
-
-h1 {
-  font-size: 3.8rem;
-  line-height: 0.9;
 }
 
 i {
@@ -531,6 +499,16 @@ i {
   display: block;
   width: fit-content;
 }
+h1 {
+  line-height: 0.9;
+  font-weight: 400;
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: inherit;
+  text-wrap: balance;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
 p {
   overflow-wrap: break-word;
   font-size: unset;
@@ -553,7 +531,9 @@ p {
 .mB2 {
   margin-bottom: 2.8vw;
 }
-
+.uppercase {
+  text-transform: uppercase;
+}
 @media only screen and (max-width: 850px) {
   .sP {
     font-size: 14px;
@@ -596,27 +576,12 @@ p {
   .bT4 {
     padding-top: 4vh;
   }
-  .header--two,
-  .animateh1 {
+
+  .header--two {
     font-weight: 450;
     font-size: 1.9em;
     line-height: 1.1;
     justify-content: center;
-  }
-
-  .headerCA {
-    font-size: 1.2em;
-    line-height: 0.8;
-    text-transform: uppercase;
-  }
-  .animateh1 {
-    font-weight: 450;
-    font-size: 1.9em;
-    line-height: 0.9;
-  }
-  .headerp {
-    letter-spacing: -0.2px;
-    font-weight: 350;
   }
 
   .showmobile,
@@ -655,10 +620,6 @@ p {
 }
 
 @media (max-width: 780px) {
-  h1 {
-    font-size: 6vh;
-    line-height: 0.9;
-  }
   .dd {
     right: auto;
     bottom: 80px;
@@ -687,13 +648,8 @@ p {
   .hero-caption {
     padding: 10px;
   }
-  .hero-headtextt {
-    line-height: 1;
-  }
-  .hero-headtextt h1 {
-    font-size: 3.2em;
-    width: 50%;
-  }
+  
+  
   .oshin-container {
     width: 80%;
   }

@@ -13,13 +13,7 @@
     margin: 4vw 0;
   }
   
-  /* Text Styles */
-  .pd-text-xl {
-    font-size: 7vw;
-    font-weight: 450;
-    line-height: 1.1;
-  }
-  
+ 
   /* Intro Grid */
   .pd-intro-grid {
     display: grid;

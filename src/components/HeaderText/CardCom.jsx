@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CardAnimation = ({ text, className }) => {
+const CardAnimation = ({ text}) => {
   const letters = Array.isArray(text) ? text : text.split("");
 
   useEffect(() => {
@@ -29,9 +29,9 @@ const CardAnimation = ({ text, className }) => {
 
   return (
     <div className="card-animation-container">
-      <div className="card-content text-center text-heading-1 font-semibold uppercase text-accent-400">
-        <div aria-hidden="true" className="leading-tighter">
-          <span className="inline-block headerCA">
+      <div>
+        <div aria-hidden="true" className=" fC-wid leading-tighter">
+          <span className="sP mP uppercase">
             {letters.map((letter, index) => (
               <span
                 key={index}

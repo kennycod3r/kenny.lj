@@ -8,14 +8,16 @@ const TechSection = () => {
     <section className="tech-section fC flexDC">
       <div className="tech-section-wrapper">
         <div className="doublegrid">
-          <div className="mh40 flexsercon2">
+          <div className="mh40">
             <div>
-              <div className="flex-text-an">
+              <div className="fStart">
                 {" "}
-                <h1 className="header--two">How Can i</h1>
-                
-                <h1 className="header--two">Assist</h1>
-                <h1 className="header--two">You</h1>
+                <h1 className="header--two">
+                  How Can i<br/>
+                  Assist<br/>
+                  You<br/>
+                </h1>
+               
               </div>
             </div>
             <Link to="/ContactPage" className="block">
@@ -30,9 +32,7 @@ const TechSection = () => {
                 <CardAnimation text={"DEVELOPMENT"} />
                 <h3 className="sP showmobile">DEVELOPMENT</h3>
                 <ul>
-                  <li className="sP">
-                    Cross-Browser/Cross-Device Testing
-                  </li>
+                  <li className="sP">Cross-Browser/Cross-Device Testing</li>
                   <li className="sP">Shopify or Webflow Development</li>
                   <li className="sP">React / Next.js Development</li>
                   <li className="sP">Automation and Integration</li>

@@ -20,7 +20,7 @@ const ProjectDisplay = ({
   return (
     <div className="project-section">
       <div className="project-wrapper">
-        <h1 className="header--two ">
+        <h1 className="header--two">
           Selected Works.<span className="o2">02</span>
         </h1>
 

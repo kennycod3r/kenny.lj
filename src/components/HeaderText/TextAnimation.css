@@ -3,13 +3,6 @@
 }
 
 
-.text-accent-400 {
-  color: var(--color1); /* Adjust color as needed */
-}
-
-.leading-tighter {
-  line-height: 1.1;
-}
 
 .inline-block {
   display: inline-block;
