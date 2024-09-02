@@ -5,6 +5,7 @@
   color: var(--color2);
   padding: var(--pagePadding);
 }
+
 .project-wrapper {
   padding-top: 1rem;
   display: flex;
@@ -19,9 +20,6 @@
   gap: 0.5em;
   padding-bottom: 1em;
   margin-top: 1em;
-}
-.Contactprojectgrid {
-  gap: 0.7em;
 }
 
 .project-button {
@@ -41,8 +39,6 @@
   align-content: center;
   justify-content: space-between;
 }
-
-
 
 .project-description {
   margin-top: 1em;
@@ -76,6 +72,7 @@
   z-index: 3;
   box-shadow: var(--box-shadow);
 }
+
 .view-btn {
   justify-content: center;
   opacity: 0;
@@ -98,14 +95,17 @@
   align-items: center;
   justify-content: center;
 }
+
 .btn-image-div:hover .view-btn {
   opacity: 1;
 }
+
 .project-description ul {
   display: flex;
   gap: 2em;
   text-transform: capitalize;
 }
+
 .phone-btn-div {
   width: 100%;
   display: flex;
@@ -143,12 +143,13 @@
     margin-top: 4vh;
     border-radius: 38px;
   }
-  .projectgrid,
-  .Contactprojectgrid {
+
+  .projectgrid {
     grid-template-columns: 1fr;
     gap: 1em;
   }
 }
+
 
 @media only screen and (min-width: 2000px) {
   .project-wrapper {

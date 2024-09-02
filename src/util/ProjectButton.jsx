@@ -2,7 +2,7 @@ import React from "react";
 import ArrowLink from "./ArrowLink";
 import "../components/ProjectSection/ProjectDisplay.css";
 
-const ProjectButton = ({ item, handleSendImg, grid3 }) => {
+const ProjectButton = ({ item, handleSendImg }) => {
   return (
     <button
       onClick={() =>
@@ -16,11 +16,7 @@ const ProjectButton = ({ item, handleSendImg, grid3 }) => {
       className="project-button"
       style={{ position: "relative" }}
     >
-      <div
-        className={
-          grid3 ? "btn-image-div contact-btn-image-div" : "btn-image-div"
-        }
-      >
+      <div className="btn-image-div">
         <img
           src={item.image}
           alt={item.title}
@@ -37,19 +33,17 @@ const ProjectButton = ({ item, handleSendImg, grid3 }) => {
         </div>
       </div>
       <div className="project-description">
-      <h3 className="sP name">{item.title}</h3>
+        <h3 className="sP name">{item.title}</h3>
         <ul className="project-tags">
-          {item.projectTags.map((item, index) => {
-            return (
-              <li className="sP" key={index}>
-                {item}
-              </li>
-            );
-          })}
+          {item.projectTags.map((item, index) => (
+            <li className="sP" key={index}>
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
     </button>
   );
 };
 
-export default React.memo(ProjectButton);
+export default ProjectButton;
