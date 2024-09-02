@@ -15,7 +15,29 @@
   --navanimationslow2: all 0.5s cubic-bezier(0.7, 0, 0.1, 1);
   --orange: #f96d3f;
 }
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
 
+html {
+  overscroll-behavior: none;
+  scrollbar-width: none;
+  text-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+}
 .containerAnimate {
   position: relative;
   overflow: hidden;
@@ -217,11 +239,6 @@ h1 {
   text-transform: uppercase;
   letter-spacing: -0.03em;
 }
-p {
-  overflow-wrap: break-word;
-  font-size: unset;
-  font-weight: unset;
-}
 
 .link-copy__icon {
   height: 100%;
@@ -229,19 +246,6 @@ p {
   color: #aeaeae;
   z-index: 10;
   margin-right: 8px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  -webkit-user-drag: none;
-}
-
-.fCj,
-.fcb {
-  display: flex;
-  align-items: center;
 }
 
 .fStart {
@@ -267,22 +271,6 @@ p {
 
 .underline:hover {
   text-decoration: underline;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-  width: 0;
-}
-
-html {
-  text-rendering: geometricPrecision;
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
-  height: 100%;
-  overscroll-behavior: none;
-  -webkit-text-size-adjust: none;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -406,7 +394,6 @@ b {
   display: flex;
   align-items: flex-start;
 }
-
 
 .headerCA {
   font-weight: 450;
@@ -543,6 +530,11 @@ i {
 .block {
   display: block;
   width: fit-content;
+}
+p {
+  overflow-wrap: break-word;
+  font-size: unset;
+  font-weight: unset;
 }
 
 .sP {

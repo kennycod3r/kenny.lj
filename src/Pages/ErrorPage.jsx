@@ -10,7 +10,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page" className="fCj">
+    <div id="error-page" className="fC">
       <div>
         <div className="erobot">
           

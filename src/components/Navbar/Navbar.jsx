@@ -9,11 +9,11 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
       <div className="static-nav-inner flexSB">
         <div className="nav-links-container ">
           <Link to="/">
-            <div className="logo-text fcb">
+            <div className="logo-text fC">
               <div className="spin-logodiv  fJc">
                 <span className="spinlogo fJc orangeColor">©</span>
               </div>
-              <div className="logo-main fcb">KNNY</div>
+              <div className="logo-main fC">KNNY</div>
             </div>
           </Link>
         </div>

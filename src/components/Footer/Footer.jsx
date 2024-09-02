@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="container">
           <div className="row ">
             <div className="col col1 showmobile">
-              <div className="logo-text fcb">
-                <div className="logo-main fcb">
+              <div className="logo-text fC">
+                <div className="logo-main fC">
                   <span className="orangeColor">©</span>KNNY
                 </div>
               </div>
