@@ -130,7 +130,6 @@ html {
   top: 10px;
 }
 
-
 .arrowdiv {
   width: 30px;
   height: 30px;
@@ -440,62 +439,46 @@ i {
 }
 
 .more-button {
-  height: 3.8em;
-  width: 15em;
+  display: inline-flex;
+  height: 2.5em;
+  width: 9em;
   background-color: var(--color1);
   padding: 10px;
   border-radius: 35px;
-  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   cursor: pointer;
   border: none;
   outline: none;
-  color: white;
+  color: var(--color2);
   overflow: hidden;
   transition: transform 0.4s ease-in-out;
 }
 
-.about-btn {
-  width: 8em;
-  height: 3em;
-  background-color: plum;
-}
-
 .more-button p {
-  position: absolute;
   z-index: 2;
 }
 
 .more-button::after {
   content: "";
   position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
   z-index: 1;
   transform: translateY(100%);
+  transition: transform 0.4s ease-in-out, background-color 0.25s ease-in-out;
   background-color: var(--orange);
-  transition: transform 0.4s ease-in-out;
 }
 
 .more-button:hover::after {
-  transform: translateY(0);
+  transform: translate(-10.1923px, 2.9223px) rotate(0.001deg);
 }
 
-.more-btn-div {
-  min-height: 20vh;
-}
 
-.small-btn {
-  height: 2.5em;
-  width: 9em;
-  margin: 0;
-}
 .block {
   display: block;
   width: fit-content;
@@ -649,8 +632,7 @@ p {
   .hero-caption {
     padding: 10px;
   }
-  
-  
+
   .oshin-container {
     width: 80%;
   }

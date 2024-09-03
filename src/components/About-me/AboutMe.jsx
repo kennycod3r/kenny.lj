@@ -52,9 +52,7 @@ export default function AboutMe() {
               <h1 className="fStart fadeIndiv ">
                 Front-End Developer<span className="o2">04</span>
               </h1>
-              <p className="sP orangeColor">
-                Interactive Developer, Creator
-              </p>
+              <p className="sP orangeColor">Interactive Developer, Creator</p>
             </div>
             <div className=" pad-20 sP textexpandDiv fadeIndiv">
               Driven by a passion for design and development, I take projects

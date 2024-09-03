@@ -23,7 +23,7 @@
   min-width: 100%;
 }
 
-.containercs-grid{
+.containercs-grid {
   background-color: var(--black);
   width: 100%;
   color: var(--color2);
@@ -33,7 +33,7 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
 }
-.cs-cg1{
+.cs-cg1 {
   margin: 4vh 0;
 }
 
@@ -49,8 +49,6 @@
 .containercs > * {
   width: 100%;
 }
-
-
 
 /* Hover Card Base Styles */
 .hover-card {
@@ -173,7 +171,7 @@
   overflow: hidden;
 }
 
-#contacth1{
+#contacth1 {
   min-width: 100%;
   display: flex;
   align-items: flex-start;
@@ -328,8 +326,7 @@
 
 @media (max-width: 780px) {
   .conAb {
-    margin:2em;
-    
+    margin: 2em;
   }
   .mh40 {
     min-height: 20vh;
@@ -347,21 +344,19 @@
   .span-container {
     height: 25px;
   }
-  .tslists{
+  .tslists {
     gap: 1vh;
   }
-  .ts-div2 li{
+  .ts-div2 li {
     color: #555555;
   }
   .ts-div2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2vw;
     column-gap: 4vw;
-    grid-row-gap: 4vw;
-    row-gap: 4vw;
+    row-gap: 8vw;
     padding-top: 4vh;
     padding-bottom: 2vh;
     border-top: 0.1px solid #1c1414;
-}
+  }
 }

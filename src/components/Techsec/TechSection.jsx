@@ -24,6 +24,7 @@ const TechSection = () => {
               <button className="more-button small-btn">
                 <p className="bP">Contact Me</p>
               </button>
+              
             </Link>
           </div>
           <>
