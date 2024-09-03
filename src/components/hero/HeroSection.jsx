@@ -53,10 +53,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="hero-container fC" role="banner">
+    <header className="hero-container fC" role="banner">
       <div className="overlay-base hero-overlay">
         <div className="hero-caption flexStartC">
-          <header className="hero-headtext">
+          <div className="hero-headtext">
             <span className="number o2">00</span>
             <div className="hero-animate">
               <div id="heroHeader">
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </header>
+          </div>
         </div>
       </div>
       <div className="slide-container" aria-hidden="true"></div>
@@ -151,7 +151,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

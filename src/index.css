@@ -63,10 +63,14 @@ html {
   margin: 0;
 }
 .hero-container {
-  min-width: 100%;
+  width: 100%;
+  justify-content: center;
   min-height: 90vh;
   position: relative;
-  background: center / cover no-repeat url("../../../src/images/hello.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image:url("../../../src/images/hello.webp") !important;
   overflow: hidden;
   margin-top: 4vw;
   background-color: plum;
@@ -171,7 +175,7 @@ html {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 4;
+  z-index: 2;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -225,7 +229,7 @@ html {
   height: 100%;
   width: 10px;
   color: #aeaeae;
-  z-index: 10;
+  z-index: 1;
   margin-right: 8px;
 }
 
@@ -478,7 +482,6 @@ i {
   transform: translate(-10.1923px, 2.9223px) rotate(0.001deg);
 }
 
-
 .block {
   display: block;
   width: fit-content;
@@ -625,6 +628,7 @@ p {
     min-height: 70vh;
     margin-top: 0;
   }
+  
 
   .view-hero-header-details {
     grid-template-columns: 1fr;
