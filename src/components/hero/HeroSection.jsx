@@ -1,45 +1,24 @@
 import "./Hero.css";
 import React, { useState, useEffect, useCallback } from "react";
 import gsap from "gsap";
-import "../../index.css";
+import heroImg from "../../images/hello.webp";
 
 const HeroSection = () => {
   const runAnimation = useCallback(() => {
     gsap.timeline()
       .to("#heroHeader", {
         yPercent: -100,
-        rotate: 0.001, 
+        rotate: 0.001,
         delay: 1.7,
         duration: 1.5,
         ease: "power3.out",
       })
-      .to(
-        "#line1",
-        {
-          yPercent: -100,
-          duration: 0.6,
-          ease: "power4.out",
-        },
-        "-=0.4"
-      )
-      .to(
-        "#line2",
-        {
-          yPercent: -100,
-          duration: 0.7,
-          ease: "power4.out",
-        },
-        "-=0.4"
-      )
-      .to(
-        "#line3",
-        {
-          yPercent: -100,
-          duration: 0.8,
-          ease: "power4.out",
-        },
-        "-=0.4"
-      );
+      .to("#line1, #line2, #line3", {
+        yPercent: -100,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power4.out",
+      }, "-=0.4");
   }, []);
 
   useEffect(() => {
@@ -53,7 +32,10 @@ const HeroSection = () => {
   };
 
   return (
-    <header className="hero-container fC" role="banner">
+    <header className="home-header fC" role="banner">
+      <div className="personal-image">
+        <img src={heroImg} alt="Hero" />
+      </div>
       <div className="overlay-base hero-overlay">
         <div className="hero-caption flexStartC">
           <div className="hero-headtext">
@@ -64,9 +46,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="arrowdiv showmobile">
-              <p className="sP whiteColor" id="arrow">
-                kenny.lj
-              </p>
+              <p className="sP whiteColor" id="arrow">kenny.lj</p>
             </div>
             <div className="oshin-container">
               <div className="sP whiteColor">
@@ -95,7 +75,6 @@ const HeroSection = () => {
         <div className="explore-text">
           <p className="sP whiteColor">00 - 09</p>
         </div>
-
         <div className="view-hero-header-details">
           <span className="hidemobile sP">Web-Creator</span>
           <span className="sP">Front-End Developer</span>
@@ -104,7 +83,7 @@ const HeroSection = () => {
       </div>
       <div className={openAvailability ? `dd dd-open` : `dd`}>
         <div className="nav-dd">
-          <div className="expand-icon  fJc" onClick={handleOpenAvailability}>
+          <div className="expand-icon fJc" onClick={handleOpenAvailability}>
             <svg
               className={openAvailability ? `spinIcon` : "spinIcon-open"}
               width="24px"
