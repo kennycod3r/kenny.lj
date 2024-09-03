@@ -29,47 +29,18 @@ const ProjectButton = ({ item, handleSendImg }) => {
                 data-ll-status="loaded"
               />
               <div className="overlay image-dark"></div>
-              <div className="col-tags">
-                <div className="tags">
-                  <div className="single-tag primary">
-                    <span>tag</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-          <div className="col col-content">
-            <h3 className="sP">{item.title}</h3>
-            <p className="small">
+          <div className="col-content">
+            <h3 className="sP small-listsh3">{item.title}</h3>
+            <p className="small-lists sP">
               {item.projectTags.map((tag, index) => (
-                <span className="sP" key={index}>
+                <span key={index}>
                   {tag}
                 </span>
               ))}
             </p>
-            <div className="arrow small border">
-              <div className="arrow-fill"></div>
-              <div className="arrow-fill-hover"></div>
-              <div className="arrow-content">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <polyline
-                    points="18 8 18 18 8 18"
-                    fill="none"
-                    stroke="#000"
-                    strokeMiterlimit="10"
-                  ></polyline>
-                  <line
-                    x1="18"
-                    y1="18"
-                    x2="5"
-                    y2="5"
-                    fill="none"
-                    stroke="#000"
-                    strokeMiterlimit="10"
-                  ></line>
-                </svg>
-              </div>
-            </div>
+            
           </div>
         </div>
       </li>

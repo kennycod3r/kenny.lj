@@ -107,10 +107,8 @@
   flex-direction: column;
   width: 100%;
   padding: 1vw 1vw 0px;
-  border-right:0.1px solid #ccc;;
+  border-right: 0.1px solid #ccc;
   border-bottom: 0.1px solid #ccc;
- 
-  
   position: relative;
 }
 
@@ -122,28 +120,45 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 1.5em;
-  transition: var(--animation-primary);
-  transform: scale(1) rotate(0.001deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .single-team-item .col-image .image::before {
   content: "";
   display: block;
-  padding-top: 63.333%;
+  padding-top: 65.333%;
 }
 
 img.overlay,
 video.overlay {
   object-fit: cover;
 }
-
+.small-listsh3{
+  font-weight: 450;
+}
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+}
+.small-lists{
+  display: flex;
+  width: 100%;
+  gap: 3vh;
+  font-size: 12px;
+}
+
+.col-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2vh;
+  margin-bottom: 1.5vh ;
 }
 
 @media only screen and (max-width: 720px) {
@@ -162,6 +177,13 @@ video.overlay {
     display: block;
     padding-top: 93.333%;
   }
+  .single-team-item {
+    
+    border-right:none;
+    border-bottom:1px solid #323232;
+    
+  }
+  
 }
 
 @media only screen and (min-width: 2000px) {
