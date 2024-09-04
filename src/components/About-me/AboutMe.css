@@ -1,57 +1,52 @@
-
 .aboutme-pages {
-  margin: .3em;
   overflow: hidden;
+  background-color: var(--black);
+  color: var(--color2);
   border-radius: 12px 12px 0 0;
-  background-color: black;
 }
 
 .about-content-wrapper {
   width: 100%;
   display: flex;
   height: 100%;
-  padding-top: 4vh;
-  padding:4em;
+  padding: 4em;
   gap: 4vh;
   flex-direction: column;
 }
 
-.about-content-wrapper2{
+.about-content-wrapper2 {
   padding-top: 4vh;
 }
-.ab-div2{
+.ab-div2 {
   display: grid;
   gap: 4vh;
 }
 
 .about-nav {
-  background-color: black;
   justify-content: space-between;
   padding: 0.5em 1em;
   border-radius: 12px 12px 0 0;
 }
 
-.whitecontainer, .whitecontainerorange {
+.whitecontainer,
+.whitecontainerorange {
   min-height: 100vh;
   width: 100%;
   border-radius: 15px 15px 0 0;
   overflow: hidden;
-  background-position: center;
-  background-size: cover;
-  background: rgb(216, 162, 243);
+  /* background: rgb(216, 162, 243);
   background: linear-gradient(
     184deg,
     rgba(226, 170, 255, 1) 0%,
     rgba(221, 160, 221, 1) 0%
-  );
+  ); */
+  margin: 0;
+  padding: 0;
   box-shadow: 0 0 10px rgba(1, 1, 1, 0.38);
-  background-color: #181818;
 }
 
-
 .whitecontainerorange {
- background: black;
- border: var(--border-line);
+  border: var(--border-line);
 }
 
 .aboutpage {
@@ -63,15 +58,15 @@
   width: 100%;
   overflow: hidden;
   min-height: 100vh;
+  max-width: 100vw;
   grid-template-columns: 1fr 1fr;
-  background-color: black;
 }
 
-.aboutherocontainer .p-20{
+.aboutherocontainer .p-20 {
   padding: 2em 0;
 }
-.p-2{
-padding: 0 2em;
+.p-2 {
+  padding: 0 2em;
 }
 .aboutherocontainer .fadeIndiv {
   animation: fadeIn 1s ease-in-out;
@@ -79,11 +74,11 @@ padding: 0 2em;
 
 .profilegrid {
   display: flex;
-  gap: 0.1em;
-  padding: 2em;
+  gap: 1em;
 }
 
-.profilediv, .contactprofilediv{
+.profilediv,
+.contactprofilediv {
   height: 100px;
   width: 100px;
   transition: var(--animationSmooth);
@@ -92,7 +87,7 @@ padding: 0 2em;
   border: var(--border-line);
 }
 
-.contactprofilediv{
+.contactprofilediv {
   height: 35px;
   width: 35px;
   overflow: hidden;
@@ -145,7 +140,7 @@ padding: 0 2em;
   transform: translateY(100%);
 }
 
-.about-wrapper2{
+.about-wrapper2 {
   width: 100%;
   display: flex;
   height: 100%;
@@ -159,15 +154,11 @@ padding: 0 2em;
   .aboutherocontainer div {
     overflow: hidden;
   }
-  .aboutpage {
-    padding-top:4vh ;
-  }
-
   .aboutherocontainer {
     grid-template-columns: 1fr;
+    overflow: hidden;
   }
 
- 
   .profilediv {
     width: 80px;
     height: 80px;
@@ -176,19 +167,17 @@ padding: 0 2em;
   .textexpandDiv {
     width: 100%;
   }
-  .aboutme-pages{
+  .aboutme-pages {
     padding: 3px;
   }
-  
 
   .about-content-wrapper {
     width: 100%;
     display: flex;
-    padding-top: 4vh;
     padding: 0;
     gap: 0;
   }
-  .pad-20{
+  .pad-20 {
     display: grid;
     padding: 2em;
   }

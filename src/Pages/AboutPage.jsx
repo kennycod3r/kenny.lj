@@ -5,8 +5,7 @@ const AboutPage = () => {
   return (
     <div className="aboutpage">
       <div className="about-nav fC">
-        <div>Circle</div>
-        <div>Kenny</div>
+        <h1 className="header--two">About Me.</h1>
       </div>
       <div className="whitecontainer">
         <AboutMe />
