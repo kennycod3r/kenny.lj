@@ -13,58 +13,42 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
     const animation = gsap.to(displayPageRef.current, {
       y: openDisplay ? 0 : "100%",
       duration: 1.1,
+      stagger: 0,
       ease: "power4.out",
     });
     return () => animation.kill();
   }, [openDisplay]);
-
   return (
     <div ref={displayPageRef} data-lenis-prevent className="display-page">
-      <div className="display-page-inner">
-        <div className="flex-header">
-          <a
-          className="showmobile"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://shoe-fang-v-indol.vercel.app/"
-          >
-            <span className="showmobile job-title underline whiteColor flexSB">
-              <ArrowLink /> VIEW LIVE PROJECT
-            </span>
-            
-          </a>
-          <div className="display-page-title">{displayPageTitle}</div>
-          <div className="close-header" onClick={handleOpenDisplay}>
-            <span className="job-title whiteColor showmobile">close</span>
-            <div className="display-page-btn dp-btn">
-              <CloseSvg isOpen={openDisplay} />
-            </div>
+      <div className="flex-header">
+        <a target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
+          <span className="showmobile job-title underline whiteColor flexSB">
+            <ArrowLink /> VIEW LIVE PROJECT
+          </span>
+        </a>
+        <div className="display-page-title">{displayPageTitle}</div>
+        <div className="close-header" onClick={handleOpenDisplay}>
+          <span className="job-title whiteColor showmobile">close</span>
+          <div className="display-page-btn dp-btn">
+            <CloseSvg isOpen={openDisplay} />
           </div>
         </div>
-        <div className="display-page-content">
-          <div className="display-page-scroller">
-            <div className="display-page-image snap-scroller">
-              {displayPageDataImages.map((item, index) => (
-                <div className="project-imgs-con fC" key={index}>
-                  <img
-                    className="project-imgs"
-                    src={item}
-                    alt={`project-${index}`}
-                  />
-                </div>
-              ))}
-              <div className="project-imgs project-imgs-link">
-                <div className="pili fC">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://shoe-fang-v-indol.vercel.app/"
-                  >
-                    <span className="job-title underline whiteColor fC">
-                      <ArrowLink /> VIEW LIVE PROJECT
-                    </span>
-                  </a>
-                </div>
+      </div>
+      <div className="display-page-content">
+        <div className="display-page-scroller">
+          <div className="display-page-image snap-scroller">
+            {displayPageDataImages.map((item, index) => (
+              <div className="project-imgs-con fC" key={index}>
+                <img className="project-imgs" src={item} alt={item.title} />
+              </div>
+            ))}
+            <div className="project-imgs project-imgs-link">
+              <div className="pili fC">
+                <a target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
+                  <span className="job-title underline whiteColor fC">
+                    <ArrowLink /> VIEW LIVE PROJECT
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -82,5 +66,3 @@ DisplayPage.propTypes = {
   }).isRequired,
   openDisplay: PropTypes.bool.isRequired,
 };
-
-export default DisplayPage;
