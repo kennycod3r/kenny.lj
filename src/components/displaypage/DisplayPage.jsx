@@ -11,7 +11,7 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
 
   useEffect(() => {
     const animation = gsap.to(displayPageRef.current, {
-      y: openDisplay ? 0 : "100%",
+      y: openDisplay ? 0 : "110%",
       duration: 1.1,
       stagger: 0,
       ease: "power4.out",
