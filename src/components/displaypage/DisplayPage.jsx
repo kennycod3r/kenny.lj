@@ -58,6 +58,7 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
   );
 };
 
+
 DisplayPage.propTypes = {
   handleOpenDisplay: PropTypes.func.isRequired,
   displayPageData: PropTypes.shape({
@@ -66,3 +67,4 @@ DisplayPage.propTypes = {
   }).isRequired,
   openDisplay: PropTypes.bool.isRequired,
 };
+export default DisplayPage;
