@@ -21,8 +21,8 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
   return (
     <div ref={displayPageRef} data-lenis-prevent className="display-page">
       <div className="flex-header">
-        <a target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
-          <span className="showmobile job-title underline whiteColor flexSB">
+        <a className="showmobile" target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
+          <span className="job-title underline whiteColor flexSB">
             <ArrowLink />VIEW PROJECT LIVE
           </span>
         </a>
