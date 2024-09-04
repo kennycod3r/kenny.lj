@@ -2,6 +2,7 @@
   height: 100%;
   position: fixed;
   width: 100%;
+  overscroll-behavior:none;
   overflow: auto;
   z-index: 5000;
 }
@@ -107,8 +108,6 @@
   transition: var(--navanimationslow);
 }
 
-
-
 .display-page-btn {
   background-color: inherit;
   position: relative;
@@ -121,17 +120,7 @@
   background-color: rgba(240, 248, 255, 0.106);
 }
 
-.display-page-scroller {
-  width: 100%;
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  margin: 0;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Snap Scrolling */
 .snap-scroller {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 2em;
@@ -139,29 +128,6 @@
 
 .snap-scroller > * {
   scroll-snap-align: start;
-}
-
-.project-imgs {
-  inline-size: 100%;
-  width: 500px;
-  height: 390px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: contain;
-  overflow: hidden;
-  background-color: var(--black);
-}
-
-.project-imgs-link {
-  background-color: var(--black);
-}
-
-.project-imgs-link .pili {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  border: 1px solid #181818;
 }
 
 /* Hide scrollbar */
@@ -187,7 +153,8 @@
     height: 300px;
     object-fit: cover;
   }
-  .pili{
+
+  .pili {
     align-items: center;
     justify-content: center;
   }

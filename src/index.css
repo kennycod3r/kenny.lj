@@ -23,7 +23,9 @@ html::-webkit-scrollbar {
 html.w-mod-touch * {
   background-attachment: scroll !important;
 }
-
+html, body {
+  overscroll-behavior: none !important;
+}
 html {
   overscroll-behavior: none;
   scrollbar-width: none;

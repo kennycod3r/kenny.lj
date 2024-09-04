@@ -23,7 +23,7 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
       <div className="display-page-inner">
         <div className="flex-header">
           <a
-          className=""
+          className="showmobile"
             target="_blank"
             rel="noopener noreferrer"
             href="https://shoe-fang-v-indol.vercel.app/"
@@ -31,7 +31,7 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
             <span className="showmobile job-title underline whiteColor flexSB">
               <ArrowLink /> VIEW LIVE PROJECT
             </span>
-            <span className="02 number job-title">0001</span>
+            
           </a>
           <div className="display-page-title">{displayPageTitle}</div>
           <div className="close-header" onClick={handleOpenDisplay}>
