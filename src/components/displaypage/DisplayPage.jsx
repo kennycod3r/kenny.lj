@@ -23,7 +23,7 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
       <div className="flex-header">
         <a target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
           <span className="showmobile job-title underline whiteColor flexSB">
-            <ArrowLink />VIEW PROJECT LIVE 
+            <ArrowLink />VIEW PROJECT LIVE
           </span>
         </a>
         <div className="display-page-title">{displayPageTitle}</div>
