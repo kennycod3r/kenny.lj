@@ -1,40 +1,196 @@
 :root {
-    --gap-padding: clamp(1.5em, 4vw, 2.5em);
-  }
-  
-  .hero-animate-container {
-    display: flex;
-    align-items: center;
-    height: fit-content;
-  }
-  
-  #heroHeader {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    transform: translateY(120%);
-    color: white;
-    margin: 0;
-  }
-  
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);
+}
+
+.hero-animate-container {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
+
+#heroHeader {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transform: translateY(120%);
+  color: white;
+  margin: 0;
+}
+
+.home-header {
+  min-height: 88vh;
+  max-height: 100vh;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 4vw;
+  background-color: plum;
+}
+
+.personal-image {
+  width: 100%;
+  height: 100%;
+}
+
+.personal-image img {
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.dd {
+  bottom: 0;
+  transform: translateY(0);
+  position: absolute;
+  background-color: transparent;
+  right: 1em;
+  z-index: 2;
+  transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+
+.spinIcon {
+  transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+  transform: rotate(180deg);
+}
+
+.spinIcon:hover {
+  animation: logo-spin 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.spinIcon-open {
+  transform: rotate(0deg);
+}
+
+.dd-open {
+  transform: translateY(-80px);
+}
+
+.nav-dd {
+  z-index: 2;
+  width: 570px;
+  color: white;
+  backdrop-filter: blur(6px);
+  background-color: rgba(118, 118, 118, 0.4);
+  border-radius: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1em;
+  line-height: 1.4;
+  position: relative;
+  overflow: hidden;
+}
+
+.expand-icon {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+  right: 10px;
+  top: 10px;
+}
+
+.arrowdiv {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.linehero,
+.span-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.span-container {
+  position: relative;
+}
+
+.oshin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 1.4;
+  font-weight: 400;
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+.oshin-container span {
+  font-size: 1.44em;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.hero-headtext .o2 {
+  color: var(--orange);
+}
+
+.view-hero-header {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: var(--border-line);
+  height: 50px;
+  box-shadow: var(--box-shadow-light);
+  justify-items: flex-start;
+}
+
+.explore-text {
+  padding-left: 30px;
+}
+
+.view-hero-header-details {
+  background-color: #fafafa;
+  border-radius: 5px 5px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: left;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  align-items: center;
+  padding: 0 10px;
+  line-height: normal;
+  align-content: space-around;
+  justify-items: center;
+}
+
+@media screen and (max-width: 740px) {
   .home-header {
     min-height: 80vh;
     max-height: 100vh;
-    align-items: flex-end;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 4vw;
-    background-color: plum;
+    margin-top: 0;
+    padding: calc(var(--gap-padding) * 2) 0;
   }
-  
+
   .personal-image {
     width: 100%;
     height: 100%;
   }
-  
+
   .personal-image img {
     object-fit: cover;
     position: absolute;
@@ -43,160 +199,4 @@
     height: 100%;
     width: 100%;
   }
-  
-  .dd {
-    bottom: 0;
-    transform: translateY(0);
-    position: absolute;
-    background-color: transparent;
-    right: 1em;
-    z-index: 2;
-    transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    will-change: transform;
-  }
-  
-  .spinIcon {
-    transition: transform 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    will-change: transform;
-    transform: rotate(180deg);
-  }
-  
-  .spinIcon:hover {
-    animation: logo-spin 1.1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  
-  .spinIcon-open {
-    transform: rotate(0deg);
-  }
-  
-  .dd-open {
-    transform: translateY(-80px);
-  }
-  
-  .nav-dd {
-    z-index: 2;
-    width: 570px;
-    color: white;
-    backdrop-filter: blur(6px);
-    background-color: rgba(118, 118, 118, 0.4);
-    border-radius: 0.75rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 1em;
-    line-height: 1.4;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .expand-icon {
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    overflow: hidden;
-    right: 10px;
-    top: 10px;
-  }
-  
-  .arrowdiv {
-    width: 30px;
-    height: 30px;
-    margin-top: 20px;
-  }
-  
-  .linehero,
-  .span-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    overflow: hidden;
-  }
-  
-  .span-container {
-    position: relative;
-  }
-  
-  .oshin-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    line-height: 1.4;
-    font-weight: 400;
-    width: 500px;
-    margin-top: 20px;
-    margin-left: 70px;
-  }
-  
-  .oshin-container span {
-    font-size: 1.44em;
-    text-align: left;
-    text-transform: capitalize;
-  }
-  
-  .hero-headtext .o2 {
-    color: var(--orange);
-  }
-  
-  .view-hero-header {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    overflow: hidden;
-    border-bottom: var(--border-line);
-    height: 50px;
-    justify-items: flex-start;
-  }
-  
-  .explore-text {
-    padding-left: 30px;
-  }
-  
-  .view-hero-header-details {
-    background-color: #fafafa;
-    border-radius: 5px 5px 0 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: left;
-    min-height: 100%;
-    min-width: 100%;
-    overflow: hidden;
-    align-items: center;
-    padding: 0 10px;
-    line-height: normal;
-    align-content: space-around;
-    justify-items: center;
-  }
-  
-  @media screen and (max-width: 740px) {
-    .home-header {
-      min-height: 80vh;
-      max-height: 100vh;
-      margin-top: 0;
-      padding: calc(var(--gap-padding) * 2) 0;
-    }
-  
-    .personal-image {
-      width: 100%;
-      height: 100%;
-    }
-  
-    .personal-image img {
-      object-fit: cover;
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-    }
-  }
-  
+}

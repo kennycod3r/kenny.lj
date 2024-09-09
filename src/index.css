@@ -256,7 +256,8 @@ h3,
 }
 
 .name2 {
-  padding: 1em 0;
+  padding-top: 1em;
+  padding-bottom: .5em;
 }
 
 .job-title,
@@ -348,8 +349,8 @@ p {
 
 .sP {
   font-size: 16px;
-  line-height: 1.2;
-  font-weight: 300;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .mP {
@@ -360,7 +361,7 @@ p {
   line-height: 1.45;
 }
 .mB2 {
-  margin-bottom: 2.8vw;
+  margin-bottom: 1.8vw;
 }
 .uppercase {
   text-transform: uppercase;
@@ -379,9 +380,15 @@ p {
     font-size: clamp(1.5em, 2vw, 2.2em);
     line-height: 1.45;
   }
+  .mB2 {
+    margin-bottom: 2.8vw;
+  }
   .gPadBig {
     padding-top: 6vw;
     padding-bottom: 4vh;
+  }
+  .name2 {
+    padding: 1em 0;
   }
 
   .hero-overlay {

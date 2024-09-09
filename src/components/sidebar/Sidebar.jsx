@@ -35,7 +35,7 @@ const Sidebar = ({ openSidebar, handleSidebar }) => {
           </li>
           <li className="navigation-sidelink flexSB">
             <Link
-              to="/Projects"
+              to="/CaseStudy"
               className={`sidebar-link ${
                 isActive("/Projects") ? "active" : ""
               }`}
@@ -67,22 +67,7 @@ const Sidebar = ({ openSidebar, handleSidebar }) => {
             </Link>
             <span className="o2">03-04</span>
           </li>
-          
-          <li className="navigation-sidelink flexSB">
-            <Link
-              to="/"
-              className={`sidebar-link`}
-              onClick={handleSidebar}
-            >
-              <div>
-                <h3 className="headerh2">SERVICES</h3>
-              </div>
-              <div
-                className={`dot ${isActive("/Press") ? "active" : ""}`}
-              ></div>
-            </Link>
-            <span className="o2">04-06</span>
-          </li>
+
           <li className="navigation-sidelink flexSB">
             <Link
               to="/ContactPage"
@@ -103,7 +88,11 @@ const Sidebar = ({ openSidebar, handleSidebar }) => {
         </ul>
         <div className="semi-circle">
           <div className="job-title">RESUME</div>
-          <div className="job-title">LINKEDIN</div>
+          <div className="job-title">
+            <a href="https://www.linkedin.com/in/kehinde-oguntola-270903198/">
+              LINKEDIN
+            </a>
+          </div>
           <div className="job-title">ABOUT</div>
         </div>
       </div>
