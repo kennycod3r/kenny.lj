@@ -29,20 +29,20 @@ const CardAnimation = ({ text}) => {
 
   return (
     <div className="card-animation-container">
-      <div>
-        <div aria-hidden="true" className="fC-wid2">
-          <span className="sP name name2 mP capitalise">
+     
+        <div aria-hidden="true">
+          <h3 className="sP name name1 mP">
             {letters.map((letter, index) => (
               <span
                 key={index}
                 className="relative inline-flex overflow-y-clip"
               >
-                <span className="will-change-transform">{letter}</span>
+                <span key={index} className="will-change-transform">{letter}</span>
               </span>
             ))}
-          </span>
+          </h3>
         </div>
-      </div>
+      
     </div>
   );
 };
