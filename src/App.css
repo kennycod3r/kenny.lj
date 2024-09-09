@@ -34,7 +34,7 @@ main {
   margin-top: 1em;
   border-top: var(--border-line);
 }
-.fC-wid {
+.fC-wid, .fCwid2 {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -85,7 +85,10 @@ main {
     text-align: left;
   }
   .fC-wid {
-    margin-top: 4vh;
+    margin-top: 5vh;
+  }
+  .fC-wid2{
+    margin-top: 5vh;
   }
   .main-f-btn {
     flex-direction: column;

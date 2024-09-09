@@ -194,7 +194,8 @@
   display: flex;
   flex-direction: column;
   padding: var(--pagePadding);
-  justify-content: center;
+  align-items: stretch;
+  width: 100%;
 }
 
 .service-btn {
@@ -228,13 +229,16 @@
 
 .linkDisplaypage form input {
   background-color: var(--black);
-  border-bottom: var(--border-line);
+  border-bottom: 1px solid #6e6e6e;
 }
 .gridDiv {
   padding: 2em;
   overflow: hidden;
 }
-
+.contact-form{
+  display: grid;
+  gap: 4vh;
+}
 .contact-wrapper-outer {
   padding: 4em 6em;
   background-color: var(--black);
@@ -333,13 +337,15 @@
   }
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 4vh;
   }
   .contact-wrapper-outer {
     padding: 10px;
   }
   .gridDiv {
     padding: 0;
-    margin-bottom: 3em;
+    display: grid;
+    gap: 2vh;
   }
   .span-container {
     height: 25px;

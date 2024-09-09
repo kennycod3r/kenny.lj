@@ -14,7 +14,6 @@ import sf4 from "../../images/sfp3.webp";
 
 import osp from "../../images/osp.webp";
 import othersimg from "../../images/others.webp";
-import CardAnimation from "../HeaderText/CardCom";
 
 const CaseStudyDetail = () => {
   const { caseStudyId } = useParams(); // Updated parameter name

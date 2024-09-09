@@ -53,7 +53,7 @@ const Services = () => {
       <div className="m-small">
       <div className="flex-st">
 
-      <CardAnimation text={"services"}/>
+      <CardAnimation text={"Services"}/>
       <CardAnimation text={"i"}/>
       <CardAnimation text={"provide"}/>
       </div>

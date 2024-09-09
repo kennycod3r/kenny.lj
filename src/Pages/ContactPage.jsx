@@ -77,7 +77,7 @@ const ContactPage = () => {
 
   return (
     <div className="aboutpage">
-      <div className="whitecontainerorange">
+      <div>
         <div className="aboutme-pages">
           <div className="linkDisplaypage ">
             <div className="contact-grid">
@@ -105,7 +105,7 @@ const ContactPage = () => {
                 </a>
               </div>
               <div className="gridDiv">
-                <form ref={formRef} onSubmit={sendEmail}>
+                <form ref={formRef} onSubmit={sendEmail} className="contact-form">
                   <div className="form-group">
                     I am looking for (select multiple if needed)
                     <div className="fC flexbtn">

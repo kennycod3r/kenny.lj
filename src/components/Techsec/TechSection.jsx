@@ -30,7 +30,7 @@ const TechSection = () => {
           <>
             <div className="ts-div2">
               <div className="tslists">
-                <CardAnimation text={"DEVELOPMENT"} />
+                <CardAnimation text={"Development"} />
                 <h3 className="sP showmobile">DEVELOPMENT</h3>
                 <ul>
                   <li className="sP">Cross-Browser/Cross-Device Testing</li>
@@ -41,7 +41,7 @@ const TechSection = () => {
               </div>
 
               <div className="tslists">
-                <CardAnimation text={"STRATEGY"} />
+                <CardAnimation text={"Strategy"} />
                 <h3 className="sP showmobile">STRATEGY</h3>
                 <ul>
                   <li className="sP">Brand Strategy & Architecture</li>
@@ -52,7 +52,7 @@ const TechSection = () => {
                 </ul>
               </div>
               <div className="tslists">
-                <CardAnimation text={"DESIGN"} />
+                <CardAnimation text={"Design"} />
                 <h3 className="sP showmobile">DESIGN</h3>
                 <ul>
                   <li className="sP">User Interface, Experience</li>
@@ -86,7 +86,7 @@ const TechSection = () => {
                 </ul>
               </div>
               <div className="tslists">
-                <CardAnimation text={"RESEARCH"} />
+                <CardAnimation text={"Research"} />
                 <h3 className="sP showmobile">RESEARCH</h3>
                 <ul>
                   <li className="sP">Best Practices Review</li>

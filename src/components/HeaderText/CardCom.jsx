@@ -30,8 +30,8 @@ const CardAnimation = ({ text}) => {
   return (
     <div className="card-animation-container">
       <div>
-        <div aria-hidden="true" className=" fC-wid leading-tighter">
-          <span className="sP mP uppercase">
+        <div aria-hidden="true" className="fC-wid2">
+          <span className="sP name name2 mP capitalise">
             {letters.map((letter, index) => (
               <span
                 key={index}
