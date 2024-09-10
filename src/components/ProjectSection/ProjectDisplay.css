@@ -59,7 +59,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.proj-img img{
+  object-fit: cover;
+}
 .btn-image-div:hover .view-btn {
   opacity: 1;
 }

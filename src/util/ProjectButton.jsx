@@ -17,7 +17,7 @@ const ProjectButton = ({ item, handleSendImg }) => {
       >
         <div>
           <div className="col2 col-image">
-            <div className="image">
+            <div className="image proj-img">
               <img
                 className="overlay thumbnail lazy entered loaded"
                 data-src={item.image}

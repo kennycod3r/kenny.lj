@@ -7,14 +7,22 @@
   overflow: hidden;
   z-index: 500000;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-in-out;
 }
-
+.lsht{
+  height:auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .loading-fade-out {
   opacity: 0;
 }
 
-.loading-container .loading-screen {
+.loading-screen {
   width: 100%;
   height: 100%;
   color: white;
@@ -23,40 +31,39 @@
   align-items: center;
   flex-direction: column;
   gap: 2em;
-  overflow: hidden;
-  background-color: var(--black);
+  background: radial-gradient(circle at center, #181717 0%, #0f0f0f 100%);
+}
+
+.head-text {
+  text-align: center;
+}
+
+.gradient-text {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.sub-header {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #eee;
+  letter-spacing: 1px;
 }
 
 .mr1 {
   margin: 0 10px;
 }
 
-.spinner {
-  border: 1px solid rgba(0, 0, 0, 0.068);
-  border-top: 1px solid var(--orange);
+.custom-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid var(--orange);
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  transition: all ease;
-  animation: spin 1s linear infinite;
-}
-
-.lsht {
-  margin: 0;
-  padding: 0;
-}
-
-.loader-container {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  overflow: hidden;
-  will-change: transform;
-  transition: transform .1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.inner-loader-container {
-  transform: translateY(100%);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite, grow-shrink 1.2s ease-in-out infinite;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
 }
 
 @keyframes spin {
@@ -66,4 +73,25 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 300px;
+}
+
+.inner-loader-container {
+  transform: translateY(100%);
+  transition: transform 1.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
