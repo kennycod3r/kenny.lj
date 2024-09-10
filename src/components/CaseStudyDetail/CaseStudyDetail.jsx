@@ -35,7 +35,8 @@ const CaseStudyDetail = () => {
       img3: frame2,
       img4: frame3,
       img5: frame4,
-      bgColor:"#eeddc",
+      bgColor: "#eeddc",
+      projectLink: "https://skincare-demo-app.vercel.app/",
     },
     2: {
       title: "Sneakers E-commerce Project",
@@ -52,7 +53,8 @@ const CaseStudyDetail = () => {
       img3: sf2,
       img4: sf3,
       img5: sf4,
-      bgColor:"ffff",
+      bgColor: "ffff",
+      projectLink: "https://shoe-fang-v-indol.vercel.app/",
     },
     3: {
       title: "Oshinowo Studios",
@@ -67,6 +69,7 @@ const CaseStudyDetail = () => {
       on all devices, which led to increased client inquiries.`,
       img1: osp,
       img3: osp,
+      projectLink: "https://oshinowo-studio-ten.vercel.app/",
     },
     4: {
       title: "Other Simple Web Apps",
@@ -76,6 +79,7 @@ const CaseStudyDetail = () => {
       implementing code splitting, and ensuring accessibility standards were met. Each application was built with scalability in mind, 
       allowing for future enhancements and integrations.`,
       img1: othersimg,
+      projectLink: "https://vercel.com/kennycod3rs-projects",
     },
   };
 
@@ -105,7 +109,6 @@ const CaseStudyDetail = () => {
             <div className="pd-tag-wrap">
               <div className="pd-text-xs sP">development</div>
             </div>
-            
           </div>
           <div className="pd-year-wrap">
             <div className="pd-text-xs">2021</div>
@@ -127,7 +130,6 @@ const CaseStudyDetail = () => {
             </div>
             <div className="mfs">
               <ul>
-              
                 <li className="sP">Design</li>
                 <li className="sP">Development</li>
                 <li className="sP">Functionality</li>
@@ -139,7 +141,6 @@ const CaseStudyDetail = () => {
               <div>
                 <div className="fStart">
                   <h3 className="sP name name2 mP">Primary Challenge.</h3>
-
                 </div>
                 <p className="sP">{caseStudy.para1}</p>
               </div>
@@ -153,9 +154,15 @@ const CaseStudyDetail = () => {
                 Explore More — View Project
               </div>
               <div>
-                <button className="more-button small-btn">
-                  <p className="bP">View Project Live</p>
-                </button>
+                <a
+                  href={caseStudy.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="more-button small-btn">
+                    <p className="bP">View Project Live</p>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

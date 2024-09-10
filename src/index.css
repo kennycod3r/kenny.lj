@@ -53,8 +53,10 @@ html {
 .Text_XL__ku5Fh {
   font-size: 7vw;
   margin: 0;
+  
   line-height: 1;
-  letter-spacing: 0.1px;
+  text-wrap: balance;
+
 }
 
 .fC {
@@ -80,8 +82,13 @@ html {
 .fStart {
   display: flex;
   align-items: flex-start;
+  
 }
 
+.desktopborder{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
 .fJc {
   display: flex;
   align-items: center;
@@ -252,7 +259,7 @@ h3,
 }
 .name1 {
   padding-top: 0;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
 }
 
 .name2 {
@@ -290,7 +297,7 @@ i {
 .more-button {
   display: inline-flex;
   height: 2.5em;
-  width: 9em;
+  width: auto;
   background-color: var(--color1);
   padding: 10px;
   border-radius: 35px;
@@ -390,7 +397,10 @@ p {
   .name2 {
     padding: 1em 0;
   }
-
+  .desktopborder{
+    border:none;
+    padding:0;
+  }
   .hero-overlay {
     padding: 0;
   }

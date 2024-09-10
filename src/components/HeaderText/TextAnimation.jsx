@@ -39,7 +39,7 @@ const TextAnimation = ({ text }) => {
 
   return (
     <div className="text-animation-container">
-      <h1 className="sP name name2 mP">
+      <h1 className="header--two">
         <span aria-hidden="true">
           <span className="inline-block">{renderLetters()}</span>
         </span>

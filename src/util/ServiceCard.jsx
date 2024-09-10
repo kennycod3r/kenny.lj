@@ -3,7 +3,7 @@ import "./../components/MyService/Services.css";
 
 const ServiceCard = ({ title, servicesText }) => {
   return (
-    <div className="s-text-grid mobileborde">
+    <div className="s-text-grid desktopborder">
       <article className=" mobileBorder sP article">
         <div>
           <div className="fStart">

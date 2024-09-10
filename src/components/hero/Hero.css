@@ -105,7 +105,7 @@
 .arrowdiv {
   width: 30px;
   height: 30px;
-  margin-top: 20px;
+  margin-top:20px ;
 }
 
 .linehero,
@@ -133,7 +133,8 @@
 }
 
 .oshin-container span {
-  font-size: 1.44em;
+  font-size: 1.3em;
+  line-height: 1;
   text-align: left;
   text-transform: capitalize;
 }

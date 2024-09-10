@@ -25,7 +25,7 @@ const Main = () => {
         </div>
         <div className="main-grid-2">
           <article className="sP article">
-            <div>
+            <div className="desktopborder">
               <div className="fStart">
                 <h3 className="sP name name2 mP">
                   Interactive Developer.
@@ -48,7 +48,7 @@ const Main = () => {
                 the digital landscape.
               </p>
             </div>
-            <div className="mobileBorder">
+            <div className="mobileBorder ">
               <h3 className="sP name name2 mP">
                 Interactive Designer.
               </h3>

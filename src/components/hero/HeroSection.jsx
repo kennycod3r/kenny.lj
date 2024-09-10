@@ -5,7 +5,8 @@ import heroImg from "../../images/hello.webp";
 
 const HeroSection = () => {
   const runAnimation = useCallback(() => {
-    gsap.timeline()
+    gsap
+      .timeline()
       .to("#heroHeader", {
         yPercent: -100,
         rotate: 0.001,
@@ -13,12 +14,16 @@ const HeroSection = () => {
         duration: 1.5,
         ease: "power3.out",
       })
-      .to("#line1, #line2, #line3", {
-        yPercent: -100,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "power4.out",
-      }, "-=0.4");
+      .to(
+        "#line1, #line2, #line3",
+        {
+          yPercent: -100,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power4.out",
+        },
+        "-=0.4"
+      );
   }, []);
 
   useEffect(() => {
@@ -46,7 +51,41 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="arrowdiv showmobile">
-              <p className="sP whiteColor" id="arrow">kenny.lj</p>
+              <svg
+                width="14px"
+                height="14px"
+                viewBox="0 0 14 14"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <title>arrow-up-right</title>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Artboard"
+                    transform="translate(-1019.000000, -279.000000)"
+                    stroke="#FFFFFF"
+                    stroke-width="1.5"
+                  >
+                    <g
+                      id="arrow-up-right"
+                      transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)"
+                    >
+                      <polyline
+                        id="Path"
+                        points="2.76923077 0 12 0 12 9.23076923"
+                      ></polyline>
+                      <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                    </g>
+                  </g>
+                </g>
+              </svg>
             </div>
             <div className="oshin-container">
               <div className="sP whiteColor">

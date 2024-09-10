@@ -45,7 +45,7 @@ main {
 }
 .article {
   display: grid;
-  gap: 2em;
+  gap: .5em;
 }
 .main-grid-2 {
   padding: 0 var(--contentPadding);
@@ -73,6 +73,7 @@ main {
   }
   .article {
     display: grid;
+    gap: 2em;
   }
 
   .article .mobileBorder{
