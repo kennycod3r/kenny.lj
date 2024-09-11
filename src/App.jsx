@@ -1,11 +1,21 @@
+// src/App.jsx
 import React, { useState, useEffect, useCallback } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import useLenis from "./components/hooks/UseLennis";
-import { Outlet } from "react-router-dom";
-import "./App.css";
 import Loading from "./util/Loader/Loading";
 import Sidebar from "./components/sidebar/Sidebar";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Reset scroll to top on page change
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
   useLenis();
@@ -30,6 +40,7 @@ const App = () => {
   return (
     <>
       {showLoader && <Loading isLoading={isLoading} />}
+      <ScrollToTop />
       <div className={`flexPage ${isLoading ? "hide-content" : ""}`}>
         <Navbar handleSidebar={handleSidebar} openSidebar={openSidebar} />
         <Sidebar handleSidebar={handleSidebar} openSidebar={openSidebar} />

@@ -1,12 +1,13 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "../../App.jsx";
-import ErrorPage from "../ErrorPage.jsx";
-import AboutPage from "../AboutPage.jsx";
-import HomePage from "../HomePage.jsx";
-import ContactPage from "../../Pages/ContactPage.jsx";
-import CaseStudy from "../CaseStudy.jsx";
-import CaseStudyDetail from "../../components/CaseStudyDetail/CaseStudyDetail.jsx";
+// src/Pages/routes/RouterProviderComponent.jsx
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from '../../App.jsx';
+import ErrorPage from '../ErrorPage.jsx';
+import AboutPage from '../AboutPage.jsx';
+import HomePage from '../HomePage.jsx';
+import ContactPage from '../ContactPage.jsx';
+import CaseStudy from '../CaseStudy.jsx';
+import CaseStudyDetail from '../../components/CaseStudyDetail/CaseStudyDetail.jsx';
 
 const router = createBrowserRouter([
   {

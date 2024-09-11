@@ -7,6 +7,7 @@ const ProjectDisplay = ({
   handleGetImage,
   handleOpenDisplay,
   hProjectImages,
+  projLink
 }) => {
   const handleSendImg = useCallback(
     (image, title, projectImages) => {

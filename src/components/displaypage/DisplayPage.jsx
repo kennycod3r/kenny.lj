@@ -6,7 +6,7 @@ import CloseSvg from "../../util/CloseSvg";
 import ArrowLink from "../../util/ArrowLink";
 
 const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
-  const { displayPageTitle, displayPageDataImages } = displayPageData;
+  const { displayPageTitle, displayPageDataImages, projectLink } = displayPageData;
   const displayPageRef = useRef(null);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
   return (
     <div ref={displayPageRef} data-lenis-prevent className="display-page">
       <div className="flex-header">
-        <a className="showmobile" target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
+        <a className="showmobile" target="_blank" href={projectLink}>
           <span className="job-title underline whiteColor flexSB">
             <ArrowLink />VIEW PROJECT LIVE
           </span>
@@ -38,13 +38,16 @@ const DisplayPage = ({ handleOpenDisplay, displayPageData, openDisplay }) => {
         <div className="display-page-scroller">
           <div className="display-page-image snap-scroller">
             {displayPageDataImages.map((item, index) => (
+              <>
               <div className="project-imgs-con fC" key={index}>
                 <img className="project-imgs" src={item} alt={item.title} />
               </div>
+           
+            </>
             ))}
-            <div className="project-imgs project-imgs-link">
+          <div className="project-imgs project-imgs-link">
               <div className="pili fC">
-                <a target="_blank" href="https://shoe-fang-v-indol.vercel.app/">
+                <a target="_blank" href={projectLink}>
                   <span className="job-title underline whiteColor fC">
                     <ArrowLink /> VIEW LIVE PROJECT
                   </span>
